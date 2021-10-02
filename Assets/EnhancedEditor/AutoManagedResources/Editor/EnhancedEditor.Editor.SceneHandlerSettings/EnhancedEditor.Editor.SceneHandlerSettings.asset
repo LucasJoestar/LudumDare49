@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee407a6cd9de5164a84606b5d8fb784a, type: 3}
   m_Name: EnhancedEditor.Editor.SceneHandlerSettings
   m_EditorClassIdentifier: 
-  sceneDatas: []
+  sceneDatas:
+  - GUID: f137c3749534db944ae227573dde9e1e
+    Tag: <None>
+    Token: 1
+  - GUID: 2cda990e2423bbf4892e6590ba056729
+    Tag: <None>
+    Token: 2
   tags:
   - <None>
   IsEnable: 0

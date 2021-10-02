@@ -53,6 +53,10 @@ namespace LudumDare49
 
         [Space(5f)]
 
+        [SerializeField, Required] private Transform worldTransform = null;
+
+        [Space(5f)]
+
         [SerializeField, Required] private RectTransform canvasTransform = null;
         [SerializeField, Required] private RectTransform rectTransform = null;
         [SerializeField, Required] private Image sprite = null;
@@ -105,18 +109,26 @@ namespace LudumDare49
                                            = Vector2.MoveTowards(rectTransform.anchoredPosition, _mousePosition, Time.deltaTime * speed);
 
 
+            _mousePosition /= canvasTransform.sizeDelta;
+
+            // Set world transform.
+            Vector3 _pos = fullCamera.ViewportToWorldPoint(_mousePosition);
+            _pos.z = 0f;
+
+            worldTransform.position = _pos;
+
             switch (state)
             {
                 case CursorState.Finger:
                 {
                     // Get interactable objects.
-                    _mousePosition = fullCamera.ViewportToScreenPoint(_mousePosition / canvasTransform.sizeDelta);
+                    _mousePosition = fullCamera.ViewportToScreenPoint(_mousePosition);
                     int _amount = Physics2D.RaycastNonAlloc(gameCamera.ScreenToWorldPoint(_mousePosition), Vector2.zero, hits, 100f, layer);
 
                     Array.Sort(hits, 0, _amount, HitComparer.Comparer);
 
                     // Set hand state.
-                    if ((_amount == 0) && !hits[0].transform.TryGetComponent<BlockInteract>(out _))
+                    if ((_amount > 0) && !hits[0].transform.TryGetComponent<BlockInteract>(out _))
                     {
                         state = CursorState.Hand;
                         sprite.sprite = handIcon;
@@ -127,7 +139,7 @@ namespace LudumDare49
                 case CursorState.Hand:
                 {
                     // Get interactable objects.
-                    _mousePosition = fullCamera.ViewportToScreenPoint(_mousePosition / canvasTransform.sizeDelta);
+                    _mousePosition = fullCamera.ViewportToScreenPoint(_mousePosition);
                     int _amount = Physics2D.RaycastNonAlloc(gameCamera.ScreenToWorldPoint(_mousePosition), Vector2.zero, hits, 100f, layer);
 
                     Array.Sort(hits, 0, _amount, HitComparer.Comparer);
@@ -156,7 +168,7 @@ namespace LudumDare49
                             {
                                 // Grab the object.
                                 interaction = _object;
-                                _object.Grab(this);
+                                _object.Grab(worldTransform);
 
                                 state = CursorState.Grab;
                                 sprite.sprite = grabIcon;
