@@ -24,13 +24,13 @@ namespace EnhancedEditor.Editor
 
         // -----------------------
 
-        [MenuItem(ScriptCreatorSubMenu + "C# Dreadful Script/MonoBehaviour", false, Order)]
+        [MenuItem(ScriptCreatorSubMenu + "C# Ludum Script/MonoBehaviour", false, Order)]
         public static void CreateMonoBehaviour() => ScriptCreatorWindow.GetWindow(MonoBehaviour);
 
-        [MenuItem(ScriptCreatorSubMenu + "C# Dreadful Script/ScriptableObject", false, Order)]
+        [MenuItem(ScriptCreatorSubMenu + "C# Ludum Script/ScriptableObject", false, Order)]
         public static void CreateScriptableObject() => ScriptCreatorWindow.GetWindow(ScriptableObject);
 
-        [MenuItem(ScriptCreatorSubMenu + "C# Dreadful Script/StateMachineBehaviour", false, Order)]
+        [MenuItem(ScriptCreatorSubMenu + "C# Ludum Script/StateMachineBehaviour", false, Order)]
         public static void CreateStateMachineBehaviour() => ScriptCreatorWindow.GetWindow(StateMachineBehaviour, "ANI_", string.Empty);
         #endregion
 
