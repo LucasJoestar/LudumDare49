@@ -169,7 +169,7 @@ namespace LudumDare49
                             {
                                 // Grab the object.
                                 interaction = _object;
-                                _object.Grab(worldTransform);
+                                _object.Grab();
 
                                 state = CursorState.Grab;
                                 sprite.sprite = grabIcon;
