@@ -74,6 +74,7 @@ namespace LudumDare49
 
         [Section("State")]
 
+        [SerializeField, Required] private HingeJoint2D joint = null;
         [SerializeField, ReadOnly] private PhysicsObject interaction = null;
         private CursorState state = CursorState.Finger;
         #endregion
@@ -173,6 +174,8 @@ namespace LudumDare49
                                 state = CursorState.Grab;
                                 sprite.sprite = grabIcon;
 
+                                joint.connectedBody = _object.GetComponent<Rigidbody2D>();
+
                                 break;
                             }
                             else if (_transform.TryGetComponent<InteractObject>(out var _interaction))
@@ -192,6 +195,8 @@ namespace LudumDare49
                     {
                         interaction.Drop();
                         interaction = null;
+
+                        joint.connectedBody = null;
 
                         state = CursorState.Finger;
                         sprite.sprite = fingerIcon;
