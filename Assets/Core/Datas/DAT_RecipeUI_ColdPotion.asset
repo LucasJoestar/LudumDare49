@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832595ad9518cd947b99720f3c1a4a6f, type: 3}
+  m_Name: DAT_RecipeUI_ColdPotion
+  m_EditorClassIdentifier: 
+  potionIcon: {fileID: 0}
+  steps:
+  - stepIcon: {fileID: 0}
+    stepAmount: 0
+  - stepIcon: {fileID: 0}
+    stepAmount: 0
