@@ -36,43 +36,45 @@ namespace LudumDare49
 
         public void Grab(Transform _cursor)
         {
-            cursor = _cursor;
+            /*cursor = _cursor;
 
             rigidbody.isKinematic = true;
             isGrabbed = true;
 
-            transform.position = cursor.position - (transform.rotation * grabPoint);
+            rigidbody.MovePosition(cursor.position - (transform.rotation * grabPoint));*/
         }
 
         public void Drop()
         {
-            rigidbody.isKinematic = false;
+            rigidbody.velocity *= inertiaCoef;
+
+            /*rigidbody.isKinematic = false;
             isGrabbed = false;
 
             Vector3 _old = transform.position;
             Vector3 _new = cursor.position - (transform.rotation * grabPoint);
-            Vector3 _movement = _new - _old;
+            Vector3 _movement = _new - _old;*/
 
-            rigidbody.AddForceAtPosition(_movement * inertiaCoef, transform.rotation * (transform.position + centerOfMass), ForceMode2D.Impulse);
+            //rigidbody.AddForceAtPosition(_movement * inertiaCoef, transform.rotation * (transform.position + centerOfMass), ForceMode2D.Impulse);
         }
 
         private void Update()
         {
             // Update position.
-            if (isGrabbed)
+            /*if (isGrabbed)
             {
                 Vector3 _old = transform.position;
                 Vector3 _new = cursor.position - (transform.rotation * grabPoint);
                 Vector3 _movement = _new - _old;
 
-                transform.position = _new;
+                rigidbody.MovePosition(_new);
 
                 Quaternion _rotation = (_movement.x == 0f)
                                      ? Quaternion.identity
                                      : Quaternion.Euler(0f, 0f, rotationAngle * -Mathf.Sign(_movement.x));
 
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, _rotation, Time.deltaTime * rotationSpeed);
-            }
+            }*/
         }
 
         private void OnDrawGizmos()
