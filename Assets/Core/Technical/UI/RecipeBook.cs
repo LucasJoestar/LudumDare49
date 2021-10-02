@@ -17,8 +17,9 @@ namespace LudumDare49
         [SerializeField, Required] private Animator animator = null; 
         [SerializeField] private RecipeUI[] recipesUI = new RecipeUI[] { };
         [SerializeField, ReadOnly] private int currentIndex = 0;
-        [Section("UI Pagination")]
-        [SerializeField, Required] private Image potionImage = null; 
+        [Section("Pages")]
+        [SerializeField, Required] private SpriteRenderer leftPageImage = null; 
+        [SerializeField, Required] private SpriteRenderer rightPageImage = null; 
         #endregion
 
         #region Animation
@@ -50,6 +51,8 @@ namespace LudumDare49
         {
             // Start sound here
             // Change Sprites
+            leftPageImage.sprite = recipesUI[currentIndex].PotionIcon;
+            rightPageImage.sprite = recipesUI[currentIndex].ActionsIcon; 
         }
         #endregion
     }

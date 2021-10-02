@@ -15,15 +15,11 @@ namespace LudumDare49
         #region Content
         [Section("RecipeUI")]
         [SerializeField] private Sprite potionIcon = null;
-        [SerializeField] private RecipeStep[] steps = new RecipeStep[] { }; 
+        [SerializeField] private Sprite actionsIcon = null;
+
+        public Sprite PotionIcon => potionIcon;
+        public Sprite ActionsIcon => actionsIcon; 
         #endregion
     }
 
-    [System.Serializable]
-    public class RecipeStep
-    {
-        [Section("Recipe Step")]
-        [SerializeField] private Sprite stepIcon = null;
-        [SerializeField, Range(0,2)] private int stepAmount = 0; 
-    }
 }
