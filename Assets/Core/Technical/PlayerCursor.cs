@@ -109,11 +109,14 @@ namespace LudumDare49
             {
                 case CursorState.Finger:
                 {
-                    // Set hand state.
+                    // Get interactable objects.
                     _mousePosition = fullCamera.ViewportToScreenPoint(_mousePosition / canvasTransform.sizeDelta);
-                    bool _hit = Physics2D.Raycast(gameCamera.ScreenToWorldPoint(_mousePosition), Vector2.zero, 100f, layer);
+                    int _amount = Physics2D.RaycastNonAlloc(gameCamera.ScreenToWorldPoint(_mousePosition), Vector2.zero, hits, 100f, layer);
 
-                    if (_hit)
+                    Array.Sort(hits, 0, _amount, HitComparer.Comparer);
+
+                    // Set hand state.
+                    if ((_amount == 0) && !hits[0].transform.TryGetComponent<BlockInteract>(out _))
                     {
                         state = CursorState.Hand;
                         sprite.sprite = handIcon;
@@ -148,25 +151,22 @@ namespace LudumDare49
                         // Grab.
                         if (Mouse.current.leftButton.wasPressedThisFrame)
                         {
-                            for (int _i = 0; _i < _amount; _i++)
+                            Transform _transform = hits[0].transform;
+                            if (_transform.TryGetComponent<PhysicsObject>(out var _object))
                             {
-                                Transform _transform = hits[_i].transform;
-                                if (_transform.TryGetComponent<PhysicsObject>(out var _object))
-                                {
-                                    // Grab the object.
-                                    interaction = _object;
-                                    _object.Grab(this);
+                                // Grab the object.
+                                interaction = _object;
+                                _object.Grab(this);
 
-                                    state = CursorState.Grab;
-                                    sprite.sprite = grabIcon;
+                                state = CursorState.Grab;
+                                sprite.sprite = grabIcon;
 
-                                    break;
-                                }
-                                else if (_transform.TryGetComponent<InteractObject>(out var _interaction))
-                                {
-                                    // Interact.
-                                    _interaction.Interact();
-                                }
+                                break;
+                            }
+                            else if (_transform.TryGetComponent<InteractObject>(out var _interaction))
+                            {
+                                // Interact.
+                                _interaction.Interact();
                             }
                         }
                     }
