@@ -17,7 +17,7 @@ namespace LudumDare49
         [SerializeField, ReadOnly] private int score = 0;
         public int Score => score;
 
-        [Section("Physics")]
+        /*[Section("Physics")]
 
         [SerializeField] private new Rigidbody2D rigidbody = null;
         [SerializeField] private new Collider2D collider = null;
@@ -26,7 +26,7 @@ namespace LudumDare49
         [SerializeField] private LayerMask snapLayer = new LayerMask();
         [SerializeField] private LayerMask potionLayer = new LayerMask();
 
-        private ContactFilter2D contactFilter = new ContactFilter2D();
+        private ContactFilter2D contactFilter = new ContactFilter2D();*/
         #endregion
 
         #region Methods
@@ -34,7 +34,7 @@ namespace LudumDare49
 
         // -----------------------
 
-        protected static Collider2D[] overlapBuffer = new Collider2D[6];
+        /*protected static Collider2D[] overlapBuffer = new Collider2D[6];
 
         private void ExtractFromCollisions()
         {
@@ -100,7 +100,7 @@ namespace LudumDare49
         {
             contactFilter.layerMask = _mask;
             return collider.OverlapCollider(contactFilter, overlapBuffer);
-        }
+        }*/
         #endregion
     }
 }

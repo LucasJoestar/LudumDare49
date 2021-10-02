@@ -84,13 +84,13 @@ namespace LudumDare49
 
         // -----------------------
 
-        #if !UNITY_EDITOR
-        private void Awake()
+        //#if UNITY_EDITOR
+        private void FixedUpdate()
         {
             Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
         }
-        #endif
+        //#endif
 
         private void Update()
         {
