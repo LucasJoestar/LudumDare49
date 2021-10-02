@@ -1,8 +1,8 @@
-// ===== The Dreadful Show - https://github.com/LucasJoestar/LudumDare49 ===== //
+// ===== Ludum Dare #49 - https://github.com/LucasJoestar/LudumDare49 ===== //
 //
 // Notes:
 //
-// =========================================================================== //
+// ======================================================================== //
 
 using UnityEngine;
 
