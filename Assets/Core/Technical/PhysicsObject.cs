@@ -22,59 +22,42 @@ namespace LudumDare49
 
         [Space(10f)]
 
-        [SerializeField, Range(0f, 90f)] private float rotationAngle = 10f;
-        [SerializeField, Range(0f, 1000f)] private float rotationSpeed = 200f;
-
         [SerializeField, Range(0f, 100f)] private float inertiaCoef = 10f;
         #endregion
 
         #region Behaviour
-        private Transform cursor = null;
         private bool isGrabbed = false;
-
+        private static Vector2[] positionBuffer = new Vector2[5]; 
         // -----------------------
 
-        public void Grab(Transform _cursor)
+        public void Grab()
         {
-            /*cursor = _cursor;
-
-            rigidbody.isKinematic = true;
-            isGrabbed = true;
-
-            rigidbody.MovePosition(cursor.position - (transform.rotation * grabPoint));*/
+            rigidbody.velocity = Vector2.zero;
+            for (int i = 0; i < positionBuffer.Length; i++)
+            {
+                positionBuffer[i] = transform.position; 
+            }
+            isGrabbed = true; 
         }
 
         public void Drop()
         {
-            rigidbody.velocity *= inertiaCoef;
-
-            /*rigidbody.isKinematic = false;
             isGrabbed = false;
-
-            Vector3 _old = transform.position;
-            Vector3 _new = cursor.position - (transform.rotation * grabPoint);
-            Vector3 _movement = _new - _old;*/
-
-            //rigidbody.AddForceAtPosition(_movement * inertiaCoef, transform.rotation * (transform.position + centerOfMass), ForceMode2D.Impulse);
+            Vector2 _dir = positionBuffer[0] - positionBuffer[positionBuffer.Length - 1];
+            rigidbody.velocity = _dir * inertiaCoef;
         }
 
         private void Update()
         {
-            // Update position.
-            /*if (isGrabbed)
+            if(isGrabbed)
             {
-                Vector3 _old = transform.position;
-                Vector3 _new = cursor.position - (transform.rotation * grabPoint);
-                Vector3 _movement = _new - _old;
-
-                rigidbody.MovePosition(_new);
-
-                Quaternion _rotation = (_movement.x == 0f)
-                                     ? Quaternion.identity
-                                     : Quaternion.Euler(0f, 0f, rotationAngle * -Mathf.Sign(_movement.x));
-
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, _rotation, Time.deltaTime * rotationSpeed);
-            }*/
+                if ((Vector2)transform.position == positionBuffer[0]) return;
+                for (int i = positionBuffer.Length; i--> 1;) 
+                {
+                    positionBuffer[i] = positionBuffer[i - 1]; 
+                }
+                positionBuffer[0] = transform.position;
+            }
         }
 
         private void OnDrawGizmos()
