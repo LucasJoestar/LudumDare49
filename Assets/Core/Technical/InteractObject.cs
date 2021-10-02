@@ -9,20 +9,15 @@ using UnityEngine;
 
 namespace LudumDare49
 {
-	public class PhysicsObject : MonoBehaviour
+	public class InteractObject : MonoBehaviour
     {
         #region Global Members
-        //[Section("PhysicsObject")]
+        //[Section("InteractObject")]
 
         #endregion
 
         #region Behaviour
-        public void Grab(PlayerCursor _cursor)
-        {
-
-        }
-
-        public void Drop()
+        public void Interact()
         {
 
         }
