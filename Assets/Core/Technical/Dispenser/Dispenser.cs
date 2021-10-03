@@ -32,7 +32,7 @@ namespace LudumDare49
             dispenserSequence = DOTween.Sequence();
             dispenserSequence.Append(_leverTransform.DOLocalRotate(new Vector3(0,0,-70), .5f));
             dispenserSequence.Append(pipeTransform.DOShakePosition(1.0f, .1f, 8));
-            dispenserSequence.Append(pipeTransform.DOLocalMoveY(1.25f, .1f).OnComplete(ApplyPotionAction)); 
+            dispenserSequence.Append(pipeTransform.DOLocalMoveY(1.05f, .1f).OnComplete(ApplyPotionAction)); 
             dispenserSequence.Append(pipeTransform.DOLocalMoveY(1.0f, .1f));
             dispenserSequence.Append(_leverTransform.DOLocalRotate( Vector3.zero, .5f));
         }

@@ -20,6 +20,15 @@ TextureImporter:
   - first:
       213: -4635459801796621616
     second: Stamp_Mark_Living
+  - first:
+      213: 5548604857879292093
+    second: Icon_Heavy
+  - first:
+      213: -2543620371492230604
+    second: Alive_Icon
+  - first:
+      213: 2811970481800219896
+    second: Temperature_Icon
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -242,6 +251,69 @@ TextureImporter:
       bones: []
       spriteID: 0da4f47bed98bafb0800000000000000
       internalID: -4635459801796621616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Heavy
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 364
+        width: 74
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8e6e078ba900d40800000000000000
+      internalID: 5548604857879292093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alive_Icon
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 357
+        width: 74
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a22c1bfbe33bcd0800000000000000
+      internalID: -2543620371492230604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Temperature_Icon
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 367
+        width: 58
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc06963140260720800000000000000
+      internalID: 2811970481800219896
       vertices: []
       indices: 
       edges: []

@@ -444,8 +444,8 @@ MonoBehaviour:
   comment: 
   Tags:
     Tags: []
-  lastModifiedBy: Lucas
-  lastModifiedDate: 02/10/2021 16:43:54
+  lastModifiedBy: Alexis_Admin
+  lastModifiedDate: 03/10/2021 22:35:55
   IsPersistent: 0
 --- !u!4 &140989324
 Transform:
@@ -675,7 +675,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Alexis_Admin
-  lastModifiedDate: 02/10/2021 23:05:43
+  lastModifiedDate: 03/10/2021 22:35:55
   IsPersistent: 0
 --- !u!4 &261434536
 Transform:
@@ -702,6 +702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stamp Mark Temperature
       objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032612, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032613, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -720,11 +724,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: lastModifiedDate
-      value: 03/10/2021 18:53:15
+      value: 03/10/2021 23:41:55
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -821,8 +825,8 @@ MonoBehaviour:
   comment: 
   Tags:
     Tags: []
-  lastModifiedBy: Lucas
-  lastModifiedDate: 02/10/2021 16:33:57
+  lastModifiedBy: Alexis_Admin
+  lastModifiedDate: 03/10/2021 22:35:55
   IsPersistent: 0
 --- !u!1 &485783234
 GameObject:
@@ -1090,7 +1094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032612, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032613, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_Color.a
@@ -1110,11 +1114,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: lastModifiedDate
-      value: 03/10/2021 18:53:15
+      value: 03/10/2021 23:41:55
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1188,7 +1192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032612, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032613, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_Color.a
@@ -1208,11 +1212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: lastModifiedDate
-      value: 03/10/2021 18:53:15
+      value: 03/10/2021 23:41:55
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1286,7 +1290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032612, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032613, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_Color.a
@@ -1306,11 +1310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: lastModifiedDate
-      value: 03/10/2021 18:53:15
+      value: 03/10/2021 23:41:55
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1406,8 +1410,8 @@ MonoBehaviour:
   comment: 
   Tags:
     Tags: []
-  lastModifiedBy: Lucas
-  lastModifiedDate: 02/10/2021 18:59:02
+  lastModifiedBy: Alexis_Admin
+  lastModifiedDate: 03/10/2021 22:35:55
   IsPersistent: 0
 --- !u!20 &1543223785
 Camera:
@@ -1720,7 +1724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032612, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032613, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_Color.a
@@ -1740,11 +1744,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: lastModifiedDate
-      value: 03/10/2021 18:53:15
+      value: 03/10/2021 23:41:55
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1997,7 +2001,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Alexis_Admin
-  lastModifiedDate: 03/10/2021 00:03:46
+  lastModifiedDate: 03/10/2021 22:35:59
   IsPersistent: 0
 --- !u!4 &2135376402
 Transform:
@@ -2022,7 +2026,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2088,6 +2092,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stamp Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124598, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124599, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: lastModifiedDate
+      value: 03/10/2021 23:41:55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
 --- !u!1001 &2516728911913717116
@@ -2099,7 +2111,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2516728911840802572, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 2516728911840802572, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2107,7 +2119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2516728911840802572, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 2516728911840802572, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2141,9 +2153,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2516728911840802574, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
+      propertyPath: snappingOffset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2516728911840802579, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
+      propertyPath: lastModifiedDate
+      value: 03/10/2021 23:41:55
+      objectReference: {fileID: 0}
     - target: {fileID: 2516728911840802583, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
       propertyPath: m_Name
       value: Dispenser
+      objectReference: {fileID: 0}
+    - target: {fileID: 2516728911840802583, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
@@ -2156,7 +2180,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2200,11 +2224,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9002581470984690665, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
       propertyPath: lastModifiedDate
-      value: 03/10/2021 21:44:40
+      value: 03/10/2021 23:41:55
       objectReference: {fileID: 0}
     - target: {fileID: 9002581470984690667, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
       propertyPath: m_Name
       value: Stamp Mark Heavy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690667, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
@@ -2219,9 +2247,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dispenser 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4227775303781304072, guid: 5ba904bc4f0f95e4796f03f587201553, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4227775303781304076, guid: 5ba904bc4f0f95e4796f03f587201553, type: 3}
       propertyPath: lastModifiedDate
-      value: 03/10/2021 22:24:38
+      value: 03/10/2021 23:41:55
       objectReference: {fileID: 0}
     - target: {fileID: 4227775303781304083, guid: 5ba904bc4f0f95e4796f03f587201553, type: 3}
       propertyPath: m_RootOrder
@@ -2233,7 +2265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4227775303781304083, guid: 5ba904bc4f0f95e4796f03f587201553, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 4227775303781304083, guid: 5ba904bc4f0f95e4796f03f587201553, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2278,7 +2310,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2322,11 +2354,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8008095504764210913, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
       propertyPath: lastModifiedDate
-      value: 03/10/2021 21:44:56
+      value: 03/10/2021 23:41:55
       objectReference: {fileID: 0}
     - target: {fileID: 8008095504764210915, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
       propertyPath: m_Name
       value: Stamp Mark Living
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210915, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
@@ -2339,7 +2375,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2385,9 +2421,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stamp Heavy
       objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705412, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8207437245214705413, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
       propertyPath: lastModifiedDate
-      value: 03/10/2021 21:49:47
+      value: 03/10/2021 23:41:55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
@@ -2400,11 +2440,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6337602229538767522, guid: 82a90ce660487c345ad1297839c6b77d, type: 3}
       propertyPath: lastModifiedDate
-      value: 03/10/2021 22:24:38
+      value: 03/10/2021 23:41:55
       objectReference: {fileID: 0}
     - target: {fileID: 6337602229538767526, guid: 82a90ce660487c345ad1297839c6b77d, type: 3}
       propertyPath: m_Name
       value: Dispenser 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337602229538767526, guid: 82a90ce660487c345ad1297839c6b77d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6337602229538767549, guid: 82a90ce660487c345ad1297839c6b77d, type: 3}
       propertyPath: m_RootOrder
@@ -2416,7 +2460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337602229538767549, guid: 82a90ce660487c345ad1297839c6b77d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 6337602229538767549, guid: 82a90ce660487c345ad1297839c6b77d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2661,11 +2705,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8529524704502246476, guid: 83da5ded4d4b39a47a70b42f777ab3e1, type: 3}
       propertyPath: lastModifiedDate
-      value: 03/10/2021 22:08:31
+      value: 03/10/2021 23:41:55
       objectReference: {fileID: 0}
     - target: {fileID: 8529524704502246479, guid: 83da5ded4d4b39a47a70b42f777ab3e1, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8529524704502246479, guid: 83da5ded4d4b39a47a70b42f777ab3e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2711,6 +2755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Package Box
       objectReference: {fileID: 0}
+    - target: {fileID: 8529524704502246482, guid: 83da5ded4d4b39a47a70b42f777ab3e1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83da5ded4d4b39a47a70b42f777ab3e1, type: 3}
 --- !u!1001 &8984160631044950372
@@ -2722,7 +2770,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2768,9 +2816,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stamp Living
       objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754046, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9218079514204754047, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
       propertyPath: lastModifiedDate
-      value: 03/10/2021 21:50:01
+      value: 03/10/2021 23:41:55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
