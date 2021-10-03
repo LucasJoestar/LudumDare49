@@ -35,10 +35,10 @@ namespace LudumDare49
             int IComparer.Compare(object _a, object _b)
             {
                 if (!(_a is RaycastHit2D _aHit) || !_aHit.transform || !_aHit.transform.TryGetComponent<SortingGroup>(out var _aGroup))
-                    return -1;
+                    return 1;
 
                 if (!(_b is RaycastHit2D _bHit) || !_bHit.transform || !_bHit.transform.TryGetComponent<SortingGroup>(out var _bGroup))
-                    return 1;
+                    return -1;
 
                 return _aGroup.sortingOrder.CompareTo(_bGroup.sortingOrder);
             }
@@ -129,7 +129,7 @@ namespace LudumDare49
                     Array.Sort(hits, 0, _amount, HitComparer.Comparer);
 
                     // Set hand state.
-                    if ((_amount > 0) && !hits[0].transform.TryGetComponent<BlockInteract>(out _))
+                    if ((_amount > 0) && !hits[0].collider.transform.TryGetComponent<BlockInteract>(out _))
                     {
                         state = CursorState.Hand;
                         sprite.sprite = handIcon;
@@ -164,15 +164,12 @@ namespace LudumDare49
                         // Grab.
                         if (Mouse.current.leftButton.wasPressedThisFrame)
                         {
-                            Transform _transform = hits[0].transform;
+                            Transform _transform = hits[0].collider.transform;
+
                             if (_transform.TryGetComponent<IGrabbable>(out var _grab))
                             {
                                 // Grab the object.
-                                interaction = _grab;
-                                _grab.Grab(joint);
-
-                                state = CursorState.Grab;
-                                sprite.sprite = grabIcon;
+                                SetInteraction(_grab);
 
                                 break;
                             }
@@ -205,6 +202,21 @@ namespace LudumDare49
                 default:
                     break;
             }
+        }
+
+        public void SetInteraction(IGrabbable _interaction)
+        {
+            if (interaction != null)
+            {
+                interaction.Drop();
+                joint.connectedBody = null;
+            }
+
+            interaction = _interaction;
+            _interaction.Grab(this, joint);
+
+            state = CursorState.Grab;
+            sprite.sprite = grabIcon;
         }
         #endregion
     }
