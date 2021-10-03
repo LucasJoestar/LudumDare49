@@ -81,6 +81,20 @@ namespace LudumDare49
 
         [SerializeField] private LayerMask layer = new LayerMask();
 
+        [Section("Shake")]
+
+        [SerializeField, Range(0f, 2f)] private float inactiveResetTime = .5f;
+        [SerializeField, Range(0, 20)] private int shakeLoops = 5;
+
+        [Space(5f)]
+
+        [SerializeField, ReadOnly] private int shakeCount = 0;
+        [SerializeField, ReadOnly] private float inactiveTime = 0f;
+
+        private Vector3 lastPosition = Vector3.zero;
+        private Vector3 lastMovement = Vector3.zero;
+        private float lastShakeSign = 0;
+
         [Section("State")]
 
         [SerializeField, Required] private HingeJoint2D joint = null;
@@ -148,9 +162,12 @@ namespace LudumDare49
 
             _mousePosition /= canvasTransform.sizeDelta;
 
-            // Set world transform.
+            // Set world transform and last position.
             Vector3 _pos = fullCamera.ViewportToWorldPoint(_mousePosition);
             _pos.z = 0f;
+
+            lastPosition = worldTransform.position;
+            lastMovement = _pos - lastPosition;
 
             worldTransform.position = _pos;
 
@@ -232,6 +249,37 @@ namespace LudumDare49
                         state = CursorState.Finger;
                         sprite.sprite = fingerIcon;
                     }
+                    else
+                    {
+                        // Shake.
+                        if (lastMovement.y == 0f)
+                        {
+                            // Reset shake.
+                            inactiveTime += Time.deltaTime;
+                            if (inactiveTime > inactiveResetTime)
+                            {
+                                inactiveTime = 0f;
+                                shakeCount = 0;
+                            }
+                        }
+                        else
+                        {
+                            float _shakeSign = Mathf.Sign(lastMovement.y);
+                            if (_shakeSign != lastShakeSign)
+                            {
+                                lastShakeSign = _shakeSign;
+                                inactiveTime = 0f;
+
+                                shakeCount++;
+                                if (shakeCount == shakeLoops)
+                                {
+                                    // Shake it.
+                                    shakeCount = 0;
+                                    interaction.Shake();
+                                }
+                            }
+                        }
+                    }
                 }
                     break;
 
@@ -258,6 +306,9 @@ namespace LudumDare49
 
             state = CursorState.Grab;
             sprite.sprite = grabIcon;
+
+            shakeCount = 0;
+            inactiveTime = 0f;
         }
         #endregion
     }

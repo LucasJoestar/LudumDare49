@@ -89,6 +89,11 @@ namespace LudumDare49
             DoOverlap();
         }
 
+        public void Shake()
+        {
+            Debug.Log("Shake!");
+        }
+
         protected virtual void Update()
         {
             if (isGrabbed)

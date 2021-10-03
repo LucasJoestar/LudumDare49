@@ -13,5 +13,7 @@ namespace LudumDare49
         void Grab(PlayerCursor _cursor, HingeJoint2D _joint);
 
         void Drop();
+
+        void Shake();
     }
 }

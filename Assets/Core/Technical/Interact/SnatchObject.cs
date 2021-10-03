@@ -61,6 +61,11 @@ namespace LudumDare49
             Wobble();
         }
 
+        public void Shake()
+        {
+            Debug.Log("Nothing happens.");
+        }
+
         void Wobble()
         {
             Vector3 _angles = rigidbody.transform.rotation.eulerAngles;
