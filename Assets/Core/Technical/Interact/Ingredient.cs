@@ -14,11 +14,8 @@ namespace LudumDare49
         #region Global Members
         [Section("Ingredient")]
 
-        [SerializeField] private ActionPotion potion = null;
-        #endregion
-
-        #region Behaviour
-
+        [SerializeField] private PotionAction action = null;
+        public PotionAction Action => action;
         #endregion
     }
 }

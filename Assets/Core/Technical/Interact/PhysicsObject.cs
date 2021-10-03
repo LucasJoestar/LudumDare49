@@ -45,14 +45,14 @@ namespace LudumDare49
         #endregion
 
         #region Behaviour
-        [SerializeField, ReadOnly] private PhysicsTrigger trigger = null;
+        [SerializeField, ReadOnly] protected PhysicsTrigger trigger = null;
 
-        private bool isGrabbed = false;
+        protected bool isGrabbed = false;
         private static Vector2[] positionBuffer = new Vector2[5]; 
 
         // -----------------------
 
-        public void Grab()
+        public virtual void Grab()
         {
             rigidbody.isKinematic = false;
             rigidbody.velocity = Vector2.zero;
@@ -75,7 +75,7 @@ namespace LudumDare49
             isGrabbed = true;
         }
 
-        public void Drop()
+        public virtual void Drop()
         {
             isGrabbed = false;
 
@@ -86,7 +86,7 @@ namespace LudumDare49
             DoOverlap();
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             if (isGrabbed)
             {
@@ -103,7 +103,7 @@ namespace LudumDare49
             }
         }
 
-        private void OnDrawGizmos()
+        protected virtual void OnDrawGizmos()
         {
             Gizmos.color = Color.green;
             Gizmos.DrawSphere(transform.position + centerOfMass, .1f);
@@ -112,7 +112,7 @@ namespace LudumDare49
             Gizmos.DrawSphere(transform.position + grabPoint, .1f);
         }
 
-        private void Start()
+        protected virtual void Start()
         {
             contactFilter.useLayerMask = true;
             contactFilter.useTriggers = true;
@@ -122,7 +122,7 @@ namespace LudumDare49
         #endregion
 
         #region Layer
-        public void SetLayer(LayerMask _layer)
+        public virtual void SetLayer(LayerMask _layer)
         {
             gameObject.layer = (int)Mathf.Log(_layer.value, 2);
         }
@@ -133,7 +133,7 @@ namespace LudumDare49
 
         // -----------------------
 
-        protected void DoOverlap()
+        protected virtual void DoOverlap()
         {
             // Physics overlap extraction.
             int _count = OverlapCollider(physicsMask);
@@ -177,19 +177,19 @@ namespace LudumDare49
             }
         }
 
-        protected int OverlapCollider(LayerMask _mask)
+        protected virtual int OverlapCollider(LayerMask _mask)
         {
             contactFilter.layerMask = _mask;
             return collider.OverlapCollider(contactFilter, overlapBuffer);
         }
 
-        protected void AddIgnoredCollider(Collider2D _collider)
+        protected virtual void AddIgnoredCollider(Collider2D _collider)
         {
             Physics2D.IgnoreCollision(collider, _collider, true);
             ignoredColliders.Add(_collider);
         }
 
-        protected void UpdateIgnoredColliders()
+        protected virtual void UpdateIgnoredColliders()
         {
             for (int _i = ignoredColliders.Count; _i-- > 0;)
             {
@@ -204,7 +204,7 @@ namespace LudumDare49
             }
         }
 
-        protected void ResetIgnoredColliders()
+        protected virtual void ResetIgnoredColliders()
         {
             foreach (Collider2D _collider in ignoredColliders)
                 Physics2D.IgnoreCollision(collider, _collider, false);
