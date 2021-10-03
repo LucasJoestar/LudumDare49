@@ -21,5 +21,4 @@ namespace LudumDare49
         public Sprite ActionsIcon => actionsIcon; 
         #endregion
     }
-
 }
