@@ -57,16 +57,16 @@ namespace LudumDare49
             switch (_effectState)
             {
                 case AudioEffectState.None:
-                    mixer.FindSnapshot(mainSnapshot_Name).TransitionTo(.2f);
+                    mixer.FindSnapshot(mainSnapshot_Name).TransitionTo(transitionDuration);
                     break;
                 case AudioEffectState.LowPassAndEcho:
-                    mixer.FindSnapshot(LPESnapshot_Name).TransitionTo(.2f);
+                    mixer.FindSnapshot(LPESnapshot_Name).TransitionTo(transitionDuration);
                     break;
                 case AudioEffectState.PitchShifter:
-                    mixer.FindSnapshot(PSSnapshot_Name).TransitionTo(.2f);
+                    mixer.FindSnapshot(PSSnapshot_Name).TransitionTo(transitionDuration);
                     break;
                 default:
-                    mixer.FindSnapshot(mainSnapshot_Name).TransitionTo(.2f);
+                    mixer.FindSnapshot(mainSnapshot_Name).TransitionTo(transitionDuration);
                     break;
             }
         }
