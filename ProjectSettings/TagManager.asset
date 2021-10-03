@@ -12,16 +12,16 @@ TagManager:
   - Water
   - UI
   - Grabbed
-  - Limit
+  - Bounds
   - Snap
   - Potion
   - Stamp
   - Package
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Platform
+  - Door
+  - Ingredient
+  - Physics
+  - Interact
   - 
   - 
   - 
