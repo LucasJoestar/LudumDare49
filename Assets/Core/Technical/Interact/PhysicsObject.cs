@@ -45,6 +45,8 @@ namespace LudumDare49
         #endregion
 
         #region Behaviour
+        [SerializeField, ReadOnly] private PhysicsTrigger trigger = null;
+
         private bool isGrabbed = false;
         private static Vector2[] positionBuffer = new Vector2[5]; 
 
@@ -52,12 +54,21 @@ namespace LudumDare49
 
         public void Grab()
         {
+            rigidbody.isKinematic = false;
             rigidbody.velocity = Vector2.zero;
+            rigidbody.constraints = RigidbodyConstraints2D.None;
+
             for (int i = 0; i < positionBuffer.Length; i++)
             {
                 positionBuffer[i] = transform.position; 
             }
 
+            if (trigger)
+            {
+                trigger.OnGrabbed(this);
+                trigger = null;
+            }
+            
             ResetIgnoredColliders();
             SetLayer(ignoreLayer);
 
@@ -158,8 +169,9 @@ namespace LudumDare49
                 }
 
                 // Trigger.
-                if (overlapBuffer[_bestIndex].TryGetComponent<PhysicsTrigger>(out PhysicsTrigger _trigger))
+                if (overlapBuffer[_bestIndex].TryGetComponent(out PhysicsTrigger _trigger))
                 {
+                    trigger = _trigger;
                     _trigger.OnTrigger(this);
                 }
             }
