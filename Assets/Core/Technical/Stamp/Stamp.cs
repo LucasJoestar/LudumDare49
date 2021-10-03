@@ -45,7 +45,7 @@ namespace LudumDare49
             returningSequence = DOTween.Sequence();
             float _duration = Vector2.Distance(transform.position, startPosition) / returningSpeed; 
             returningSequence.Join(transform.DOMove(startPosition, _duration));
-            returningSequence.Play(); 
+            returningSequence.Play();
         }
 
         public void Grab(PlayerCursor _cursor, HingeJoint2D _joint)
