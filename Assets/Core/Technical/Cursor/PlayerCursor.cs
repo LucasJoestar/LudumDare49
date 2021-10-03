@@ -75,7 +75,7 @@ namespace LudumDare49
         [Section("State")]
 
         [SerializeField, Required] private HingeJoint2D joint = null;
-        [SerializeField, ReadOnly] private PhysicsObject interaction = null;
+        [SerializeField, ReadOnly] private IGrabbable interaction = null;
         private CursorState state = CursorState.Finger;
         #endregion
 
@@ -165,16 +165,14 @@ namespace LudumDare49
                         if (Mouse.current.leftButton.wasPressedThisFrame)
                         {
                             Transform _transform = hits[0].transform;
-                            if (_transform.TryGetComponent<PhysicsObject>(out var _object))
+                            if (_transform.TryGetComponent<IGrabbable>(out var _grab))
                             {
                                 // Grab the object.
-                                interaction = _object;
-                                _object.Grab();
+                                interaction = _grab;
+                                _grab.Grab(joint);
 
                                 state = CursorState.Grab;
                                 sprite.sprite = grabIcon;
-
-                                joint.connectedBody = _object.GetComponent<Rigidbody2D>();
 
                                 break;
                             }

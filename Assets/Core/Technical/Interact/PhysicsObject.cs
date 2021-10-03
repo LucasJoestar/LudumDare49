@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace LudumDare49
 {
-	public class PhysicsObject : MonoBehaviour
+	public class PhysicsObject : MonoBehaviour, IGrabbable
     {
         #region Global Members
         [Section("PhysicsObject")]
@@ -52,11 +52,14 @@ namespace LudumDare49
 
         // -----------------------
 
-        public virtual void Grab()
+        public virtual void Grab(HingeJoint2D _joint)
         {
+            // Set joint body.
             rigidbody.isKinematic = false;
             rigidbody.velocity = Vector2.zero;
             rigidbody.constraints = RigidbodyConstraints2D.None;
+
+            _joint.connectedBody = rigidbody;
 
             for (int i = 0; i < positionBuffer.Length; i++)
             {
