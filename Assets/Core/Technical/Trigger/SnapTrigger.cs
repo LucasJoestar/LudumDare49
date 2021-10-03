@@ -16,7 +16,7 @@ namespace LudumDare49
         [Section("SnapTrigger")]
         [SerializeField] private Vector2 snappingOffset = Vector2.zero;
 
-        public bool HasSnappedObject { get; private set; }
+        public bool HasSnappedObject { get; private set; } = false; 
         private Sequence snapSequence; 
         #endregion
 
