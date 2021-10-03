@@ -10,8 +10,10 @@ namespace LudumDare49
 {
 	public interface IGrabbable
     {
-        void Grab(HingeJoint2D _joint);
+        void Grab(PlayerCursor _cursor, HingeJoint2D _joint);
 
         void Drop();
+
+        void Shake();
     }
 }

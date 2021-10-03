@@ -48,12 +48,14 @@ namespace LudumDare49
             returningSequence.Play(); 
         }
 
-        public void Grab(HingeJoint2D _joint)
+        public void Grab(PlayerCursor _cursor, HingeJoint2D _joint)
         {
             isGrabbed = true;
             handTransform = _joint.transform;
             spriteRenderer.sprite = grabbedSprite;
         }
+
+        public void Shake(){}
 
 
         [SerializeField] private SpriteRenderer[] marks = new SpriteRenderer[5];

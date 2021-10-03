@@ -52,7 +52,7 @@ namespace LudumDare49
 
         // -----------------------
 
-        public virtual void Grab(HingeJoint2D _joint)
+        public virtual void Grab(PlayerCursor _cursor, HingeJoint2D _joint)
         {
             // Set joint body.
             rigidbody.isKinematic = false;
@@ -87,6 +87,11 @@ namespace LudumDare49
 
             SetLayer(collisionLayer);
             DoOverlap();
+        }
+
+        public virtual void Shake()
+        {
+            Debug.Log("Shake!");
         }
 
         protected virtual void Update()
