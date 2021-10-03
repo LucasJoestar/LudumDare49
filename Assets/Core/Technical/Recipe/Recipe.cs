@@ -5,6 +5,7 @@
 // ======================================================================== //
 
 using EnhancedEditor;
+using System;
 using UnityEngine;
 
 namespace LudumDare49
@@ -14,31 +15,27 @@ namespace LudumDare49
     {
         #region Content
         [Section("Recipe")]
-        [SerializeField] private ActionScore[] actionsScore = new ActionScore[] { };
-        #endregion
 
-        #region Methods
-        public int GetActionScore(ActionPotion _action)
-        {
-            for (int i = 0; i < actionsScore.Length ; i++)
-            {
-                if (_action == actionsScore[i].Action)
-                    return actionsScore[i].Score; 
-            }
-            return 0; 
-        }
+        public RecipeAction[] RecipeActions = new RecipeAction[] { };
+        public RecipeAction[] ForbiddenActions = new RecipeAction[] { };
 
+        [Space(5f)]
+
+        [SerializeField, Range(-100, 0)] public int UndesiredActionScore = -20;
         #endregion
     }
 
-    [System.Serializable]
-    public class ActionScore
+    [Serializable]
+    public class RecipeAction
     {
         [Section("Action Score")]
-        [SerializeField] private ActionPotion action = null;
+
+        [SerializeField] private string name = "Action";
+        [SerializeField] private PotionAction action = null;
         [SerializeField, Range(-100, 100)] private int score = 0;
 
-        public ActionPotion Action => action;
+        public PotionAction Action => action;
+
         public int Score => score; 
     }
 }

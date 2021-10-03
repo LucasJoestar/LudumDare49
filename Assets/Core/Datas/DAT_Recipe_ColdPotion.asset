@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2022e6cedbf04e74ba4d5f548cd989c7, type: 3}
   m_Name: DAT_Recipe_ColdPotion
   m_EditorClassIdentifier: 
-  actionsScore:
-  - action: {fileID: 11400000, guid: c414f8b743d66e740ae48003f26be2d4, type: 2}
-    score: -5
+  RecipeActions:
+  - name: Chauffer
+    action: {fileID: 11400000, guid: c414f8b743d66e740ae48003f26be2d4, type: 2}
+    score: 25
+  ForbiddenActions: []
+  UndesiredActionScore: -20
