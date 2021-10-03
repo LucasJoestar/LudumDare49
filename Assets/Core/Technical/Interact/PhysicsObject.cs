@@ -4,19 +4,21 @@
 //
 // ======================================================================== //
 
+using DG.Tweening;
 using EnhancedEditor;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace LudumDare49
 {
-	public class PhysicsObject : MonoBehaviour, IGrabbable
+    public class PhysicsObject : MonoBehaviour, IGrabbable
     {
         #region Global Members
         [Section("PhysicsObject")]
 
         [SerializeField, Required] protected new Rigidbody2D rigidbody = null;
         [SerializeField, Required] protected new Collider2D collider = null;
+        [SerializeField, Required] protected SpriteRenderer carrierPrefab = null;
 
         public Rigidbody2D Rigidbody => rigidbody;
         public Collider2D Collider => collider;
@@ -37,6 +39,20 @@ namespace LudumDare49
         [Section("Settings")]
 
         [SerializeField, Range(0f, 100f)] protected float inertiaCoef = 10f;
+        [SerializeField] protected bool doRepop = true;
+        [SerializeField, Range(1f, 10f)] private float repopSpeed = 2f;
+
+        [Space(5f)]
+
+        [SerializeField] protected Transform repopPosition = null;
+        [SerializeField] protected Transform conveyDefaultPosition = null;
+        [SerializeField] protected Transform carrierAnchor = null;
+        [SerializeField] protected Transform[] carrierDepopPositions = new Transform[] { };
+
+        [Space(5f)]
+
+        [SerializeField, ReadOnly] protected bool isRepoping = false;
+        [SerializeField, ReadOnly] protected SpriteRenderer carrier = null;
 
         // -----------------------
 
@@ -49,6 +65,7 @@ namespace LudumDare49
 
         private static Vector2[] positionBuffer = new Vector2[5];
         protected bool isGrabbed = false;
+        protected Sequence repopSequence = null;
 
         public bool IsGrabbed => isGrabbed;
 
@@ -56,6 +73,13 @@ namespace LudumDare49
 
         public virtual void Grab(PlayerCursor _cursor, HingeJoint2D _joint)
         {
+            // Stop repop.
+            if (isRepoping)
+            {
+                repopSequence.Kill(false);
+                DepopCarrier();
+            }
+
             // Set joint body.
             rigidbody.isKinematic = false;
             rigidbody.velocity = Vector2.zero;
@@ -98,7 +122,70 @@ namespace LudumDare49
 
         public virtual void Eat()
         {
-            Destroy(gameObject);
+            LoseObject();
+        }
+
+        protected virtual void LoseObject()
+        {
+            if (doRepop)
+            {
+                // Repop.
+                transform.position = conveyDefaultPosition.position;
+                Repop();
+            }
+            else
+            {
+                // Destroyed.
+                Destroy(gameObject);
+            }
+        }
+
+        protected virtual void Repop()
+        {
+            if (isRepoping)
+                return;
+
+            isRepoping = true;
+            rigidbody.isKinematic = true;
+            rigidbody.velocity = Vector2.zero;
+
+            // Carrier.
+            carrier = Instantiate(carrierPrefab);
+            carrier.transform.position = carrierAnchor.position;
+
+            Vector3 _anchorOffset = carrierAnchor.position - transform.position;
+            float _duration = Vector2.Distance(transform.position, repopPosition.position) / repopSpeed;
+
+            // Repop sequence.
+            repopSequence = DOTween.Sequence();
+
+            repopSequence.AppendInterval(1f);
+            repopSequence.Append(transform.DOMove(repopPosition.position, _duration));
+            repopSequence.Join(carrier.transform.DOMove(repopPosition.position + _anchorOffset, _duration));
+
+            carrier.flipX = Mathf.Sign(repopPosition.position.x - transform.position.x) < 0f;
+
+            repopSequence.OnComplete(() =>
+            {
+                DepopCarrier();
+
+                isRepoping = false;
+                rigidbody.isKinematic = false;
+            });
+        }
+
+        protected void DepopCarrier()
+        {
+            Vector3 _destination = carrierDepopPositions[Random.Range(0, carrierDepopPositions.Length)].position;
+            float _duration = Vector2.Distance(transform.position, _destination) / (repopSpeed * 2f);
+
+            carrier.transform.DOMove(_destination, _duration).OnComplete(() => Destroy(carrier.gameObject));
+            carrier.flipX = Mathf.Sign(_destination.x - transform.position.x) < 0f;
+        }
+
+        protected virtual void OnBecameInvisible()
+        {
+            LoseObject();
         }
 
         protected virtual void Update()
