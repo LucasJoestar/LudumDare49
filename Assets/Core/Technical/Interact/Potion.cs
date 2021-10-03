@@ -8,6 +8,7 @@ using EnhancedEditor;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio; 
 
 namespace LudumDare49
 {
@@ -67,15 +68,14 @@ namespace LudumDare49
         }
 
         // -----------------------
-
         protected virtual void OnRecipeAction(RecipeAction _recipeAction, PotionAction _potionAction)
         {
             // Update score.
             score += _recipeAction.Score;
 
             // Feedback.
-            AudioSource.PlayClipAtPoint(_potionAction.AudioClip, rigidbody.position);
-
+            //AudioSource.PlayClipAtPoint(_potionAction.AudioClip, rigidbody.position);
+            SoundManager.Instance.PlayAtPosition(_potionAction.AudioClip, rigidbody.position); 
             ParticleSystem _particle = Instantiate(_potionAction.Particles);
             _particle.transform.position = transform.position + particleOffset;
             _particle.transform.rotation = Quaternion.identity;

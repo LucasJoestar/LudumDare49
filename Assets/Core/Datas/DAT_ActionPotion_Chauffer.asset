@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e12257a1ddb98469e5e46cdf7198dc, type: 3}
   m_Name: DAT_ActionPotion_Chauffer
   m_EditorClassIdentifier: 
+  Particles: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: ee144b5ac96912346bea81be7c1db305, type: 3}
