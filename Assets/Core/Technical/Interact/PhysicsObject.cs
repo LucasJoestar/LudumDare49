@@ -5,6 +5,7 @@
 // ======================================================================== //
 
 using EnhancedEditor;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace LudumDare49
@@ -23,17 +24,29 @@ namespace LudumDare49
         [SerializeField] protected Vector3 centerOfMass = Vector3.zero;
         [SerializeField, HelpBox("Cyan", MessageType.Info)] protected Vector3 grabPoint = Vector3.zero;
 
-        [Section("Settings")]
+        [Section("Layers")]
 
         [SerializeField] protected LayerMask physicsMask = new LayerMask();
         [SerializeField] protected LayerMask triggerMask = new LayerMask();
 
-        [Space(10f)]
+        [Space(5f)]
+
+        [SerializeField] protected LayerMask collisionLayer = new LayerMask();
+        [SerializeField] protected LayerMask ignoreLayer = new LayerMask();
+
+        [Section("Settings")]
 
         [SerializeField, Range(0f, 100f)] protected float inertiaCoef = 10f;
+
+        // -----------------------
+
+        [SerializeField] protected List<Collider2D> ignoredColliders = new List<Collider2D>();
+        [SerializeField] protected ContactFilter2D contactFilter = new ContactFilter2D();
         #endregion
 
         #region Behaviour
+        [SerializeField, ReadOnly] private PhysicsTrigger trigger = null;
+
         private bool isGrabbed = false;
         private static Vector2[] positionBuffer = new Vector2[5]; 
 
@@ -41,12 +54,25 @@ namespace LudumDare49
 
         public void Grab()
         {
+            rigidbody.isKinematic = false;
             rigidbody.velocity = Vector2.zero;
+            rigidbody.constraints = RigidbodyConstraints2D.None;
+
             for (int i = 0; i < positionBuffer.Length; i++)
             {
                 positionBuffer[i] = transform.position; 
             }
-            isGrabbed = true; 
+
+            if (trigger)
+            {
+                trigger.OnGrabbed(this);
+                trigger = null;
+            }
+            
+            ResetIgnoredColliders();
+            SetLayer(ignoreLayer);
+
+            isGrabbed = true;
         }
 
         public void Drop()
@@ -56,6 +82,7 @@ namespace LudumDare49
             Vector2 _dir = positionBuffer[0] - positionBuffer[positionBuffer.Length - 1];
             rigidbody.velocity = _dir * inertiaCoef;
 
+            SetLayer(collisionLayer);
             DoOverlap();
         }
 
@@ -70,6 +97,10 @@ namespace LudumDare49
                 }
                 positionBuffer[0] = transform.position;
             }
+            else
+            {
+                UpdateIgnoredColliders();
+            }
         }
 
         private void OnDrawGizmos()
@@ -80,11 +111,25 @@ namespace LudumDare49
             Gizmos.color = Color.cyan;
             Gizmos.DrawSphere(transform.position + grabPoint, .1f);
         }
+
+        private void Start()
+        {
+            contactFilter.useLayerMask = true;
+            contactFilter.useTriggers = true;
+
+            SetLayer(collisionLayer);
+        }
+        #endregion
+
+        #region Layer
+        public void SetLayer(LayerMask _layer)
+        {
+            gameObject.layer = (int)Mathf.Log(_layer.value, 2);
+        }
         #endregion
 
         #region Collision
         protected static Collider2D[] overlapBuffer = new Collider2D[6];
-        protected ContactFilter2D contactFilter = new ContactFilter2D();
 
         // -----------------------
 
@@ -95,10 +140,13 @@ namespace LudumDare49
             for (int _i = 0; _i < _count; _i++)
             {
                 // If overlap, extract from collision.
-                ColliderDistance2D _distance = collider.Distance(overlapBuffer[_i]);
+                Collider2D _collider = overlapBuffer[_i];
+                ColliderDistance2D _distance = collider.Distance(_collider);
 
                 if (_distance.isOverlapped)
-                    rigidbody.position += _distance.normal * _distance.distance;
+                    AddIgnoredCollider(_collider);
+
+                //rigidbody.position += _distance.normal * _distance.distance;
             }
 
             // Snap test.
@@ -121,8 +169,9 @@ namespace LudumDare49
                 }
 
                 // Trigger.
-                if (overlapBuffer[_bestIndex].TryGetComponent<PhysicsTrigger>(out PhysicsTrigger _trigger))
+                if (overlapBuffer[_bestIndex].TryGetComponent(out PhysicsTrigger _trigger))
                 {
+                    trigger = _trigger;
                     _trigger.OnTrigger(this);
                 }
             }
@@ -132,6 +181,35 @@ namespace LudumDare49
         {
             contactFilter.layerMask = _mask;
             return collider.OverlapCollider(contactFilter, overlapBuffer);
+        }
+
+        protected void AddIgnoredCollider(Collider2D _collider)
+        {
+            Physics2D.IgnoreCollision(collider, _collider, true);
+            ignoredColliders.Add(_collider);
+        }
+
+        protected void UpdateIgnoredColliders()
+        {
+            for (int _i = ignoredColliders.Count; _i-- > 0;)
+            {
+                Collider2D _collider = overlapBuffer[_i];
+                ColliderDistance2D _distance = collider.Distance(_collider);
+
+                if (!_distance.isOverlapped)
+                {
+                    Physics2D.IgnoreCollision(collider, _collider, false);
+                    ignoredColliders.RemoveAt(_i);
+                }
+            }
+        }
+
+        protected void ResetIgnoredColliders()
+        {
+            foreach (Collider2D _collider in ignoredColliders)
+                Physics2D.IgnoreCollision(collider, _collider, false);
+
+            ignoredColliders.Clear();
         }
         #endregion
     }

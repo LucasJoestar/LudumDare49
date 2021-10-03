@@ -12,6 +12,8 @@ namespace LudumDare49
     {
         #region Global Members
         public abstract void OnTrigger(PhysicsObject _object);
+
+        public virtual void OnGrabbed(PhysicsObject _object) { }
         #endregion
     }
 }
