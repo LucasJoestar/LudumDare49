@@ -56,8 +56,8 @@ namespace LudumDare49
 
         // -----------------------
 
-        [SerializeField] protected List<Collider2D> ignoredColliders = new List<Collider2D>();
-        [SerializeField] protected ContactFilter2D contactFilter = new ContactFilter2D();
+        protected List<Collider2D> ignoredColliders = new List<Collider2D>();
+        protected ContactFilter2D contactFilter = new ContactFilter2D();
         #endregion
 
         #region Behaviour
@@ -86,6 +86,7 @@ namespace LudumDare49
             rigidbody.constraints = RigidbodyConstraints2D.None;
 
             _joint.connectedBody = rigidbody;
+            _joint.connectedAnchor = -grabPoint;
 
             for (int i = 0; i < positionBuffer.Length; i++)
             {

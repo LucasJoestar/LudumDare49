@@ -68,9 +68,9 @@ namespace LudumDare49
 
         [Space(5f)]
 
-        [SerializeField] private Sprite fingerIcon,
-                                        handIcon,
-                                        grabIcon = null;
+        [SerializeField] private Sprite fingerIcon = null;
+        [SerializeField] private Sprite handIcon = null;
+        [SerializeField] private Sprite grabIcon = null;
 
         [Section("Settings")]
 
