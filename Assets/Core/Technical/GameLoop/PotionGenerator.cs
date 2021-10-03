@@ -48,7 +48,7 @@ namespace LudumDare49
         {
             AudioSource.PlayClipAtPoint(alertClip, alertObject.transform.position);
             alertObject.DOGradientColor(alertGradient, alertClip.length).SetEase(alertEase);
-
+            
             potion.Activate();
         }
 
