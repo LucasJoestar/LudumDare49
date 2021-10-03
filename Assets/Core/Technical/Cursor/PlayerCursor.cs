@@ -178,7 +178,7 @@ namespace LudumDare49
 
                                 break;
                             }
-                            else if (_transform.TryGetComponent<InteractObject>(out var _interaction))
+                            else if (_transform.TryGetComponent<IInteractObject>(out var _interaction))
                             {
                                 // Interact.
                                 _interaction.Interact();

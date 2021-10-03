@@ -16,7 +16,7 @@ namespace LudumDare49
         [Section("Dispenser")]
         [SerializeField] private Transform pipeTransform = null;
         [Section("Action")]
-        [SerializeField] private ActionPotion actionPotion = null;
+        [SerializeField] private PotionAction actionPotion = null;
         [SerializeField, ReadOnly] private Potion potion = null; 
         #endregion
 
