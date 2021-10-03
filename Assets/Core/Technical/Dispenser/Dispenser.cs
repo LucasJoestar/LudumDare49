@@ -28,7 +28,7 @@ namespace LudumDare49
         public void ActivateDispenser(Transform _leverTransform)
         {
             if (!HasSnappedObject) return;
-            if (dispenserSequence != null) dispenserSequence.Kill(); 
+            if (dispenserSequence.IsActive()) dispenserSequence.Kill(); 
             dispenserSequence = DOTween.Sequence();
             dispenserSequence.Append(_leverTransform.DOLocalRotate(new Vector3(0,0,-70), .5f));
             dispenserSequence.Append(pipeTransform.DOShakePosition(1.0f, .1f, 8));

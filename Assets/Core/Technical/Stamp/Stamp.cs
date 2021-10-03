@@ -24,13 +24,13 @@ namespace LudumDare49
         [SerializeField] private Sprite grabbedSprite = null;
         [Section("package Detection")]
         [SerializeField, HelpBox("Layer mask of the package object", MessageType.Info)] private LayerMask packageLayer;
-        [SerializeField] private SortingLayer backgroundSortingLayer;
-        [SerializeField] private SortingLayer BoxSortingLayer;
         [SerializeField] private PotionAction action; 
 
         private bool isGrabbed = false;
         private Sequence returningSequence;
         private Vector2 startPosition;
+
+        public PotionAction Action => action; 
         #endregion
 
         #region Methods
@@ -41,7 +41,7 @@ namespace LudumDare49
             transform.rotation = Quaternion.identity; 
             spriteRenderer.sprite = normalSprite; 
             // Reset Stamp Position
-            if (returningSequence != null) returningSequence.Kill();
+            if (returningSequence.IsActive()) returningSequence.Kill();
             returningSequence = DOTween.Sequence();
             float _duration = Vector2.Distance(transform.position, startPosition) / returningSpeed; 
             returningSequence.Join(transform.DOMove(startPosition, _duration));
@@ -60,54 +60,56 @@ namespace LudumDare49
 
         [SerializeField] private SpriteRenderer[] marks = new SpriteRenderer[5];
         private Sequence DestroyLastStampMarkSequence = null;
-        private Sequence StampSequence = null; 
-        private void ApplyStamp(bool _isOnPackage)
+        private Sequence stampSequence = null; 
+        private void ApplyStamp(PackageBox _package = null)
         {
-            
-            if (marks[marks.Length - 1] != null)
+            bool _isOnPackage = _package != null; 
+            // ---- NORMAL BEHAVIOUR
+            if (marks[marks.Length - 1] != null && !_isOnPackage)
             {
-                if (DestroyLastStampMarkSequence != null)
+                if (DestroyLastStampMarkSequence.IsActive())
                 {
-                    DestroyLastStampMarkSequence.Complete();
+                    DestroyLastStampMarkSequence.Kill(true); 
                 }
                 DestroyLastStampMarkSequence = DOTween.Sequence();
                 SpriteRenderer _renderer = marks[marks.Length - 1].GetComponent<SpriteRenderer>();
                 DestroyLastStampMarkSequence.Join(_renderer.DOFade(0, 1.0f)).OnComplete(() => marks[0] = _renderer); 
             }
-            
 
-            if (StampSequence != null) StampSequence.Kill();
-            StampSequence = DOTween.Sequence(); 
-            StampSequence.Append(transform.DORotate(Vector3.forward * Random.value * 45 * (Random.value > .5f ? -1 : 1), .05f)) ;
-            StampSequence.Append(transform.DOScale(.5f, .1f).OnComplete(() => InstanciateStampMark(_isOnPackage))); 
-            StampSequence.Append(transform.DOScale(1.0f, .5f));
+            if (stampSequence.IsActive())
+            { 
+                stampSequence.Kill(true); 
+            }
+            stampSequence = DOTween.Sequence(); 
+            stampSequence.Append(transform.DORotate(Vector3.forward * Random.value * 45 * (Random.value > .5f ? -1 : 1), .05f)) ;
+            stampSequence.Append(transform.DOScale(.5f, .1f).OnComplete(() => InstanciateStampMark(_isOnPackage, _package))); 
+            stampSequence.Append(transform.DOScale(1.0f, .5f));
         }
 
-        private void InstanciateStampMark(bool _isOnPackage)
+        private void InstanciateStampMark(bool _isOnPackage, PackageBox _package = null)
         {
-            if(_isOnPackage)
+            if (_isOnPackage)
             {
-                /*
-                PotionPackage _package; 
-                if(hits[0].transform.TryGetComponent<PotionPackage>(out _package))
-                {
-                    marks[0].GetComponent<SortingGroup>().sortingLayerID = BoxSortingLayer.id; 
-                    _package.ApplyAction(action);
-                }
-                */
+                SpriteRenderer _renderer = Instantiate(marks[0], transform.position, transform.rotation, _package.transform).GetComponent<SpriteRenderer>();
+                _renderer.GetComponent<SortingGroup>().sortingLayerID = _package.GetComponent<SortingGroup>().sortingLayerID;
+                _renderer.color = Color.white;
+                _renderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+                _package.StampPackage(action);
             }
-            marks[0].GetComponent<SortingGroup>().sortingLayerID = backgroundSortingLayer.id;
-            marks[0].transform.position = transform.position;
-            marks[0].transform.rotation = transform.rotation;
-            marks[0].color = Color.white;
+            else
+            { 
+                marks[0].transform.position = transform.position;
+                marks[0].transform.rotation = transform.rotation;
+                marks[0].color = Color.white;
 
-            for (int i = marks.Length; i-- > 1;)
-            {
-                marks[i] = marks[i - 1];
+                for (int i = marks.Length; i-- > 1;)
+                {
+                    marks[i] = marks[i - 1];
+                }
             }
         }
 
-        private static RaycastHit2D[] hits = new RaycastHit2D[1]; 
+        private static RaycastHit2D[] hits = new RaycastHit2D[5]; 
         private void Update()
         {
             // Update Stamp position if is held
@@ -119,7 +121,19 @@ namespace LudumDare49
                     // Get Box object.
                     int _amount = Physics2D.RaycastNonAlloc(transform.position, Vector2.zero, hits, packageLayer);
 
-                    ApplyStamp(_amount > 0); 
+                    if (_amount > 0)
+                    {
+                        PackageBox _packageBox; 
+                        for (int i = 0; i < _amount; i++)
+                        {
+                            if(hits[i].transform.TryGetComponent<PackageBox>(out _packageBox))
+                            {
+                                ApplyStamp(_packageBox);
+                                return; 
+                            }
+                        }
+                    }
+                    ApplyStamp();
                 }
             }
         }
