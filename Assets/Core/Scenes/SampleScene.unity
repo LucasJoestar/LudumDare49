@@ -466,7 +466,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 03/10/2021 15:16:13
+  lastModifiedDate: 03/10/2021 16:36:33
   IsPersistent: 0
 --- !u!114 &854864683
 MonoBehaviour:
@@ -483,6 +483,7 @@ MonoBehaviour:
   rigidbody: {fileID: 748718383}
   snatch: {fileID: 2047398441}
   snatchAngle: 35.9
+  cursorCoef: 3
   wobbleForce: 29.3
   destroyOnSnatched: 0
   isBeingSnatched: 0
@@ -1153,7 +1154,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 03/10/2021 15:16:13
+  lastModifiedDate: 03/10/2021 16:36:33
   IsPersistent: 0
 --- !u!114 &1526972616
 MonoBehaviour:
@@ -1170,6 +1171,7 @@ MonoBehaviour:
   rigidbody: {fileID: 748718383}
   snatch: {fileID: 2047398441}
   snatchAngle: 35.9
+  cursorCoef: 3
   wobbleForce: 29.3
   destroyOnSnatched: 0
   isBeingSnatched: 0
@@ -1429,6 +1431,7 @@ MonoBehaviour:
   handIcon: {fileID: -7040460436098977408, guid: ba101b8b77b5cac4aa0478c88eb8ca85, type: 3}
   grabIcon: {fileID: 8589531035368735815, guid: ba101b8b77b5cac4aa0478c88eb8ca85, type: 3}
   speed: 6000
+  currentSpeed: 0
   layer:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1552,7 +1555,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 03/10/2021 15:16:13
+  lastModifiedDate: 03/10/2021 16:36:33
   IsPersistent: 0
 --- !u!114 &1996663843
 MonoBehaviour:
@@ -1569,6 +1572,7 @@ MonoBehaviour:
   rigidbody: {fileID: 748718383}
   snatch: {fileID: 2047398441}
   snatchAngle: 35.9
+  cursorCoef: 3
   wobbleForce: 29.3
   destroyOnSnatched: 0
   isBeingSnatched: 0

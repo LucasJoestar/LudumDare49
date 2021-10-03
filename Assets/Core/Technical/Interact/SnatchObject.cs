@@ -16,11 +16,13 @@ namespace LudumDare49
         [Section("Snatch Object")]
 
         [SerializeField] protected new Rigidbody2D rigidbody = null;
-        [SerializeField] protected new PhysicsObject snatch = null;
+        [SerializeField] protected PhysicsObject snatch = null;
 
         [Space(5)]
 
         [SerializeField, Range(0f, 90f)] protected float snatchAngle = 1f;
+        [SerializeField, Range(0f, 100f)] protected float cursorCoef = 1f;
+
         [SerializeField, Range(0f, 100f)] protected float wobbleForce = 1f;
         [SerializeField] protected bool destroyOnSnatched = false;
 
@@ -52,6 +54,8 @@ namespace LudumDare49
         {
             handTransform = null;
             isBeingSnatched = false;
+
+            cursor.RemoveSpeedCoef(this);
 
             // Wobble.
             Wobble();
@@ -101,9 +105,16 @@ namespace LudumDare49
                 if (_angle > 180f)
                     _angle -= 360f;
 
-                if (Mathf.Abs(_angle) > snatchAngle)
+                _angle = Mathf.Abs(_angle);
+                if (_angle >= snatchAngle)
                 {
                     Snatch();
+                }
+                else
+                {
+                    // Cursor coef.
+                    float _coef = 1f / (Mathf.Max(1, _angle) * cursorCoef);
+                    cursor.SetSpeedCoef(this, _coef);
                 }
 
                 buffer = _pos;

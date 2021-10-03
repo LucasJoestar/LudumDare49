@@ -7,10 +7,13 @@
 using EnhancedEditor;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+
+using Object = UnityEngine.Object;
 
 namespace LudumDare49
 {
@@ -70,6 +73,12 @@ namespace LudumDare49
         [Section("Settings")]
 
         [SerializeField, Range(0f, 10000f)] private float speed = 3000f;
+        [SerializeField, ReadOnly] private float currentSpeed = 0f;
+
+        private Dictionary<Object, float> speedCoefs = new Dictionary<Object, float>();
+
+        [Space(5f)]
+
         [SerializeField] private LayerMask layer = new LayerMask();
 
         [Section("State")]
@@ -77,6 +86,33 @@ namespace LudumDare49
         [SerializeField, Required] private HingeJoint2D joint = null;
         [SerializeField, ReadOnly] private IGrabbable interaction = null;
         private CursorState state = CursorState.Finger;
+        #endregion
+
+        #region Speed
+        public void SetSpeedCoef(Object _object, float _coef)
+        {
+            if (speedCoefs.ContainsKey(_object))
+            {
+                currentSpeed /= speedCoefs[_object];
+
+                speedCoefs[_object] = _coef;
+                currentSpeed *= _coef;
+            }
+            else
+            {
+                speedCoefs.Add(_object, _coef);
+                currentSpeed *= _coef;
+            }
+        }
+
+        public void RemoveSpeedCoef(Object _object)
+        {
+            if (speedCoefs.ContainsKey(_object))
+            {
+                currentSpeed /= speedCoefs[_object];
+                speedCoefs.Remove(_object);
+            }
+        }
         #endregion
 
         #region Mono Behaviour
@@ -107,7 +143,7 @@ namespace LudumDare49
             _mousePosition.y = Mathf.Clamp(_mousePosition.y, _offset.y, canvasTransform.sizeDelta.y - _offset.y);
 
             rectTransform.anchoredPosition = _mousePosition
-                                           = Vector2.MoveTowards(rectTransform.anchoredPosition, _mousePosition, Time.deltaTime * speed);
+                                           = Vector2.MoveTowards(rectTransform.anchoredPosition, _mousePosition, Time.deltaTime * currentSpeed);
 
 
             _mousePosition /= canvasTransform.sizeDelta;
@@ -202,6 +238,11 @@ namespace LudumDare49
                 default:
                     break;
             }
+        }
+
+        private void Start()
+        {
+            currentSpeed = speed;
         }
 
         public void SetInteraction(IGrabbable _interaction)
