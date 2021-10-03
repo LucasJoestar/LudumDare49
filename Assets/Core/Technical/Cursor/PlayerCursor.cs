@@ -58,6 +58,8 @@ namespace LudumDare49
 
         [SerializeField, Required] private Transform worldTransform = null;
 
+        public Transform WorldTransform => worldTransform;
+
         [Space(5f)]
 
         [SerializeField, Required] private RectTransform canvasTransform = null;
@@ -99,7 +101,10 @@ namespace LudumDare49
 
         [SerializeField, Required] private HingeJoint2D joint = null;
         [SerializeField, ReadOnly] private IGrabbable interaction = null;
+
         private CursorState state = CursorState.Finger;
+
+        public CursorState State => state;
         #endregion
 
         #region Speed

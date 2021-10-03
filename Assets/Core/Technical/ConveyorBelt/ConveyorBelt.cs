@@ -64,13 +64,20 @@ namespace LudumDare49
 
             // Audio.
             audio.Play();
+            audio.DOFade(1f, .2f);
+
             sequence.OnComplete(() =>
             {
-                audio.Stop();
+                audio.DOFade(0f, .2f).OnComplete(audio.Stop);
                 OnEndRoll?.Invoke();
 
                 Debug.Log("Stop Roll");
             });
+        }
+
+        private void Start()
+        {
+            audio.volume = 0f;
         }
         #endregion
     }

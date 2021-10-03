@@ -47,8 +47,10 @@ namespace LudumDare49
         #region Behaviour
         [SerializeField, ReadOnly] protected PhysicsTrigger trigger = null;
 
+        private static Vector2[] positionBuffer = new Vector2[5];
         protected bool isGrabbed = false;
-        private static Vector2[] positionBuffer = new Vector2[5]; 
+
+        public bool IsGrabbed => isGrabbed;
 
         // -----------------------
 
@@ -92,6 +94,11 @@ namespace LudumDare49
         public virtual void Shake()
         {
             Debug.Log("Shake!");
+        }
+
+        public virtual void Eat()
+        {
+            Destroy(gameObject);
         }
 
         protected virtual void Update()
