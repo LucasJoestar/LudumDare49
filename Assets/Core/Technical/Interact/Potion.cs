@@ -22,8 +22,6 @@ namespace LudumDare49
 
         #region Methods
         public void ApplyAction(ActionPotion _action) => score += potionRecipe.GetActionScore(_action);
-
-
         #endregion
     }
 }
