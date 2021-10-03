@@ -10,7 +10,7 @@ using DG.Tweening;
 
 namespace LudumDare49
 {
-    public class SnapTrigger : PhysicsTrigger
+    public abstract class SnapTrigger : PhysicsTrigger
     {
         #region Global Members
         [Section("SnapTrigger")]
@@ -34,6 +34,9 @@ namespace LudumDare49
             snapSequence.Join(_object.transform.DORotate(Vector3.zero, .25f).SetEase(Ease.OutCirc));
             snapSequence.Play(); 
         }
+
+        public override void OnGrabbed(PhysicsObject _object) => HasSnappedObject = false;
+
 
         private void OnDrawGizmos()
         {

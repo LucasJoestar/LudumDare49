@@ -6,18 +6,19 @@
 
 using EnhancedEditor;
 using UnityEngine;
-using UnityEngine.Events; 
+using DG.Tweening; 
 
 namespace LudumDare49
 {
-	public interface IInteractObject
+	public class Lever : MonoBehaviour, IInteractObject
     {
         #region Global Members
-        //[Section("InteractObject")]
+        [Section("Lever")]
+        [SerializeField] private Dispenser linkedDispenser = null;
         #endregion
 
-        #region Behaviour
-        public void Interact();
+        #region Methods
+        void IInteractObject.Interact() => linkedDispenser.ActivateDispenser(transform);
         #endregion
     }
 }
