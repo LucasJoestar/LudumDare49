@@ -37,7 +37,7 @@ namespace LudumDare49
         #endregion
 
         #region Behaviour
-        public void Grab(PlayerCursor _cursor, HingeJoint2D _joint)
+        public virtual void Grab(PlayerCursor _cursor, HingeJoint2D _joint)
         {
             cursor = _cursor;
             handTransform = _joint.transform;
@@ -50,7 +50,7 @@ namespace LudumDare49
             buffer = handTransform.position;
         }
 
-        public void Drop()
+        public virtual void Drop()
         {
             handTransform = null;
             isBeingSnatched = false;
@@ -61,12 +61,12 @@ namespace LudumDare49
             Wobble();
         }
 
-        public void Shake()
+        public virtual void Shake()
         {
             Debug.Log("Nothing happens.");
         }
 
-        void Wobble()
+        protected virtual void Wobble()
         {
             Vector3 _angles = rigidbody.transform.rotation.eulerAngles;
             float _rotation = Mathf.Abs(_angles.z);
@@ -82,7 +82,7 @@ namespace LudumDare49
             }
         }
 
-        public void Snatch()
+        public virtual void Snatch()
         {
             PhysicsObject _snatch = Instantiate(snatch);
             _snatch.transform.position = transform.position;

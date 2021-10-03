@@ -89,7 +89,7 @@ namespace LudumDare49
             DoOverlap();
         }
 
-        public void Shake()
+        public virtual void Shake()
         {
             Debug.Log("Shake!");
         }
