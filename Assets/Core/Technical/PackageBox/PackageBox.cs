@@ -35,9 +35,10 @@ namespace LudumDare49
             snapSequence.Join(_object.transform.DORotate(Vector3.zero, 0.01f).SetEase(Ease.OutCirc));
 
             snapSequence.Append(_object.transform.DOMove((Vector2)transform.position + waypoint, .8f).OnComplete(() => SetMaskInteraction(_object)));
-            snapSequence.Append(wayPointTransform.DORotate(Vector3.back * 180, .125f).SetLoops(4, LoopType.Incremental).SetEase(Ease.InOutCirc));
+            snapSequence.Append(wayPointTransform.DORotate(Vector3.back * 180, .125f).SetLoops(4, LoopType.Incremental).SetEase(Ease.InOutSine));
+            snapSequence.Join(wayPointTransform.transform.DOScale(1.5f, .125f).SetLoops(4, LoopType.Yoyo).SetEase(Ease.InOutSine));
 
-            snapSequence.Append(wayPointTransform.DOMove((Vector2)transform.position + snappingOffset, .25f).SetEase(Ease.OutCirc).OnComplete(() => SetObject(_object)));
+            snapSequence.Append(wayPointTransform.DOMove((Vector2)transform.position + snappingOffset, .25f).OnComplete(() => SetObject(_object)));
             snapSequence.Play();
         }
 
