@@ -15,8 +15,8 @@ TagManager:
   - Limit
   - Snap
   - Potion
-  - 
-  - 
+  - Stamp
+  - Package
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3467499223
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

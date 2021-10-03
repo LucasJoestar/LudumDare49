@@ -14,10 +14,10 @@ namespace LudumDare49
     {
         #region Global Members
         [Section("SnapTrigger")]
-        [SerializeField] private Vector2 snappingOffset = Vector2.zero;
+        [SerializeField] protected Vector2 snappingOffset = Vector2.zero;
 
-        public bool HasSnappedObject { get; private set; } = false; 
-        private Sequence snapSequence; 
+        public bool HasSnappedObject { get; protected set; } = false; 
+        protected Sequence snapSequence; 
         #endregion
 
         #region Methods
@@ -38,7 +38,7 @@ namespace LudumDare49
         public override void OnGrabbed(PhysicsObject _object) => HasSnappedObject = false;
 
 
-        private void OnDrawGizmos()
+        protected virtual void OnDrawGizmos()
         {
             Gizmos.color = Color.cyan;
             Gizmos.DrawSphere((Vector2)transform.position + snappingOffset, .1f); 
