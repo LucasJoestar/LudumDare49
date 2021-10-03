@@ -19,6 +19,8 @@ namespace LudumDare49
         [SerializeField, ReadOnly] private Queue<PotionAction> pendingActions = new Queue<PotionAction>();
         [SerializeField] private Vector2 waypoint = Vector2.zero;
         [SerializeField] private Transform wayPointTransform;
+        [SerializeField] private AnimationCurve movementCurve = new AnimationCurve(); 
+        [SerializeField] private AnimationCurve rotationCurve = new AnimationCurve(); 
         #endregion
 
         #region Methods
@@ -32,12 +34,13 @@ namespace LudumDare49
             if (snapSequence != null) snapSequence.Complete();
             snapSequence = DOTween.Sequence();
 
-            snapSequence.Join(_object.transform.DORotate(Vector3.zero, 0.01f).SetEase(Ease.OutCirc));
+            snapSequence.Join(_object.transform.DORotate(Vector3.zero, 0.01f).SetEase(movementCurve));
 
             snapSequence.Append(_object.transform.DOMove((Vector2)transform.position + waypoint, .8f).OnComplete(() => SetMaskInteraction(_object)));
-            snapSequence.Append(wayPointTransform.DORotate(Vector3.back * 180, .125f).SetLoops(4, LoopType.Incremental).SetEase(Ease.InOutCirc));
+            snapSequence.Append(wayPointTransform.DORotate(Vector3.back * 180, .15f).SetLoops(8, LoopType.Incremental).SetEase(rotationCurve)); 
+            //snapSequence.Join(wayPointTransform.transform.DOScale(1.5f, .125f).SetLoops(4, LoopType.Yoyo));
 
-            snapSequence.Append(wayPointTransform.DOMove((Vector2)transform.position + snappingOffset, .25f).SetEase(Ease.OutCirc).OnComplete(() => SetObject(_object)));
+            snapSequence.Append(wayPointTransform.DOMove((Vector2)transform.position + snappingOffset, .25f).OnComplete(() => SetObject(_object)));
             snapSequence.Play();
         }
 
