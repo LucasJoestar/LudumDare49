@@ -13,20 +13,11 @@ namespace LudumDare49
     {
         #region Global Members
         [Section("Potion")]
+
         [SerializeField] private Recipe potionRecipe = null;
         [SerializeField, ReadOnly] private int score = 0;
-        public int Score => score;
 
-        [Section("Physics")]
-
-        [SerializeField] private new Rigidbody2D rigidbody = null;
-        [SerializeField] private new Collider2D collider = null;
-
-        [SerializeField] private LayerMask physicsLayer = new LayerMask();
-        [SerializeField] private LayerMask snapLayer = new LayerMask();
-        [SerializeField] private LayerMask potionLayer = new LayerMask();
-
-        
+        public int Score => score;        
         #endregion
 
         #region Methods

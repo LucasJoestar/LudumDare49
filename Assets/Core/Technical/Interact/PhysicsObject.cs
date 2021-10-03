@@ -17,6 +17,9 @@ namespace LudumDare49
         [SerializeField, Required] protected new Rigidbody2D rigidbody = null;
         [SerializeField, Required] protected new Collider2D collider = null;
 
+        public Rigidbody2D Rigidbody => rigidbody;
+        public Collider2D Collider => collider;
+
         [SerializeField] protected Vector3 centerOfMass = Vector3.zero;
         [SerializeField, HelpBox("Cyan", MessageType.Info)] protected Vector3 grabPoint = Vector3.zero;
 
@@ -58,7 +61,7 @@ namespace LudumDare49
 
         private void Update()
         {
-            if(isGrabbed)
+            if (isGrabbed)
             {
                 if ((Vector2)transform.position == positionBuffer[0]) return;
                 for (int i = positionBuffer.Length; i--> 1;) 
