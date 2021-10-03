@@ -17,7 +17,10 @@ namespace LudumDare49
         [SerializeField] private Transform pipeTransform = null;
         [Section("Action")]
         [SerializeField] private PotionAction actionPotion = null;
-        [SerializeField, ReadOnly] private Potion potion = null; 
+        [SerializeField, ReadOnly] private Potion potion = null;
+        [Section("Feedback")]
+        [SerializeField] private ParticleSystem particle;
+        [SerializeField] private AudioClip audioClip; 
         #endregion
 
         #region Methods
