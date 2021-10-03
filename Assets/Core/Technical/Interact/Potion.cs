@@ -56,6 +56,16 @@ namespace LudumDare49
             }
         }
 
+        public virtual void Activate()
+        {
+
+        }
+
+        public virtual void Deactivate()
+        {
+
+        }
+
         // -----------------------
 
         protected virtual void OnRecipeAction(RecipeAction _recipeAction, PotionAction _potionAction)
