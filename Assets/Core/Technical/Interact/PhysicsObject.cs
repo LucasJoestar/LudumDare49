@@ -86,7 +86,7 @@ namespace LudumDare49
             rigidbody.constraints = RigidbodyConstraints2D.None;
 
             _joint.connectedBody = rigidbody;
-            _joint.connectedAnchor = -grabPoint;
+            _joint.connectedAnchor = grabPoint;
 
             for (int i = 0; i < positionBuffer.Length; i++)
             {

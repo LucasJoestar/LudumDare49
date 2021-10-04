@@ -935,6 +935,107 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464dbbf5bd7a1e34d919f0f0dbf3049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1891977561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1891977562}
+  - component: {fileID: 1891977564}
+  - component: {fileID: 1891977563}
+  m_Layer: 9
+  m_Name: Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1891977562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891977561}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.21, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 609918080775864685}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1891977563
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891977561}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -1061600653231999548, guid: b9e2931215399a2439d7a4b98b254e8a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.68, y: 2.600711}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1891977564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891977561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877eb788512e6904897eca70a462a2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comment: 
+  Tags:
+    Tags: []
+  lastModifiedBy: Lucas
+  lastModifiedDate: 04/10/2021 02:51:09
+  IsPersistent: 0
 --- !u!1 &1996663839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,6 +1408,167 @@ MonoBehaviour:
   isRepoping: 0
   carrier: {fileID: 0}
   trigger: {fileID: 0}
+--- !u!60 &609918080775864672
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609918080775864674}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.68, y: 2.600711}
+    newSize: {x: 1.68, y: 2.600711}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.44413123, y: 2.6551557}
+      - {x: -0.38618636, y: 2.694984}
+      - {x: -0.18193997, y: 1.6647543}
+      - {x: -1.2690276, y: -0.1491083}
+      - {x: 0.07845724, y: -0.1438601}
+      - {x: 1.30942, y: -0.09150171}
+      - {x: 0.19258296, y: 1.6791992}
+--- !u!50 &609918080775864673
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609918080775864674}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &609918080775864674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 609918080775864685}
+  - component: {fileID: 609918080775864684}
+  - component: {fileID: 609918080775864676}
+  - component: {fileID: 609918080775864673}
+  - component: {fileID: 609918080775864672}
+  - component: {fileID: 609918080775864675}
+  m_Layer: 9
+  m_Name: Potion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!210 &609918080775864675
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609918080775864674}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+--- !u!114 &609918080775864676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609918080775864674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce6c3a2213bae6248900224b211351a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 609918080775864673}
+  collider: {fileID: 609918080775864672}
+  carrierPrefab: {fileID: 0}
+  centerOfMass: {x: 0, y: 0, z: 0}
+  grabPoint: {x: 0, y: 1.52, z: 0}
+  physicsMask:
+    serializedVersion: 2
+    m_Bits: 4225
+  triggerMask:
+    serializedVersion: 2
+    m_Bits: 149760
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  inertiaCoef: 3
+  doRepop: 0
+  repopSpeed: 2
+  repopPosition: {fileID: 0}
+  conveyDefaultPosition: {fileID: 0}
+  carrierAnchor: {fileID: 0}
+  carrierDepopPositions: []
+  isRepoping: 0
+  carrier: {fileID: 0}
+  trigger: {fileID: 0}
+  recipe: {fileID: 11400000, guid: b54f29f0ba40df9429f317608ddfd83a, type: 2}
+  score: 0
+  remainingActions: []
+  particleOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &609918080775864684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609918080775864674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877eb788512e6904897eca70a462a2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comment: 
+  Tags:
+    Tags: []
+  lastModifiedBy: Lucas
+  lastModifiedDate: 04/10/2021 02:52:33
+  IsPersistent: 0
+--- !u!4 &609918080775864685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609918080775864674}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.41, y: 1.86, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_Children:
+  - {fileID: 1891977562}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1210500855607147874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1517,18 +1779,10 @@ PrefabInstance:
       propertyPath: cursor
       value: 
       objectReference: {fileID: 1807944358}
-    - target: {fileID: 304477542, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
-      propertyPath: lastModifiedDate
-      value: 04/10/2021 02:14:50
-      objectReference: {fileID: 0}
-    - target: {fileID: 463976260, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
-      propertyPath: lastModifiedDate
-      value: 04/10/2021 02:14:50
-      objectReference: {fileID: 0}
-    - target: {fileID: 872758622, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
-      propertyPath: lastModifiedDate
-      value: 04/10/2021 02:14:50
-      objectReference: {fileID: 0}
+    - target: {fileID: 440252861, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: potions.Array.data[0]
+      value: 
+      objectReference: {fileID: 609918080775864676}
     - target: {fileID: 7695784675419628292, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
       propertyPath: m_RootOrder
       value: 8

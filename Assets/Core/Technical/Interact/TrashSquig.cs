@@ -155,8 +155,6 @@ namespace LudumDare49
 
             void Hide(Sprite _sprite)
             {
-                Debug.Log("Hide");
-
                 // Kill sequence.
                 if (sequence.IsActive())
                     sequence.Kill(false);
