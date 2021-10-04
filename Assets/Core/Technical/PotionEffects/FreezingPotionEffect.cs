@@ -54,6 +54,16 @@ namespace LudumDare49
             //_cursor.SetSpeedCoef()
         }
 
+        public override void OnCollideObject(Collider2D _collider)
+        {
+
+        }
+
+        public override void OnRecipeAction()
+        {
+
+        }
+
         public override void OnShake()
         {
             throw new System.NotImplementedException();

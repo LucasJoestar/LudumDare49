@@ -63,6 +63,8 @@ namespace LudumDare49
                 // Recipe action.
                 OnRecipeAction(_match, _action);
                 SoundManager.Instance.PlayAtPosition(successClip, transform.position);
+
+                if (effect != null) effect.OnRecipeAction();
             }
             else
             {
@@ -110,10 +112,22 @@ namespace LudumDare49
             SoundManager.Instance.PlayAtPosition(dropClip, transform.position);
         }
 
+        protected override void OnCollideObject(Collider2D _collider)
+        {
+            base.OnCollideObject(_collider);
+            if (effect != null) effect.OnCollideObject(_collider);
+        }
+
         protected override void OnBrutalCollision(Vector3 _velocity)
         {
             base.OnBrutalCollision(_velocity);
             LoseObject(false);
+        }
+
+        protected override void OnDestroyed()
+        {
+            base.OnDestroyed();
+            if (effect != null) effect.OnCrashPotion();
         }
 
         public override void Shake()

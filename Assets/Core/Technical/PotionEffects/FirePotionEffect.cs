@@ -66,6 +66,16 @@ namespace LudumDare49
             dropSequence.OnComplete(DropPotionFromBurn); 
         }
 
+        public override void OnCollideObject(Collider2D _collider)
+        {
+
+        }
+
+        public override void OnRecipeAction()
+        {
+
+        }
+
         public override void OnShake()
         {
             // potion.Crush();

@@ -9,11 +9,58 @@ using UnityEngine;
 
 namespace LudumDare49
 {
-	public class HairyPotionEffect : MonoBehaviour
+    public class HairyPotionEffect : PotionEffect
     {
         #region Global Members
-		//[Section("HairyPotionEffect")]
-		
+        //[Section("HairyPotionEffect")]
+
+        #endregion
+
+        #region Behaviour
+        public override void OnCollideObject(Collider2D _collider)
+        {
+            
+        }
+
+        public override void OnCrashPotion()
+        {
+            
+        }
+
+        public override void OnDropPotion()
+        {
+            
+        }
+
+        public override void OnForbiddenAction()
+        {
+            
+        }
+
+        public override void OnGrabPotion(PlayerCursor _cursor)
+        {
+            
+        }
+
+        public override void OnRecipeAction()
+        {
+            
+        }
+
+        public override void OnShake()
+        {
+            
+        }
+
+        public override void OnStart()
+        {
+            
+        }
+
+        public override void OnTimeInterval()
+        {
+            
+        }
         #endregion
     }
 }
