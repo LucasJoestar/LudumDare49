@@ -99,7 +99,9 @@ namespace LudumDare49
                 Destroy(this);
                 return;
             }
-            Instance = this; 
+            Instance = this;
+
+            currentGroup = mainMixer;
         }
         #endregion
     }
