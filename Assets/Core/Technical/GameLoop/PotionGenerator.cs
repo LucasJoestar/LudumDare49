@@ -45,6 +45,7 @@ namespace LudumDare49
         #region Behaviour
         private Potion potion = null;
         private bool canGenerate = true;
+        private bool isEnabled = false;
 
         // -----------------------
 
@@ -81,6 +82,9 @@ namespace LudumDare49
 
         private void Update()
         {
+            if (!isEnabled)
+                return;
+
             timer -= Time.deltaTime;
             if ((timer < 0f) && canGenerate)
             {
@@ -96,6 +100,8 @@ namespace LudumDare49
         private void Start()
         {
             belt.OnEndRoll += OnEndRoll;
+            RecipeBook.OnCloseBook += () => isEnabled = true;
+
             Potion.OnNoPotion += () =>
             {
                 if (canGenerate)

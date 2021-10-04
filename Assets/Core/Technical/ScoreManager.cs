@@ -23,7 +23,7 @@ namespace LudumDare49
 
         public void IncrementScore(int _score)
         {
-            score += score;
+            score += _score;
             text.text = score.ToString();
         }
 
