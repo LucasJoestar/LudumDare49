@@ -49,7 +49,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 11:24:02
+  lastModifiedDate: 04/10/2021 23:12:49
   IsPersistent: 0
 --- !u!114 &7497298006099101542
 MonoBehaviour:
@@ -64,6 +64,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potion: {fileID: 5608044127364552561}
+  fx: {fileID: 8284361641193036256, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
+  fxClip: {fileID: 8300000, guid: 4ba83454aee076747ae89d7dc7d448a7, type: 3}
 --- !u!61 &5479522254410713991
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -295,10 +297,8 @@ MonoBehaviour:
   score: 0
   remainingActions: []
   grabClip: {fileID: 8300000, guid: 1e9ccc78592ab1b41822e92b9e8c2a93, type: 3}
-  dropClip: {fileID: 8300000, guid: 4eade7ad8bde04d4c9db45ebe907925c, type: 3}
+  dropClip: {fileID: 8300000, guid: 0a38a9d9e1612a540953d1c16f77c061, type: 3}
   mixClip: {fileID: 8300000, guid: b006408b0466ba44c8e5102d609d705a, type: 3}
-  successClip: {fileID: 8300000, guid: b10f5178eb167c243aa5032af9d9c7c2, type: 3}
-  failureClip: {fileID: 8300000, guid: 2d5dc2f2dffc36a428ca0949492c6a35, type: 3}
   bubbleFX: {fileID: 1037309486743709533, guid: cbc4fb4ac846e7f4fb7f0c446ea78cb9, type: 3}
   particleOffset: {x: 0, y: 0, z: 0}
   effect: {fileID: 796445538470318154}

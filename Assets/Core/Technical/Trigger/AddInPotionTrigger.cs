@@ -31,10 +31,10 @@ namespace LudumDare49
                 if (fx != null)
                 {
                     var _fx = Instantiate(fx);
-                    _fx.transform.position = transform.position;
+                    _fx.transform.position = _object.transform.position;
                     _fx.transform.rotation = Quaternion.identity;
 
-                    SoundManager.Instance.PlayAtPosition(fxClip, transform.position);
+                    SoundManager.Instance.PlayAtPosition(fxClip, _object.transform.position);
                 }
 
                 // Disappear.

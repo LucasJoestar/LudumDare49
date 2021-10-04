@@ -108,6 +108,13 @@ namespace LudumDare49
                     break;
 
                 case SquigState.Target:
+                    if (target == null)
+                    {
+                        target = null;
+                        state = SquigState.Wait;
+                        return;
+                    }
+
                     if (target.IsGrabbed)
                     {
                         // Wait.

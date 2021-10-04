@@ -15,7 +15,7 @@ namespace LudumDare49
         #region Global Members
         [Section("FreezingPotionEffect")]
         [SerializeField, Range(.1f, 1.0f)] private float freezingSpeedCoeff = .75f;
-        [SerializeField] private AudioClip freezingAudioClip = null;
+        [SerializeField, Required] private AudioSource source = null;
         [SerializeField] private SpriteRenderer freezingEffect = null;
         [SerializeField, Range(.1f, 2.0f)] private float transitionDuration = .5f;
         private Sequence transitionSequence = null;
@@ -35,7 +35,10 @@ namespace LudumDare49
             transitionSequence = DOTween.Sequence();
             transitionSequence.Join(freezingEffect.DOFade(0.0f, transitionDuration));
             // reset cursor speed
-            cursor.RemoveSpeedCoef(this); 
+            cursor.RemoveSpeedCoef(this);
+
+            source.DOKill();
+            source.DOFade(0f, .5f).OnComplete(() => source.Stop());
         }
 
         public override void OnForbiddenAction()
@@ -51,7 +54,11 @@ namespace LudumDare49
             transitionSequence.Join(freezingEffect.DOFade(1.0f, transitionDuration));
             //Change Cursor Speed
             cursor = _cursor;
-           _cursor.SetSpeedCoef(this, 5f);
+           _cursor.SetSpeedCoef(this, freezingSpeedCoeff);
+
+            source.DOKill();
+            source.DOFade(1f, .5f);
+            source.Play();
         }
 
         public override void OnCollideObject(Collider2D _collider, Vector2 _point)

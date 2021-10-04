@@ -1046,6 +1046,10 @@ PrefabInstance:
       value: 04/10/2021 22:46:18
       objectReference: {fileID: 0}
     - target: {fileID: 6080647811584796497, guid: b610a8c837c76894b9e06ff66bfab3ff, type: 3}
+      propertyPath: shakeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 67cb4c07dcfa2ff4199d4dfa7ca2f366, type: 3}
+    - target: {fileID: 6080647811584796497, guid: b610a8c837c76894b9e06ff66bfab3ff, type: 3}
       propertyPath: carrierDepopPositions.Array.data[0]
       value: 
       objectReference: {fileID: 7695784675581596674}

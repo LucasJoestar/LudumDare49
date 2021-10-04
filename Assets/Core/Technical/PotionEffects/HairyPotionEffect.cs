@@ -4,6 +4,7 @@
 //
 // ======================================================================== //
 
+using DG.Tweening;
 using EnhancedEditor;
 using UnityEngine;
 
@@ -16,9 +17,9 @@ namespace LudumDare49
 
         [SerializeField, Required] private GameObject hairPrefab = null;
         [SerializeField, Required] private AudioClip hairGrow = null;
-        [SerializeField, Required] private new Collider2D collider = null;
+        [SerializeField, Required] private AudioSource source = null;
 
-        private int spawnRate = 3;
+        private int spawnRate = 2;
         private int spawnCount = 0;
         #endregion
 
@@ -46,7 +47,8 @@ namespace LudumDare49
 
         public override void OnDropPotion()
         {
-            
+            source.DOKill();
+            source.DOFade(0f, .5f).OnComplete(() => source.Stop());
         }
 
         public override void OnForbiddenAction()
@@ -56,7 +58,9 @@ namespace LudumDare49
 
         public override void OnGrabPotion(PlayerCursor _cursor)
         {
-            
+            source.DOKill();
+            source.DOFade(1f, .5f);
+            source.Play();
         }
 
         public override void OnRecipeAction()
