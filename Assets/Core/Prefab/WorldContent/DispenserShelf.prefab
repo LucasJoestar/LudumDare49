@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 2067973942813106887}
   - component: {fileID: 2067973942813106880}
   m_Layer: 12
-  m_Name: DeskCollider
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -898,7 +898,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 00:56:06
+  lastModifiedDate: 04/10/2021 10:36:04
   IsPersistent: 0
 --- !u!60 &2067973942813106880
 PolygonCollider2D:
@@ -1415,6 +1415,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5506959157037266999}
     m_Modifications:
+    - target: {fileID: 2516728910545728076, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:37:28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2516728910545728081, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2516728911840802572, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1477,6 +1485,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5506959157037266999}
     m_Modifications:
+    - target: {fileID: 6337602228212238304, guid: 82a90ce660487c345ad1297839c6b77d, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337602228212238333, guid: 82a90ce660487c345ad1297839c6b77d, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:37:28
+      objectReference: {fileID: 0}
     - target: {fileID: 6337602229538767522, guid: 82a90ce660487c345ad1297839c6b77d, type: 3}
       propertyPath: lastModifiedDate
       value: 04/10/2021 09:57:42
@@ -1590,6 +1606,14 @@ PrefabInstance:
     - target: {fileID: 4227775303781304083, guid: 5ba904bc4f0f95e4796f03f587201553, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227775304572895822, guid: 5ba904bc4f0f95e4796f03f587201553, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227775304572895827, guid: 5ba904bc4f0f95e4796f03f587201553, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:37:28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ba904bc4f0f95e4796f03f587201553, type: 3}

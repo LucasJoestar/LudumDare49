@@ -253,18 +253,18 @@ namespace LudumDare49
             }
 
             // Snap test.
-            _count = OverlapCollider(triggerMask);
+            _count = OverlapCollider(triggerMask, true);
             if (_count > 0)
             {
                 float _bestDistance = 999f;
-                int _bestIndex = 0;
+                int _bestIndex = -1;
 
                 for (int _i = 0; _i < _count; _i++)
                 {
                     Collider2D _overlap = overlapBuffer[_i];
                     float _distanceValue = Mathf.Abs(Vector2.Distance(rigidbody.position, _overlap.attachedRigidbody.position));
 
-                    if (_distanceValue < _bestDistance)
+                    if (_overlap.isTrigger && (_distanceValue < _bestDistance))
                     {
                         _bestDistance = _distanceValue;
                         _bestIndex = _i;
@@ -272,7 +272,7 @@ namespace LudumDare49
                 }
 
                 // Trigger.
-                if (overlapBuffer[_bestIndex].TryGetComponent(out PhysicsTrigger _trigger))
+                if ((_bestIndex > -1) && overlapBuffer[_bestIndex].TryGetComponent(out PhysicsTrigger _trigger))
                 {
                     trigger = _trigger;
                     _trigger.OnTrigger(this);
@@ -280,9 +280,11 @@ namespace LudumDare49
             }
         }
 
-        protected virtual int OverlapCollider(LayerMask _mask)
+        protected virtual int OverlapCollider(LayerMask _mask, bool _useTrigger = false)
         {
             contactFilter.layerMask = _mask;
+            contactFilter.useTriggers = _useTrigger;
+
             return collider.OverlapCollider(contactFilter, overlapBuffer);
         }
 

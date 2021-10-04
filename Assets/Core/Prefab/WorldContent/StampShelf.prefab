@@ -1,5 +1,219 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3569891724757020322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3987168312795936635}
+  - component: {fileID: 6114434658686118043}
+  m_Layer: 12
+  m_Name: Stamp Marks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3987168312795936635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3569891724757020322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3012653326311225553}
+  - {fileID: 4931761033491980069}
+  - {fileID: 5470798181120246514}
+  m_Father: {fileID: 8320106634683717897}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6114434658686118043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3569891724757020322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877eb788512e6904897eca70a462a2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comment: 
+  Tags:
+    Tags: []
+  lastModifiedBy: Lucas
+  lastModifiedDate: 04/10/2021 10:04:03
+  IsPersistent: 0
+--- !u!1 &4037454613068485323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5470798181120246514}
+  - component: {fileID: 5213633302834801623}
+  m_Layer: 12
+  m_Name: Living
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5470798181120246514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037454613068485323}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1383527901821483394}
+  - {fileID: 6553506319763809717}
+  - {fileID: 7957676210162908256}
+  - {fileID: 6276504101947081374}
+  - {fileID: 8579156375086112370}
+  m_Father: {fileID: 3987168312795936635}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5213633302834801623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037454613068485323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877eb788512e6904897eca70a462a2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comment: 
+  Tags:
+    Tags: []
+  lastModifiedBy: Lucas
+  lastModifiedDate: 04/10/2021 10:06:00
+  IsPersistent: 0
+--- !u!1 &6274628060924241915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4931761033491980069}
+  - component: {fileID: 1016572406075752624}
+  m_Layer: 12
+  m_Name: Heavy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4931761033491980069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6274628060924241915}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1674469968130411591}
+  - {fileID: 8005882859422524132}
+  - {fileID: 6391896233388559806}
+  - {fileID: 2279833455128022073}
+  - {fileID: 4428120218861901696}
+  m_Father: {fileID: 3987168312795936635}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1016572406075752624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6274628060924241915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877eb788512e6904897eca70a462a2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comment: 
+  Tags:
+    Tags: []
+  lastModifiedBy: Lucas
+  lastModifiedDate: 04/10/2021 10:05:40
+  IsPersistent: 0
+--- !u!1 &7586493400115293925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3012653326311225553}
+  - component: {fileID: 2438905307922437007}
+  m_Layer: 12
+  m_Name: Temperature
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3012653326311225553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7586493400115293925}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5769686554327598732}
+  - {fileID: 1025274342650291604}
+  - {fileID: 7747208929266652285}
+  - {fileID: 3583466149113499117}
+  - {fileID: 8541876299059620161}
+  m_Father: {fileID: 3987168312795936635}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2438905307922437007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7586493400115293925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877eb788512e6904897eca70a462a2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comment: 
+  Tags:
+    Tags: []
+  lastModifiedBy: Lucas
+  lastModifiedDate: 04/10/2021 10:04:20
+  IsPersistent: 0
 --- !u!1 &8320106634683717910
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,6 +244,8 @@ Transform:
   m_Children:
   - {fileID: 8320106636028761539}
   - {fileID: 8320106635634311130}
+  - {fileID: 8765213752807629308}
+  - {fileID: 3987168312795936635}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63,7 +279,7 @@ GameObject:
   - component: {fileID: 8320106635634311132}
   - component: {fileID: 8320106635634311133}
   m_Layer: 12
-  m_Name: DeskCollider
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +315,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 00:53:44
+  lastModifiedDate: 04/10/2021 10:36:04
   IsPersistent: 0
 --- !u!60 &8320106635634311133
 PolygonCollider2D:
@@ -141,6 +357,7 @@ GameObject:
   - component: {fileID: 8320106636028761539}
   - component: {fileID: 8320106636028761541}
   - component: {fileID: 8320106636028761538}
+  - component: {fileID: 4622250382320274749}
   m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
@@ -178,7 +395,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 00:53:15
+  lastModifiedDate: 04/10/2021 10:09:24
   IsPersistent: 0
 --- !u!212 &8320106636028761538
 SpriteRenderer:
@@ -231,3 +448,1057 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &4622250382320274749
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8320106636028761536}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -10
+--- !u!1 &8329437437057598032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8765213752807629308}
+  - component: {fileID: 7615274657819375239}
+  m_Layer: 12
+  m_Name: Stamp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8765213752807629308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8329437437057598032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4068371950732923668}
+  - {fileID: 6144912837224288675}
+  - {fileID: 2606985073432105666}
+  m_Father: {fileID: 8320106634683717897}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7615274657819375239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8329437437057598032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877eb788512e6904897eca70a462a2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comment: 
+  Tags:
+    Tags: []
+  lastModifiedBy: Lucas
+  lastModifiedDate: 04/10/2021 10:03:05
+  IsPersistent: 0
+--- !u!1001 &93766578453721728
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5470798181120246514}
+    m_Modifications:
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210913, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:06:14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210915, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Living Variant (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+--- !u!212 &7957676210162908258 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8008095504764210914, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+  m_PrefabInstance: {fileID: 93766578453721728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7957676210162908256 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+  m_PrefabInstance: {fileID: 93766578453721728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &150172686918069158
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3012653326311225553}
+    m_Modifications:
+    - target: {fileID: 8403526138910032612, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Temperature (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: lastModifiedBy
+      value: Lucas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:05:26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+--- !u!4 &8541876299059620161 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+  m_PrefabInstance: {fileID: 150172686918069158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &8541876299059620163 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8403526138910032613, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+  m_PrefabInstance: {fileID: 150172686918069158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1438060248455379212
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4931761033491980069}
+    m_Modifications:
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690665, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:05:49
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690667, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Heavy Variant (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+--- !u!212 &8005882859422524134 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9002581470984690666, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+  m_PrefabInstance: {fileID: 1438060248455379212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8005882859422524132 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+  m_PrefabInstance: {fileID: 1438060248455379212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1742102687343087762
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5470798181120246514}
+    m_Modifications:
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210913, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:06:14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210915, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Living Variant (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+--- !u!212 &8579156375086112368 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8008095504764210914, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+  m_PrefabInstance: {fileID: 1742102687343087762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8579156375086112370 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+  m_PrefabInstance: {fileID: 1742102687343087762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2241894340942960282
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3012653326311225553}
+    m_Modifications:
+    - target: {fileID: 8403526138910032612, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Temperature (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: lastModifiedBy
+      value: Lucas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:06:51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+--- !u!4 &7747208929266652285 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+  m_PrefabInstance: {fileID: 2241894340942960282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &7747208929266652287 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8403526138910032613, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+  m_PrefabInstance: {fileID: 2241894340942960282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2619700683733341782
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4931761033491980069}
+    m_Modifications:
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690665, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:05:49
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690667, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Heavy Variant (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+--- !u!4 &6391896233388559806 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+  m_PrefabInstance: {fileID: 2619700683733341782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &6391896233388559804 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9002581470984690666, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+  m_PrefabInstance: {fileID: 2619700683733341782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2633859375793046635
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3012653326311225553}
+    m_Modifications:
+    - target: {fileID: 8403526138910032612, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Temperature
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:06:59
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+--- !u!4 &5769686554327598732 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+  m_PrefabInstance: {fileID: 2633859375793046635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &5769686554327598734 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8403526138910032613, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+  m_PrefabInstance: {fileID: 2633859375793046635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2639585588741183137
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8765213752807629308}
+    m_Modifications:
+    - target: {fileID: 8207437245214705409, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705411, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: returningSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705411, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: marks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1674469968130411589}
+    - target: {fileID: 8207437245214705411, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: marks.Array.data[1]
+      value: 
+      objectReference: {fileID: 8005882859422524134}
+    - target: {fileID: 8207437245214705411, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: marks.Array.data[2]
+      value: 
+      objectReference: {fileID: 6391896233388559804}
+    - target: {fileID: 8207437245214705411, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: marks.Array.data[3]
+      value: 
+      objectReference: {fileID: 2279833455128022075}
+    - target: {fileID: 8207437245214705411, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: marks.Array.data[4]
+      value: 
+      objectReference: {fileID: 4428120218861901698}
+    - target: {fileID: 8207437245214705412, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: m_Name
+      value: Stamp Heavy Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705413, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: lastModifiedBy
+      value: Lucas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207437245214705413, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:37:55
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+--- !u!4 &6144912837224288675 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
+  m_PrefabInstance: {fileID: 2639585588741183137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3877813857041984341
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5470798181120246514}
+    m_Modifications:
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210913, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:06:14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210915, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Living Variant (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+--- !u!4 &6553506319763809717 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+  m_PrefabInstance: {fileID: 3877813857041984341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &6553506319763809719 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8008095504764210914, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+  m_PrefabInstance: {fileID: 3877813857041984341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4051242226255727742
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5470798181120246514}
+    m_Modifications:
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210913, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:06:14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210915, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Living Variant (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+--- !u!212 &6276504101947081372 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8008095504764210914, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+  m_PrefabInstance: {fileID: 4051242226255727742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6276504101947081374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+  m_PrefabInstance: {fileID: 4051242226255727742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4228687507982114916
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8765213752807629308}
+    m_Modifications:
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124593, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: returningSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124593, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: marks.Array.data[0]
+      value: 
+      objectReference: {fileID: 5769686554327598734}
+    - target: {fileID: 205637646683124593, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: marks.Array.data[1]
+      value: 
+      objectReference: {fileID: 1025274342650291606}
+    - target: {fileID: 205637646683124593, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: marks.Array.data[2]
+      value: 
+      objectReference: {fileID: 7747208929266652287}
+    - target: {fileID: 205637646683124593, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: marks.Array.data[3]
+      value: 
+      objectReference: {fileID: 3583466149113499119}
+    - target: {fileID: 205637646683124593, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: marks.Array.data[4]
+      value: 
+      objectReference: {fileID: 8541876299059620163}
+    - target: {fileID: 205637646683124595, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124598, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: m_Name
+      value: Stamp Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124599, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: lastModifiedBy
+      value: Lucas
+      objectReference: {fileID: 0}
+    - target: {fileID: 205637646683124599, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:37:55
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+--- !u!4 &4068371950732923668 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
+  m_PrefabInstance: {fileID: 4228687507982114916}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4727741424218623080
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4931761033491980069}
+    m_Modifications:
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690665, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:06:24
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690667, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Heavy Variant (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+--- !u!212 &4428120218861901698 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9002581470984690666, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+  m_PrefabInstance: {fileID: 4727741424218623080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4428120218861901696 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+  m_PrefabInstance: {fileID: 4727741424218623080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4982200571516505866
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3012653326311225553}
+    m_Modifications:
+    - target: {fileID: 8403526138910032612, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Temperature (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: lastModifiedBy
+      value: Lucas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:06:54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+--- !u!212 &3583466149113499119 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8403526138910032613, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+  m_PrefabInstance: {fileID: 4982200571516505866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3583466149113499117 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+  m_PrefabInstance: {fileID: 4982200571516505866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6611545276124512954
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8765213752807629308}
+    m_Modifications:
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754041, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: returningSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754041, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: marks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1383527901821483392}
+    - target: {fileID: 9218079514204754041, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: marks.Array.data[1]
+      value: 
+      objectReference: {fileID: 6553506319763809719}
+    - target: {fileID: 9218079514204754041, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: marks.Array.data[2]
+      value: 
+      objectReference: {fileID: 7957676210162908258}
+    - target: {fileID: 9218079514204754041, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: marks.Array.data[3]
+      value: 
+      objectReference: {fileID: 6276504101947081372}
+    - target: {fileID: 9218079514204754041, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: marks.Array.data[4]
+      value: 
+      objectReference: {fileID: 8579156375086112368}
+    - target: {fileID: 9218079514204754043, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754046, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: m_Name
+      value: Stamp Living Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754047, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: lastModifiedBy
+      value: Lucas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218079514204754047, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:37:55
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+--- !u!4 &2606985073432105666 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
+  m_PrefabInstance: {fileID: 6611545276124512954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7155094271588784081
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4931761033491980069}
+    m_Modifications:
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690665, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:05:49
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690667, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Heavy Variant (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+--- !u!212 &2279833455128022075 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9002581470984690666, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+  m_PrefabInstance: {fileID: 7155094271588784081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2279833455128022073 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+  m_PrefabInstance: {fileID: 7155094271588784081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7769678809094641583
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4931761033491980069}
+    m_Modifications:
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690665, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:05:49
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002581470984690667, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Heavy Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+--- !u!4 &1674469968130411591 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9002581470984690664, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+  m_PrefabInstance: {fileID: 7769678809094641583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1674469968130411589 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9002581470984690666, guid: c32d0b3bb95e576409dd28f36cdb8292, type: 3}
+  m_PrefabInstance: {fileID: 7769678809094641583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8837702849997530995
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3012653326311225553}
+    m_Modifications:
+    - target: {fileID: 8403526138910032612, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Temperature (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: lastModifiedBy
+      value: Lucas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032614, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:05:29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+--- !u!212 &1025274342650291606 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8403526138910032613, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+  m_PrefabInstance: {fileID: 8837702849997530995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1025274342650291604 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8403526138910032615, guid: b50a29cc7b64e9047aaf8b3fdd66553e, type: 3}
+  m_PrefabInstance: {fileID: 8837702849997530995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8939996164329486178
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5470798181120246514}
+    m_Modifications:
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210913, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 10:06:14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008095504764210915, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+      propertyPath: m_Name
+      value: Stamp Mark Living Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+--- !u!212 &1383527901821483392 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8008095504764210914, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+  m_PrefabInstance: {fileID: 8939996164329486178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1383527901821483394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8008095504764210912, guid: 4356ffda20551ea4c910b7a439e9c8c3, type: 3}
+  m_PrefabInstance: {fileID: 8939996164329486178}
+  m_PrefabAsset: {fileID: 0}

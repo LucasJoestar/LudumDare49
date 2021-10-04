@@ -45,7 +45,7 @@ namespace LudumDare49
             // Reset Stamp Position
             if (returningSequence.IsActive()) returningSequence.Kill();
             returningSequence = DOTween.Sequence();
-            float _duration = Vector2.Distance(transform.position, startPosition) / returningSpeed; 
+            float _duration = returningSpeed; 
             returningSequence.Join(transform.DOMove(startPosition, _duration));
             returningSequence.Play();
         }

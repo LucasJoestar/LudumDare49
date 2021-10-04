@@ -229,7 +229,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5278052685764389812}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.76, y: 0.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -259,7 +259,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 03:08:02
+  lastModifiedDate: 04/10/2021 10:57:18
   IsPersistent: 0
 --- !u!114 &5278052685764389809
 MonoBehaviour:
@@ -280,7 +280,12 @@ MonoBehaviour:
   generatePotionInterval: {x: 25, y: 30}
   beltLoop: 5
   potions:
-  - {fileID: 0}
+  - {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+  - {fileID: 7170677232709008964, guid: 0164a37d28659f84fbff3744ca8918a0, type: 3}
+  - {fileID: 6373616819300466122, guid: 99c65126dd63f9e42aa1de591f59aaa5, type: 3}
+  - {fileID: 8162648772388044549, guid: 1e8fe9d720c0baf40a2a25ec3e198dcf, type: 3}
+  - {fileID: 487674140013206784, guid: b6d3f38be719f3848ba078acb1b8d313, type: 3}
+  - {fileID: 4769151326007432161, guid: 26f0dd2342a2d5145a45d81c8668b778, type: 3}
   alertColor: {r: 1, g: 0, b: 0, a: 0.56078434}
   alertLoop: 6
   alertDuration: 0.75
@@ -1301,7 +1306,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 02:38:03
+  lastModifiedDate: 04/10/2021 10:36:04
   IsPersistent: 0
 --- !u!61 &5278052686795388277
 BoxCollider2D:
@@ -1316,7 +1321,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -18.138573, y: 0.6628013}
+  m_Offset: {x: -18.138573, y: 0.62938404}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1327,7 +1332,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.270668, y: 0.26701987}
+  m_Size: {x: 8.270668, y: 0.2001853}
   m_EdgeRadius: 0
 --- !u!1 &5278052686827627573
 GameObject:

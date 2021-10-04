@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 3494640382874029280}
   - component: {fileID: 3494640382874029281}
   - component: {fileID: 3494640382874029285}
-  m_Layer: 13
+  m_Layer: 16
   m_Name: Fridge_Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 01:09:09
+  lastModifiedDate: 04/10/2021 10:37:03
   IsPersistent: 0
 --- !u!212 &3494640382874029287
 SpriteRenderer:
@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 3494640383344649974}
   - component: {fileID: 3494640383344649975}
   - component: {fileID: 3494640383344649968}
-  m_Layer: 13
+  m_Layer: 16
   m_Name: Fridge_Open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +626,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 00:39:43
+  lastModifiedDate: 04/10/2021 10:37:03
   IsPersistent: 0
 --- !u!212 &3494640383344649974
 SpriteRenderer:
@@ -736,7 +736,7 @@ GameObject:
   - component: {fileID: 3494640383768003159}
   - component: {fileID: 3494640383768003152}
   - component: {fileID: 3494640383768003153}
-  m_Layer: 13
+  m_Layer: 16
   m_Name: LeftCabinet_Open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -773,7 +773,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 00:46:59
+  lastModifiedDate: 04/10/2021 10:37:09
   IsPersistent: 0
 --- !u!212 &3494640383768003159
 SpriteRenderer:
@@ -934,7 +934,7 @@ GameObject:
   - component: {fileID: 3494640384014004656}
   - component: {fileID: 3494640384014004657}
   - component: {fileID: 3494640384014004658}
-  m_Layer: 13
+  m_Layer: 16
   m_Name: RightCabinet_Open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -971,7 +971,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 00:49:21
+  lastModifiedDate: 04/10/2021 10:37:09
   IsPersistent: 0
 --- !u!212 &3494640384014004656
 SpriteRenderer:
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 3494640384047403462}
   - component: {fileID: 3494640384047403463}
   - component: {fileID: 3494640384047403456}
-  m_Layer: 13
+  m_Layer: 16
   m_Name: RightCabinet_Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1119,7 +1119,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 01:09:09
+  lastModifiedDate: 04/10/2021 10:37:09
   IsPersistent: 0
 --- !u!212 &3494640384047403461
 SpriteRenderer:
@@ -1240,7 +1240,7 @@ GameObject:
   - component: {fileID: 3494640384060898628}
   - component: {fileID: 3494640384060898629}
   - component: {fileID: 3494640384060898633}
-  m_Layer: 13
+  m_Layer: 16
   m_Name: LeftCabinet_Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 01:09:09
+  lastModifiedDate: 04/10/2021 10:37:09
   IsPersistent: 0
 --- !u!212 &3494640384060898635
 SpriteRenderer:
@@ -1461,7 +1461,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6535742901477494911}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.4, y: -7.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
