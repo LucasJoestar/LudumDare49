@@ -256,8 +256,8 @@ MonoBehaviour:
   comment: 
   Tags:
     Tags: []
-  lastModifiedBy: Alexis_Admin
-  lastModifiedDate: 04/10/2021 22:37:30
+  lastModifiedBy: Lucas
+  lastModifiedDate: 04/10/2021 22:55:11
   IsPersistent: 0
 --- !u!114 &6187296770043771527
 MonoBehaviour:
@@ -271,7 +271,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d20393bb4780f1d4b8de5005db35ecb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handTransform: {fileID: 0}
+  rigidbody: {fileID: 6187296770043771576}
+  collider: {fileID: 6187296770043771577}
+  carrierPrefab: {fileID: 0}
+  group: {fileID: 6187296770043771525}
+  shakeAudio: {fileID: 0}
+  grabPoint: {x: 0, y: 0, z: 0}
+  destroyFX: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
+  destroyFXClip: {fileID: 8300000, guid: 4ba83454aee076747ae89d7dc7d448a7, type: 3}
+  physicsMask:
+    serializedVersion: 2
+    m_Bits: 128
+  triggerMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  inertiaCoef: 10
+  doRepop: 0
+  repopSpeed: 2
+  repopPosition: {fileID: 0}
+  conveyDefaultPosition: {fileID: 0}
+  carrierAnchor: {fileID: 0}
+  carrierDepopPositions: []
+  isRepoping: 0
+  carrier: {fileID: 0}
+  trigger: {fileID: 0}
 --- !u!212 &6187296770043771526
 SpriteRenderer:
   m_ObjectHideFlags: 0

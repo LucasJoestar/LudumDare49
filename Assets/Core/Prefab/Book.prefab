@@ -859,6 +859,7 @@ GameObject:
   - component: {fileID: 6637422450187381639}
   - component: {fileID: 6637422450187381640}
   - component: {fileID: 6637422450187381638}
+  - component: {fileID: 1019532104}
   m_Layer: 16
   m_Name: SpriteBackground
   m_TagString: Untagged
@@ -896,7 +897,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 22:40:34
+  lastModifiedDate: 04/10/2021 23:05:40
   IsPersistent: 0
 --- !u!212 &6637422450187381642
 SpriteRenderer:
@@ -1008,6 +1009,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d15a936b989e814ab9746da1de6ffdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!210 &1019532104
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6637422450187381644}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
 --- !u!1 &6637422450420818161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,7 +1133,6 @@ GameObject:
   - component: {fileID: 6637422451018252866}
   - component: {fileID: 6637422451018252867}
   - component: {fileID: 6637422451018252868}
-  - component: {fileID: 4728962514273331977}
   m_Layer: 6
   m_Name: Book
   m_TagString: Untagged
@@ -1214,14 +1225,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!210 &4728962514273331977
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637422451018252869}
-  m_Enabled: 1
-  m_SortingLayerID: -315832941
-  m_SortingLayer: 1
-  m_SortingOrder: 50

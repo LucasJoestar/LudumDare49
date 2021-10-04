@@ -963,10 +963,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4357815767187833433, guid: b36b08b0443018e4aa6bb4af243e6676, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 23:09:58
+      objectReference: {fileID: 0}
     - target: {fileID: 4357815767187833435, guid: b36b08b0443018e4aa6bb4af243e6676, type: 3}
       propertyPath: m_Name
       value: TrashSquig
       objectReference: {fileID: 0}
+    - target: {fileID: 4357815767187833438, guid: b36b08b0443018e4aa6bb4af243e6676, type: 3}
+      propertyPath: eatClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8c0a519e9e8341941bbb3d094c60742e, type: 3}
+    - target: {fileID: 4357815767187833439, guid: b36b08b0443018e4aa6bb4af243e6676, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b0c9d5a43abf934b846ab89301ac33e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b36b08b0443018e4aa6bb4af243e6676, type: 3}
 --- !u!4 &243320306 stripped
