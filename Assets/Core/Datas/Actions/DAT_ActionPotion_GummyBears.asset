@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DAT_ActionPotion_GummyBears
   m_EditorClassIdentifier: 
   Particles: {fileID: 0}
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: b006408b0466ba44c8e5102d609d705a, type: 3}

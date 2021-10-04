@@ -484,7 +484,7 @@ MonoBehaviour:
   hasSnappedObject: 0
   pipeTransform: {fileID: 2516728910621993783}
   pipeLever: {fileID: 2516728910545728078}
-  actionPotion: {fileID: 11400000, guid: c414f8b743d66e740ae48003f26be2d4, type: 2}
+  actionPotion: {fileID: 11400000, guid: 968bcd1f3f2b7ba48a7df2a5e1feba84, type: 2}
   potion: {fileID: 0}
   particle: {fileID: 0}
   audioClip: {fileID: 8300000, guid: 823db865e724e21418370f1a19f0a6d5, type: 3}
