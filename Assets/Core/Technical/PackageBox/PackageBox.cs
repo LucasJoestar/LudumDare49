@@ -49,13 +49,13 @@ namespace LudumDare49
             snapSequence = DOTween.Sequence();
             snapSequence.AppendInterval(.1f);
             Vector2 _offsetPosition = Vector2.zero; 
-            if (_object is Potion)
+            if (_object is Potion _potion )
             {
                 snapSequence.Append(_object.transform.DORotate(Vector3.forward * potionRotation, rotationDuration)); 
                 _offsetPosition = potionOffset; 
-                potion = (Potion)_object;
+                potion = _potion;
             }
-            else if (_object is Ingredient)
+            else if (_object is Ingredient _ingredient)
             {
                 snapSequence.Append(_object.transform.DORotate(Vector3.zero, rotationDuration)); 
                 if (pendingObject[0] == null)
@@ -68,7 +68,8 @@ namespace LudumDare49
                     pendingObject[1] = _object;
                     _offsetPosition = ingredientOffset[1]; 
                 }
-                pendingActions.Enqueue((_object as Ingredient).Action);
+                
+                pendingActions.Enqueue(_ingredient.Action);
             }
             snapSequence.Append(_object.transform.DOMove((Vector2)transform.position + _offsetPosition, rotationDuration));
             snapSequence.OnComplete(ApplyPendingActions); 
