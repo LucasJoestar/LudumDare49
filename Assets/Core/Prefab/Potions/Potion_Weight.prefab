@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useTimeInterval: 0
   intervalTime: 10
+  shakeDuration: 1
   speedCoef: 8
   speedCoefIncrement: 1
   speedCoefRange: {x: 5, y: 20}
@@ -45,9 +46,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1576075075362936707, guid: baad30fda80ff3a458ae922f6e4e9467, type: 3}
     - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: destroyFX
+      value: 
+      objectReference: {fileID: 7692808752721731898, guid: f2ab480b4bce6354ba971c1feefcc789, type: 3}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: grabPoint.x
       value: -0.07
       objectReference: {fileID: 0}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: shakeAction
+      value: 
+      objectReference: {fileID: 11400000, guid: e7dfafedd2cc3854381942224d32effa, type: 2}
     - target: {fileID: 5608044127364552565, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 26

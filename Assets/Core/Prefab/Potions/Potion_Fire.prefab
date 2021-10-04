@@ -290,6 +290,7 @@ MonoBehaviour:
   carrier: {fileID: 0}
   trigger: {fileID: 0}
   recipe: {fileID: 11400000, guid: fb12276399e7e524c9c8ee9bd11aaf3a, type: 2}
+  shakeAction: {fileID: 11400000, guid: 991fa69d727b06e4b902a453f0a088da, type: 2}
   mixInCollider: {fileID: 5479522254410713991}
   score: 0
   remainingActions: []

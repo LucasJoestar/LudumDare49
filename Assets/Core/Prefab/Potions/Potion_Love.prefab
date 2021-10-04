@@ -144,6 +144,14 @@ PrefabInstance:
       propertyPath: bubbleFX
       value: 
       objectReference: {fileID: 334840741222901764, guid: 2cfbc03bc1e7b4445a9ff9bb78d1c072, type: 3}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: destroyFX
+      value: 
+      objectReference: {fileID: 5854837683361902358, guid: 2e2f8aa04d6f4334391fec9cff6024eb, type: 3}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: shakeAction
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cf8e3b21dd2e014389fe0fab414ae96, type: 2}
     - target: {fileID: 5608044127364552565, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 25

@@ -13,8 +13,23 @@ MonoBehaviour:
   m_Name: DAT_Recipe_HairPotion
   m_EditorClassIdentifier: 
   RecipeActions:
-  - name: Chauffer
-    action: {fileID: 11400000, guid: c414f8b743d66e740ae48003f26be2d4, type: 2}
+  - name: Eyes
+    action: {fileID: 11400000, guid: 968bcd1f3f2b7ba48a7df2a5e1feba84, type: 2}
     score: 25
-  ForbiddenActions: []
-  UndesiredActionScore: -20
+  - name: Mandrake
+    action: {fileID: 11400000, guid: a8a003aca583cd3429c9182bf066de6d, type: 2}
+    score: 25
+  - name: Mushroom
+    action: {fileID: 11400000, guid: a48892d6cbac830469aefebc915f531e, type: 2}
+    score: 25
+  - name: Stamp
+    action: {fileID: 11400000, guid: 2fbc17009b049da449cd4576b9d6bab6, type: 2}
+    score: 25
+  ForbiddenActions:
+  - name: Candle
+    action: {fileID: 11400000, guid: b855259e3361c3945bc6fded3f55246b, type: 2}
+    score: -20
+  - name: Hot
+    action: {fileID: 11400000, guid: 753a43e47315c004aadbaab3ed11e14e, type: 2}
+    score: -20
+  UndesiredActionScore: -5

@@ -35,7 +35,7 @@ namespace LudumDare49
             transitionSequence = DOTween.Sequence();
             transitionSequence.Join(freezingEffect.DOFade(0.0f, transitionDuration));
             // reset cursor speed
-            cursor = null; 
+            cursor.RemoveSpeedCoef(this); 
         }
 
         public override void OnForbiddenAction()
@@ -51,10 +51,10 @@ namespace LudumDare49
             transitionSequence.Join(freezingEffect.DOFade(1.0f, transitionDuration));
             //Change Cursor Speed
             cursor = _cursor;
-            //_cursor.SetSpeedCoef()
+           _cursor.SetSpeedCoef(this, 5f);
         }
 
-        public override void OnCollideObject(Collider2D _collider)
+        public override void OnCollideObject(Collider2D _collider, Vector2 _point)
         {
 
         }

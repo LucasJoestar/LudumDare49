@@ -44,9 +44,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6483900233743301653, guid: da41a2fcadde83b4ebe6ad56125a51db, type: 3}
     - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: destroyFX
+      value: 
+      objectReference: {fileID: 3660252934994701327, guid: c8f8f8cfcdad69e41bb5a8229ae9ad0d, type: 3}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: grabPoint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: shakeAction
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e220ac923780a549b510513bcd7c9f8, type: 2}
     - target: {fileID: 5608044127364552565, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 27

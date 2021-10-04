@@ -13,8 +13,20 @@ MonoBehaviour:
   m_Name: DAT_Recipe_IcePotion
   m_EditorClassIdentifier: 
   RecipeActions:
-  - name: Chauffer
-    action: {fileID: 11400000, guid: c414f8b743d66e740ae48003f26be2d4, type: 2}
+  - name: Gummy Bear
+    action: {fileID: 11400000, guid: 718b5540a97523642a3ae5ceae22a3c8, type: 2}
+    score: 25
+  - name: Gummy Bear
+    action: {fileID: 11400000, guid: 718b5540a97523642a3ae5ceae22a3c8, type: 2}
+    score: 25
+  - name: Flames
+    action: {fileID: 11400000, guid: 753a43e47315c004aadbaab3ed11e14e, type: 2}
+    score: 25
+  - name: Flames
+    action: {fileID: 11400000, guid: 753a43e47315c004aadbaab3ed11e14e, type: 2}
+    score: 25
+  - name: Stamp
+    action: {fileID: 11400000, guid: 5a2b64c12ed143b48b90da7cb3997543, type: 2}
     score: 25
   ForbiddenActions: []
-  UndesiredActionScore: -20
+  UndesiredActionScore: -5
