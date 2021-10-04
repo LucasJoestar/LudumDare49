@@ -28,5 +28,8 @@ MonoBehaviour:
   - name: Stamp
     action: {fileID: 11400000, guid: 5a2b64c12ed143b48b90da7cb3997543, type: 2}
     score: 25
-  ForbiddenActions: []
+  ForbiddenActions:
+  - name: Ice
+    action: {fileID: 11400000, guid: 5d136bd5e7e8ff649b117284eefcb6a3, type: 2}
+    score: -20
   UndesiredActionScore: -5
