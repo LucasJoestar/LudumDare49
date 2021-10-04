@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111582018050975994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.62600005, y: -9.083066, z: 0.355608}
+  m_LocalPosition: {x: -0.23, y: -9.08, z: 1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2150352743180430542}
@@ -50,7 +50,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 21:06:46
   IsPersistent: 0
 --- !u!199 &8293711031018488837
 ParticleSystemRenderer:
@@ -132,7 +132,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4940,7 +4940,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 20:15:43
   IsPersistent: 0
 --- !u!199 &1249026600070521837
 ParticleSystemRenderer:
@@ -9830,7 +9830,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 20:15:43
   IsPersistent: 0
 --- !u!199 &5473086898913331372
 ParticleSystemRenderer:
@@ -14698,7 +14698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251195920631341864}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.014000058, y: -9.083066, z: 1.3376083}
+  m_LocalPosition: {x: -0.84, y: -9.08, z: 2.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3883156133144088664}
@@ -14721,7 +14721,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 21:06:46
   IsPersistent: 0
 --- !u!199 &5540023309791674864
 ParticleSystemRenderer:
@@ -14803,7 +14803,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -19589,7 +19589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701055449919764991}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.82500005, y: -9.083066, z: 0.122608185}
+  m_LocalPosition: {x: -1.68, y: -9.08, z: 1.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5735643460364632458}
@@ -19612,7 +19612,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 21:06:46
   IsPersistent: 0
 --- !u!199 &6782016468996885055
 ParticleSystemRenderer:
@@ -19694,7 +19694,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -24510,7 +24510,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 20:02:55
+  lastModifiedDate: 04/10/2021 21:06:46
   IsPersistent: 0
 --- !u!199 &4837386514903591197
 ParticleSystemRenderer:
@@ -24588,7 +24588,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 5
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -29311,7 +29311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3709027562464278947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12599993, y: -9.083067, z: 0.24160862}
+  m_LocalPosition: {x: -0.98, y: -9.08, z: 1.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1577422350860082558}
@@ -29334,7 +29334,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 21:06:46
   IsPersistent: 0
 --- !u!199 &6653722681545153000
 ParticleSystemRenderer:
@@ -29416,7 +29416,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -34225,7 +34225,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 20:15:43
   IsPersistent: 0
 --- !u!199 &3797503211074632618
 ParticleSystemRenderer:
@@ -39115,7 +39115,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 20:15:43
   IsPersistent: 0
 --- !u!199 &3763854044409644052
 ParticleSystemRenderer:
@@ -44005,7 +44005,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 20:15:43
   IsPersistent: 0
 --- !u!199 &7142563903913291831
 ParticleSystemRenderer:
@@ -48895,7 +48895,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 20:15:43
   IsPersistent: 0
 --- !u!199 &5454258183851267998
 ParticleSystemRenderer:
@@ -53785,7 +53785,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:40:49
+  lastModifiedDate: 04/10/2021 20:15:43
   IsPersistent: 0
 --- !u!199 &7045673966279361755
 ParticleSystemRenderer:
@@ -58586,7 +58586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5117270407089855042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.72800004, y: -9.083066, z: -0.30839157}
+  m_LocalPosition: {x: -0.13, y: -9.08, z: 1.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6823701892885909356}
@@ -58609,7 +58609,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 21:06:46
   IsPersistent: 0
 --- !u!199 &908674059266583448
 ParticleSystemRenderer:
@@ -58691,7 +58691,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -63477,7 +63477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5418657425777595994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.28100002, y: -9.083066, z: -0.43339157}
+  m_LocalPosition: {x: -1.13, y: -9.08, z: 1.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8368809389978690503}
@@ -63500,7 +63500,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 21:06:46
   IsPersistent: 0
 --- !u!199 &7917432471808386758
 ParticleSystemRenderer:
@@ -63582,7 +63582,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -68390,7 +68390,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:40:49
+  lastModifiedDate: 04/10/2021 20:15:43
   IsPersistent: 0
 --- !u!199 &1958973859671983166
 ParticleSystemRenderer:
@@ -73213,7 +73213,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:40:49
+  lastModifiedDate: 04/10/2021 20:15:43
   IsPersistent: 0
 --- !u!199 &1557255797781640350
 ParticleSystemRenderer:
@@ -78014,7 +78014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6609258080765208059}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.125, y: -9.083066, z: -0.33739185}
+  m_LocalPosition: {x: -0.98, y: -9.08, z: 1.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4414660576813785232}
@@ -78037,7 +78037,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 21:06:46
   IsPersistent: 0
 --- !u!199 &3926796299097011067
 ParticleSystemRenderer:
@@ -78119,7 +78119,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -82928,7 +82928,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 20:15:43
   IsPersistent: 0
 --- !u!199 &7772626910156264279
 ParticleSystemRenderer:
@@ -87796,7 +87796,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8225865108200319908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.014000058, y: -9.083066, z: 0.8446083}
+  m_LocalPosition: {x: -0.84, y: -9.08, z: 2.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9068988332050037189}
@@ -87819,7 +87819,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 21:06:46
   IsPersistent: 0
 --- !u!199 &8768299809772339146
 ParticleSystemRenderer:
@@ -87901,7 +87901,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -92710,7 +92710,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 19:44:49
+  lastModifiedDate: 04/10/2021 20:15:43
   IsPersistent: 0
 --- !u!199 &2900066798093660716
 ParticleSystemRenderer:
