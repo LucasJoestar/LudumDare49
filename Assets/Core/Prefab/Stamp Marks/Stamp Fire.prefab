@@ -52,7 +52,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Alexis_Admin
-  lastModifiedDate: 03/10/2021 21:47:16
+  lastModifiedDate: 04/10/2021 02:07:33
   IsPersistent: 0
 --- !u!114 &205637646683124593
 MonoBehaviour:
@@ -71,6 +71,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 205637646683124594}
   normalSprite: {fileID: -2791575380922999224, guid: 5738124e593656e47b6c41799ca8ca3b, type: 3}
   grabbedSprite: {fileID: -3387579398826105982, guid: 5738124e593656e47b6c41799ca8ca3b, type: 3}
+  stampClips:
+  - {fileID: 8300000, guid: 5e4dca56f32624148a41640bbee396e8, type: 3}
+  - {fileID: 8300000, guid: 002fd5929b8e190488760b315c9ac022, type: 3}
   packageLayer:
     serializedVersion: 2
     m_Bits: 2048
