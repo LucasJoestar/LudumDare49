@@ -54,7 +54,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Alexis_Admin
-  lastModifiedDate: 03/10/2021 19:51:59
+  lastModifiedDate: 04/10/2021 11:28:26
   IsPersistent: 0
 --- !u!212 &8529524704502246477
 SpriteRenderer:
@@ -170,6 +170,20 @@ MonoBehaviour:
   potion: {fileID: 0}
   waypoint: {x: 0, y: 3}
   wayPointTransform: {fileID: 8529524705173825420}
+  movementCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rotationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  closedSprite: {fileID: 7996203760292423402, guid: 807a2ee19f15fca468ad7179b1321cb8, type: 3}
+  closingClip: {fileID: 8300000, guid: 19a863dd8a46a4742ad0fd2bbe7dac0c, type: 3}
 --- !u!210 &8529524704502246475
 SortingGroup:
   m_ObjectHideFlags: 0

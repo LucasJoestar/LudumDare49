@@ -28,7 +28,12 @@ namespace LudumDare49
         private Sequence dispenserSequence = null;
         public void ActivateDispenser()
         {
-            if (!HasSnappedObject) return;
+            if (!HasSnappedObject)
+            {
+                // Return lever at original rotation
+                pipeLever.ResetLever();
+                return;
+            }
             if (dispenserSequence.IsActive()) dispenserSequence.Kill(); 
             dispenserSequence = DOTween.Sequence();
             dispenserSequence.Append(pipeTransform.DOShakePosition(1.0f, .1f, 8));
@@ -47,7 +52,9 @@ namespace LudumDare49
 
         public void ApplyPotionAction()
         {
-            potion.ApplyAction(actionPotion); 
+            potion.ApplyAction(actionPotion);
+            // Return lever at original rotation
+            pipeLever.ResetLever();
         }
 
         private void Start()

@@ -33,20 +33,29 @@ namespace LudumDare49
 
             movementSequence = DOTween.Sequence();
             movementSequence.AppendInterval(waitingTime);
+            movementSequence.Append(transform.DOShakePosition(1.0f, .1f, 8));
             movementSequence.Append(currentBox.transform.DOMove((Vector2)transform.position + offsetPosition, .15f));
             movementSequence.Append(currentBox.transform.DOScaleY(.4f, .1f).SetLoops(2, LoopType.Yoyo).SetEase(Ease.OutQuad)); 
         }
 
         public void ValidatePackage()
         {
-            conveyorBelt.Roll(currentBox.transform); 
+            // Return lever at original rotation
+            lever.ResetLever();
+            if (!movementSequence.IsPlaying())
+            {
+                currentBox.ClosePackage(); 
+                conveyorBelt.Roll(currentBox.transform);
+            }
         }
 
         public void OnPackageSent()
         {
             // UPDATE SCORE HERE
             Destroy(currentBox.gameObject);
-            DispensePackage(); 
+            DispensePackage();
+            // Return lever at original rotation
+            //lever.ResetLever();
         }
 
         private void Start()

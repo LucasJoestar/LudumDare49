@@ -20,7 +20,10 @@ namespace LudumDare49
         [SerializeField] private Vector2 waypoint = Vector2.zero;
         [SerializeField] private Transform wayPointTransform;
         [SerializeField] private AnimationCurve movementCurve = new AnimationCurve(); 
-        [SerializeField] private AnimationCurve rotationCurve = new AnimationCurve(); 
+        [SerializeField] private AnimationCurve rotationCurve = new AnimationCurve();
+        [Section("Sending settings")]
+        [SerializeField] private Sprite closedSprite;
+        [SerializeField] private AudioClip closingClip; 
         #endregion
 
         #region Methods
@@ -85,6 +88,23 @@ namespace LudumDare49
             pendingActions.Enqueue(_stampAction);
             ApplyPendingActions(); 
         }
+
+        public void ClosePackage()
+        {
+            GetComponent<SpriteRenderer>().sprite = closedSprite;
+            SoundManager.Instance.PlayAtPosition(closingClip, transform.position);
+        }
+
+        #region Score Methods
+        public void SendPackage()
+        {
+            if(potion != null)
+            {
+                //GameManager.Score += potion.Score; 
+            }
+        }
+        #endregion
+
         #endregion
 
         protected override void OnDrawGizmos()
