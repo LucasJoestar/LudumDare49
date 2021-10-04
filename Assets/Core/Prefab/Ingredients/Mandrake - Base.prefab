@@ -99,7 +99,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 15:58:38
+  lastModifiedDate: 04/10/2021 21:24:06
   IsPersistent: 0
 --- !u!1 &5081642993373684173
 GameObject:
@@ -203,7 +203,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 16:06:08
+  lastModifiedDate: 04/10/2021 21:24:21
   IsPersistent: 0
 --- !u!114 &2158073334046728688
 MonoBehaviour:
@@ -221,13 +221,13 @@ MonoBehaviour:
   collider: {fileID: 8508470700756695089}
   carrierPrefab: {fileID: 3594512599462764317, guid: 5612ea840722f67409131c95f498b155, type: 3}
   group: {fileID: 3783256646817488689}
-  shakeAudio: {fileID: 8300000, guid: 1e09f109eed526a4988fa0cb89fe2b89, type: 3}
+  shakeAudio: {fileID: 8300000, guid: 03edf36da9eaa9f42ab90f4ec65917a9, type: 3}
   grabPoint: {x: 0, y: 0.8, z: 0}
   destroyFX: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
   destroyFXClip: {fileID: 8300000, guid: 4ba83454aee076747ae89d7dc7d448a7, type: 3}
   physicsMask:
     serializedVersion: 2
-    m_Bits: 32896
+    m_Bits: 36992
   triggerMask:
     serializedVersion: 2
     m_Bits: 8704
@@ -489,7 +489,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 16:01:10
+  lastModifiedDate: 04/10/2021 21:24:06
   IsPersistent: 0
 --- !u!212 &2216269183686429289
 SpriteRenderer:

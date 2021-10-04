@@ -4,6 +4,7 @@
 //
 // ======================================================================== //
 
+using DG.Tweening;
 using EnhancedEditor;
 using UnityEngine;
 
@@ -13,6 +14,10 @@ namespace LudumDare49
     {
         #region Global Members
         [Section("HeavyPotionEffect")]
+
+        [SerializeField, Range(.1f, 15.0f)] private float shakeDuration = 1.0f;
+
+        [Space(5f)]
 
         [SerializeField, Range(1f, 25f)] private float speedCoef = 1f;
         [SerializeField, Range(0f, 5f)] private float speedCoefIncrement = 1f;
@@ -30,6 +35,7 @@ namespace LudumDare49
         public override void OnCrashPotion()
         {
             cursor.RemoveSpeedCoef(this);
+            Camera.main.transform.DOShakePosition(shakeDuration, 1, 15);
         }
 
         public override void OnDropPotion()
@@ -54,7 +60,7 @@ namespace LudumDare49
 
         public override void OnShake()
         {
-
+            Camera.main.transform.DOShakePosition(shakeDuration, 1, 15);
         }
 
         public override void OnStart()

@@ -17,8 +17,8 @@ namespace LudumDare49
         [SerializeField, MinMax(1f, 60f)] private Vector2 lifeDuration = new Vector2();
         [SerializeField, Range(0f, 50f)] private float lifeCoef = 2;
 
-        private int spawnRate = 2;
-        private int spawnCount = 0;
+        [SerializeField, ReadOnly] private int spawnRate = 2;
+        [SerializeField, ReadOnly] private int spawnCount = 0;
         #endregion
 
         #region Behaviour
