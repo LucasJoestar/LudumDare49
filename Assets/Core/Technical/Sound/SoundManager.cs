@@ -8,6 +8,7 @@ using EnhancedEditor;
 using UnityEngine;
 using UnityEngine.Audio;
 using System.Collections.Generic;
+using DG.Tweening; 
 
 namespace LudumDare49
 {
@@ -15,7 +16,10 @@ namespace LudumDare49
     {
         #region Global Members
         [Section("SoundManager")]
-        [SerializeField] private AudioMixer mixer;
+        private AudioMixerGroup currentGroup; 
+        [SerializeField] private AudioMixerGroup mainMixer;
+        [SerializeField] private AudioMixerGroup lowPassEchoMixer;
+        [SerializeField] private AudioMixerGroup PitchShifterMixer;
         [SerializeField] private AudioSource musicSource;
         [SerializeField] private List<AudioSource> audioSourcePool = new List<AudioSource>();
         [SerializeField, Range(.1f, 1.0f)] private float transitionDuration = .25f; 
@@ -37,23 +41,27 @@ namespace LudumDare49
         public void PlayAtPosition(AudioClip _clip, Vector2 _position, float _volume = 1.0f)
         {
             AudioSource _source;
+            Sequence _s;
             for (int i = 0; i < audioSourcePool.Count; i++)
             {
-                if (audioSourcePool[i].clip != null && audioSourcePool[i].time < audioSourcePool[i].clip.length) continue;
+                if (!audioSourcePool[i].enabled) continue;
+                audioSourcePool[i].enabled = true; 
                 _source = audioSourcePool[i];
                 _source.transform.position = _position;
+                _s = DOTween.Sequence();
+                _s.AppendInterval(_clip.length).OnComplete(() => _source.enabled = false); 
                 _source.PlayOneShot(_clip, _volume);
-                Debug.Log("Sound");
                 return; 
             }
-            /*
-            _source = Instantiate(audioSourcePool[0], transform);           
+            _source = Instantiate(audioSourcePool[0], transform);
+            _source.enabled = true;
             _source.playOnAwake = false;
-            _source.outputAudioMixerGroup = mixer.outputAudioMixerGroup;
+            _source.outputAudioMixerGroup = currentGroup;
             _source.clip = _clip;
             _source.loop = false;
+            _s = DOTween.Sequence();
+            _s.AppendInterval(_clip.length).OnComplete(() => _source.enabled = false);
             _source.PlayOneShot(_clip, _volume);
-            */
         }
 
         public void ApplyAudioEffect(AudioEffectState _effectState)
@@ -61,17 +69,25 @@ namespace LudumDare49
             switch (_effectState)
             {
                 case AudioEffectState.None:
-                    mixer.FindSnapshot(mainSnapshot_Name).TransitionTo(transitionDuration);
+                    currentGroup = mainMixer; 
+                    //mainMixer.FindSnapshot(mainSnapshot_Name).TransitionTo(transitionDuration);
                     break;
                 case AudioEffectState.LowPassAndEcho:
-                    mixer.FindSnapshot(LPESnapshot_Name).TransitionTo(transitionDuration);
+                    //mainMixer.FindSnapshot(LPESnapshot_Name).TransitionTo(transitionDuration);
+                    currentGroup = lowPassEchoMixer; 
                     break;
                 case AudioEffectState.PitchShifter:
-                    mixer.FindSnapshot(PSSnapshot_Name).TransitionTo(transitionDuration);
+                    //mainMixer.FindSnapshot(PSSnapshot_Name).TransitionTo(transitionDuration);
+                    currentGroup = PitchShifterMixer; 
                     break;
                 default:
-                    mixer.FindSnapshot(mainSnapshot_Name).TransitionTo(transitionDuration);
+                    // mainMixer.FindSnapshot(mainSnapshot_Name).TransitionTo(transitionDuration);
+                    currentGroup = mainMixer; 
                     break;
+            }
+            for (int i = 0; i < audioSourcePool.Count; i++)
+            {
+                audioSourcePool[i].outputAudioMixerGroup = currentGroup; 
             }
         }
 

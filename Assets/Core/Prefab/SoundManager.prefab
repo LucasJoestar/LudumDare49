@@ -195,8 +195,8 @@ MonoBehaviour:
   comment: 
   Tags:
     Tags: []
-  lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 01:32:53
+  lastModifiedBy: Alexis_Admin
+  lastModifiedDate: 04/10/2021 09:52:55
   IsPersistent: 0
 --- !u!114 &5452904417367975575
 MonoBehaviour:
@@ -210,7 +210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6f3cc069f492846911247835a05b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: d713fdfa47481d242a65dfae27fa921c, type: 2}
+  mainMixer: {fileID: 24300002, guid: d713fdfa47481d242a65dfae27fa921c, type: 2}
+  lowPassEchoMixer: {fileID: 1115025137348090279, guid: d713fdfa47481d242a65dfae27fa921c, type: 2}
+  PitchShifterMixer: {fileID: -7716248082338629165, guid: d713fdfa47481d242a65dfae27fa921c, type: 2}
   musicSource: {fileID: 5452904417367975578}
   audioSourcePool:
   - {fileID: 5452904417140114013}

@@ -2132,6 +2132,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5452904417367975575, guid: c434a408f08598442ac27d192fb3afc4, type: 3}
+      propertyPath: mainMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: d713fdfa47481d242a65dfae27fa921c, type: 2}
+    - target: {fileID: 5452904417367975575, guid: c434a408f08598442ac27d192fb3afc4, type: 3}
+      propertyPath: lowPassEchoMixer
+      value: 
+      objectReference: {fileID: 1115025137348090279, guid: d713fdfa47481d242a65dfae27fa921c, type: 2}
+    - target: {fileID: 5452904417367975575, guid: c434a408f08598442ac27d192fb3afc4, type: 3}
+      propertyPath: PitchShifterMixer
+      value: 
+      objectReference: {fileID: -7716248082338629165, guid: d713fdfa47481d242a65dfae27fa921c, type: 2}
+    - target: {fileID: 5452904417367975576, guid: c434a408f08598442ac27d192fb3afc4, type: 3}
+      propertyPath: lastModifiedBy
+      value: Alexis_Admin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452904417367975576, guid: c434a408f08598442ac27d192fb3afc4, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 09:52:48
+      objectReference: {fileID: 0}
     - target: {fileID: 5452904417367975577, guid: c434a408f08598442ac27d192fb3afc4, type: 3}
       propertyPath: m_RootOrder
       value: 23
