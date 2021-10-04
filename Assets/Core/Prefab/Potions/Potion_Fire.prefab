@@ -245,7 +245,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 16:26:24
+  lastModifiedDate: 04/10/2021 20:49:40
   IsPersistent: 0
 --- !u!114 &5608044127364552561
 MonoBehaviour:
@@ -263,9 +263,9 @@ MonoBehaviour:
   collider: {fileID: 5608044127364552565}
   carrierPrefab: {fileID: 0}
   group: {fileID: 5608044127364552566}
-  shakeAudio: {fileID: 0}
+  shakeAudio: {fileID: 8300000, guid: c0779a63c93d6ba428e297e2ea80c60c, type: 3}
   grabPoint: {x: 0, y: 1.52, z: 0}
-  destroyFX: {fileID: 0}
+  destroyFX: {fileID: 6138314357533670291, guid: f7189fdc95ec95840a49cafe1c59ac4d, type: 3}
   destroyFXClip: {fileID: 8300000, guid: ae2692fa8c7f2754ea6b31dc74e13e45, type: 3}
   physicsMask:
     serializedVersion: 2
@@ -293,6 +293,11 @@ MonoBehaviour:
   mixInCollider: {fileID: 5479522254410713991}
   score: 0
   remainingActions: []
+  grabClip: {fileID: 8300000, guid: 1e9ccc78592ab1b41822e92b9e8c2a93, type: 3}
+  dropClip: {fileID: 8300000, guid: 4eade7ad8bde04d4c9db45ebe907925c, type: 3}
+  successClip: {fileID: 8300000, guid: b10f5178eb167c243aa5032af9d9c7c2, type: 3}
+  failureClip: {fileID: 8300000, guid: 2d5dc2f2dffc36a428ca0949492c6a35, type: 3}
+  bubbleFX: {fileID: 1037309486743709533, guid: cbc4fb4ac846e7f4fb7f0c446ea78cb9, type: 3}
   particleOffset: {x: 0, y: 0, z: 0}
   effect: {fileID: 796445538470318154}
 --- !u!50 &5608044127364552564
@@ -383,3 +388,4 @@ MonoBehaviour:
   burnClip: {fileID: 0}
   minMaxFireEffect: {x: 1, y: 2}
   shakeDuration: 1
+  flameForce: 2

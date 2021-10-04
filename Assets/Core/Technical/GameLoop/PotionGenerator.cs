@@ -44,6 +44,7 @@ namespace LudumDare49
 
         #region Behaviour
         private Potion potion = null;
+        private bool canGenerate = true;
 
         // -----------------------
 
@@ -54,6 +55,26 @@ namespace LudumDare49
 
             potion.Rigidbody.isKinematic = false;
             blockInteract.SetActive(false);
+
+            canGenerate = true;
+        }
+
+        private void Generate()
+        {
+            canGenerate = false;
+
+            // Generate.
+            potion = Instantiate(potions[Random.Range(0, potions.Length)]);
+            potion.transform.position = generateTransform.position;
+            potion.transform.rotation = Quaternion.identity;
+
+            potion.Rigidbody.isKinematic = true;
+
+            blockInteract.SetActive(true);
+            belt.Roll(potion.transform, beltLoop);
+
+            // Set timer.
+            timer = Random.Range(generatePotionInterval.x, generatePotionInterval.y);
         }
 
         // -----------------------
@@ -61,26 +82,25 @@ namespace LudumDare49
         private void Update()
         {
             timer -= Time.deltaTime;
-            if (timer < 0)
+            if ((timer < 0f) && canGenerate)
             {
-                // Generate.
-                potion = Instantiate(potions[Random.Range(0, potions.Length)]);
-                potion.transform.position = generateTransform.position;
-                potion.transform.rotation = Quaternion.identity;
-
-                potion.Rigidbody.isKinematic = true;
-
-                blockInteract.SetActive(true);
-                belt.Roll(potion.transform, beltLoop);
-
-                // Set timer.
-                timer = Random.Range(generatePotionInterval.x, generatePotionInterval.y);
+                Generate();
             }
+        }
+
+        private void OnApplicationQuit()
+        {
+            canGenerate = false;
         }
 
         private void Start()
         {
             belt.OnEndRoll += OnEndRoll;
+            Potion.OnNoPotion += () =>
+            {
+                if (canGenerate)
+                    Generate();
+            };
         }
         #endregion
     }

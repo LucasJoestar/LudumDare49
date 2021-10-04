@@ -170,17 +170,31 @@ namespace LudumDare49
         #endregion
 
         #region Mono Behaviour
+        public static event Action OnNoPotion = null;
+        private static int count = 0;
+
         protected override void Awake()
         {
             base.Awake();
 
             remainingActions = new List<RecipeAction>(recipe.RecipeActions);
+
+            count++;
         }
 
         protected virtual void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.magenta;
             Gizmos.DrawSphere(transform.position + particleOffset, .1f);
+        }
+
+        private void OnDestroy()
+        {
+            count--;
+            if (count == 0)
+            {
+                OnNoPotion?.Invoke();
+            }
         }
         #endregion
     }
