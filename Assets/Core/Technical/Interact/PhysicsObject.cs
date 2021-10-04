@@ -8,6 +8,7 @@ using DG.Tweening;
 using EnhancedEditor;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace LudumDare49
 {
@@ -18,14 +19,19 @@ namespace LudumDare49
 
         [SerializeField, Required] protected new Rigidbody2D rigidbody = null;
         [SerializeField, Required] protected new Collider2D collider = null;
-        [SerializeField, Required] protected Transform carrierPrefab = null;
+        [SerializeField, Required] protected AudioSource carrierPrefab = null;
+        [SerializeField] private SortingGroup group = null;
         [SerializeField] private AudioClip shakeAudio = null;
 
         public Rigidbody2D Rigidbody => rigidbody;
         public Collider2D Collider => collider;
 
-        [SerializeField] protected Vector3 centerOfMass = Vector3.zero;
         [SerializeField, HelpBox("Cyan", MessageType.Info)] protected Vector3 grabPoint = Vector3.zero;
+
+        [Section("Destroy FX")]
+
+        [SerializeField] private ParticleSystem destroyFX = null;
+        [SerializeField] private AudioClip destroyFXClip = null;
 
         [Section("Layers")]
 
@@ -53,7 +59,7 @@ namespace LudumDare49
         [Space(5f)]
 
         [SerializeField, ReadOnly] protected bool isRepoping = false;
-        [SerializeField, ReadOnly] protected Transform carrier = null;
+        [SerializeField, ReadOnly] protected AudioSource carrier = null;
 
         // -----------------------
 
@@ -78,7 +84,7 @@ namespace LudumDare49
             if (isRepoping)
             {
                 repopSequence.Kill(false);
-                DepopCarrier();
+                OnEndRepop();
             }
 
             // Set joint body.
@@ -132,75 +138,99 @@ namespace LudumDare49
 
         public virtual void Eat()
         {
-            LoseObject();
+            OnDestroyed();
+            LoseObject(true);
         }
 
-        protected virtual void LoseObject()
+        public virtual void LoseObject(bool _resetPos = true)
         {
+            if (isRepoping)
+                return;
+
             if (doRepop)
             {
                 // Repop.
-                transform.position = conveyDefaultPosition.position;
+                if (_resetPos)
+                    transform.position = conveyDefaultPosition.position;
+
                 Repop();
             }
             else
             {
                 // Destroyed.
+                OnDestroyed();
                 Destroy(gameObject);
+            }
+        }
+
+        protected virtual void OnDestroyed()
+        {
+            if (destroyFX != null)
+            {
+                var _fx = Instantiate(destroyFX);
+                _fx.transform.position = transform.position;
+                _fx.transform.rotation = Quaternion.identity;
+
+                SoundManager.Instance.PlayAtPosition(destroyFXClip, transform.position);
             }
         }
 
         protected virtual void Repop()
         {
-            if (isRepoping)
-                return;
-
             isRepoping = true;
             rigidbody.isKinematic = true;
             rigidbody.velocity = Vector2.zero;
+            rigidbody.rotation = 0f;
+            rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+            transform.rotation = Quaternion.identity;
+            group.sortingOrder += 5;
 
             // Carrier.
             carrier = Instantiate(carrierPrefab);
-            carrier.position = carrierAnchor.position;
+            carrier.transform.position = carrierAnchor.position;
 
-            Vector3 _anchorOffset = carrierAnchor.position - transform.position;
             float _duration = Vector2.Distance(transform.position, repopPosition.position) / repopSpeed;
+            Vector3 _offset = carrierAnchor.position - transform.position;
 
             // Repop sequence.
             repopSequence = DOTween.Sequence();
 
             repopSequence.AppendInterval(1f);
-            repopSequence.Append(transform.DOMove(repopPosition.position, _duration));
-            repopSequence.Join(carrier.transform.DOMove(repopPosition.position + _anchorOffset, _duration));
+            repopSequence.Join(carrier.DOFade(1f, 1f));
+            repopSequence.Append(transform.DOMove(repopPosition.position, _duration).SetEase(Ease.OutQuad));
+            repopSequence.Join(carrier.transform.DOMove(repopPosition.position + _offset, _duration).SetEase(Ease.OutQuad));
 
-            Vector3 _scale = carrier.localScale;
-            _scale.x = Mathf.Sign(repopPosition.position.x - transform.position.x);
-            carrier.localScale = _scale;
+            Vector3 _scale = carrier.transform.localScale;
+            _scale.x = Mathf.Abs(_scale.x) * Mathf.Sign(transform.position.x - repopPosition.position.x);
+            carrier.transform.localScale = _scale;
 
-            repopSequence.OnComplete(() =>
-            {
-                DepopCarrier();
+            repopSequence.OnComplete(OnEndRepop);
+            repopSequence.Play();
+        }
 
-                isRepoping = false;
-                rigidbody.isKinematic = false;
-            });
+        protected virtual void OnEndRepop()
+        {
+            DepopCarrier();
+
+            isRepoping = false;
+            rigidbody.isKinematic = false;
+            rigidbody.constraints = RigidbodyConstraints2D.None;
+            group.sortingOrder -= 5;
         }
 
         protected void DepopCarrier()
         {
             Vector3 _destination = carrierDepopPositions[Random.Range(0, carrierDepopPositions.Length)].position;
-            float _duration = Vector2.Distance(transform.position, _destination) / (repopSpeed * 2f);
+            float _duration = Vector2.Distance(transform.position, _destination) / (repopSpeed * 3f);
 
-            Vector3 _scale = carrier.localScale;
-            _scale.x = Mathf.Sign(repopPosition.position.x - transform.position.x);
-            carrier.localScale = _scale;
+            AudioSource _carrier = carrier;
 
-            carrier.DOMove(_destination, _duration).OnComplete(() => Destroy(carrier.gameObject));
-        }
+            Vector3 _scale = _carrier.transform.localScale;
+            _scale.x = Mathf.Abs(_scale.x) * Mathf.Sign(transform.position.x - _destination.x);
+            _carrier.transform.localScale = _scale;
 
-        protected virtual void OnBecameInvisible()
-        {
-            LoseObject();
+            _carrier.transform.DOMove(_destination, _duration).SetEase(Ease.InQuad).OnComplete(() => _carrier.DOFade(0f, 1f).OnComplete(() => Destroy(_carrier.gameObject)));
         }
 
         protected virtual void Update()
@@ -222,9 +252,6 @@ namespace LudumDare49
 
         protected virtual void OnDrawGizmos()
         {
-            Gizmos.color = Color.green;
-            Gizmos.DrawSphere(transform.position + centerOfMass, .1f);
-
             Gizmos.color = Color.cyan;
             Gizmos.DrawSphere(transform.position + grabPoint, .1f);
         }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4876267986790450912}
   - component: {fileID: 1360051794484957388}
   m_Layer: 12
-  m_Name: CabinetCollider
+  m_Name: ShelfCollider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 12:17:56
+  lastModifiedDate: 04/10/2021 14:41:39
   IsPersistent: 0
 --- !u!60 &1360051794484957388
 PolygonCollider2D:
@@ -75,27 +75,89 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.059826, y: -4.5858073}
-      - {x: 2.075749, y: -0.010202885}
-      - {x: 1.1494198, y: 0.093223095}
-      - {x: 0.258869, y: 0.37726688}
-      - {x: -0.839365, y: 0.44044113}
-      - {x: -1.9050568, y: 0.05717516}
-      - {x: -2.6712635, y: 0.08341408}
-      - {x: -2.661204, y: -1.5733037}
-      - {x: 1.6945474, y: -1.5107636}
-      - {x: 1.8837953, y: -1.686152}
-      - {x: -2.6240432, y: -1.693172}
-      - {x: -2.6633065, y: -3.0018659}
-      - {x: 1.7675233, y: -2.9725995}
-      - {x: 1.8514385, y: -3.0890985}
-      - {x: -2.6760356, y: -3.1314006}
-      - {x: -2.7507718, y: -4.6585727}
-      - {x: -2.9744074, y: -4.679926}
-      - {x: -3.0113578, y: 0.44027543}
-      - {x: -2.5782957, y: 0.5131178}
-      - {x: 2.3002706, y: 0.44871926}
-      - {x: 2.2905273, y: -4.6154156}
+    - - {x: 1.9248449, y: -1.6724677}
+      - {x: 1.7382957, y: -1.5737333}
+      - {x: -2.472571, y: -1.6277843}
+      - {x: -2.6768172, y: -1.7467885}
+--- !u!1 &2680638036105605425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4092998483359283193}
+  - component: {fileID: 7173650945411721471}
+  - component: {fileID: 2735303823265026925}
+  m_Layer: 12
+  m_Name: ShelfCollider (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4092998483359283193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2680638036105605425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6535742902435603958}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7173650945411721471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2680638036105605425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877eb788512e6904897eca70a462a2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comment: 
+  Tags:
+    Tags: []
+  lastModifiedBy: Lucas
+  lastModifiedDate: 04/10/2021 14:41:35
+  IsPersistent: 0
+--- !u!60 &2735303823265026925
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2680638036105605425}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.9698384, y: -3.168507}
+      - {x: 1.8620282, y: -3.036028}
+      - {x: -2.5175645, y: -3.0675826}
+      - {x: -2.6093266, y: -3.1978345}
 --- !u!1 &3494640382435088530
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +422,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 12:07:54
+  lastModifiedDate: 04/10/2021 14:40:28
   IsPersistent: 0
 --- !u!60 &3630387864979847744
 PolygonCollider2D:
@@ -369,7 +431,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3494640382614043467}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -717,7 +779,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 12:15:41
+  lastModifiedDate: 04/10/2021 14:40:31
   IsPersistent: 0
 --- !u!60 &4652096687680454315
 PolygonCollider2D:
@@ -726,7 +788,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3494640383212293322}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1112,7 +1174,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 12:11:22
+  lastModifiedDate: 04/10/2021 14:40:31
   IsPersistent: 0
 --- !u!60 &8537510549518409846
 PolygonCollider2D:
@@ -1121,7 +1183,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3494640384002429356}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1688,7 +1750,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6535742901477494785}
   - component: {fileID: 6535742901477494910}
-  - component: {fileID: 3494640382984646252}
   m_Layer: 12
   m_Name: WorkingDesk
   m_TagString: Untagged
@@ -1734,17 +1795,6 @@ MonoBehaviour:
   lastModifiedBy: Lucas
   lastModifiedDate: 04/10/2021 00:30:52
   IsPersistent: 0
---- !u!210 &3494640382984646252
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6535742901477494911}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -10
 --- !u!1 &6535742901802894497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,6 +1885,7 @@ GameObject:
   - component: {fileID: 6535742901879576194}
   - component: {fileID: 6535742901879576196}
   - component: {fileID: 6535742901879576197}
+  - component: {fileID: 8754004968386317189}
   m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
@@ -1925,6 +1976,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &8754004968386317189
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6535742901879576195}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -10
 --- !u!1 &6535742902435603959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,6 +2018,7 @@ Transform:
   - {fileID: 6535742901802894496}
   - {fileID: 6535742902599094214}
   - {fileID: 4888064733328324287}
+  - {fileID: 4092998483359283193}
   m_Father: {fileID: 6535742901477494785}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

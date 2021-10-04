@@ -246,13 +246,7 @@ namespace LudumDare49
                     // Drop.
                     if (!Mouse.current.leftButton.isPressed)
                     {
-                        interaction.Drop();
-                        interaction = null;
-
-                        joint.connectedBody = null;
-
-                        state = CursorState.Finger;
-                        sprite.sprite = fingerIcon;
+                        Drop();
                     }
                     else
                     {
@@ -296,6 +290,20 @@ namespace LudumDare49
         private void Start()
         {
             currentSpeed = speed;
+        }
+
+        public void Drop()
+        {
+            if (state != CursorState.Grab)
+                return;
+
+            interaction.Drop();
+            interaction = null;
+
+            joint.connectedBody = null;
+
+            state = CursorState.Finger;
+            sprite.sprite = fingerIcon;
         }
 
         public void SetInteraction(IGrabbable _interaction)

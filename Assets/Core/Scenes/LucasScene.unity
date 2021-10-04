@@ -1392,6 +1392,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6080647811584796496, guid: b610a8c837c76894b9e06ff66bfab3ff, type: 3}
+      propertyPath: lastModifiedDate
+      value: 04/10/2021 14:38:25
+      objectReference: {fileID: 0}
     - target: {fileID: 6080647811584796497, guid: b610a8c837c76894b9e06ff66bfab3ff, type: 3}
       propertyPath: carrierDepopPositions.Array.data[0]
       value: 
@@ -1449,10 +1453,6 @@ PrefabInstance:
       propertyPath: cursor
       value: 
       objectReference: {fileID: 1807944358}
-    - target: {fileID: 7695784673783014972, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
-      propertyPath: lastModifiedDate
-      value: 04/10/2021 12:26:22
-      objectReference: {fileID: 0}
     - target: {fileID: 7695784675419628292, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
       propertyPath: m_RootOrder
       value: 4
