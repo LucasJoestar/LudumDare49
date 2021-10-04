@@ -20,7 +20,10 @@ namespace LudumDare49
         [Section("Crashing Effect")]
         [SerializeField] private Vector2Int minMaxFireEffect = new Vector2Int(1, 2);
         [SerializeField, Range(.1f, 15.0f)] private float shakeDuration = 1.0f;
-        [SerializeField, Range(1, 10)] private float flameForce = 2.0f; 
+        [SerializeField, Range(1, 10)] private float flameForce = 2.0f;
+        [Section("Flame Disapearing")]
+        [SerializeField, Range(1, 10)] private float waitingTime = 1.0f; 
+        [SerializeField, Range(1, 10)] private float shrinkingDuration = 1.0f; 
 
         private PlayerCursor cursor = null; 
         private Sequence dropSequence = null;
@@ -101,6 +104,10 @@ namespace LudumDare49
             {
                 Rigidbody2D _flame = Instantiate(fireEffect, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
                 _flame.velocity = (Vector2.up + (Vector2.left * Random.Range(-1.0f, 1.0f))) * flameForce;
+                Sequence _s = DOTween.Sequence();
+                _s.AppendInterval(waitingTime);
+                _s.Append(_flame.transform.DOScale(0, shrinkingDuration));
+                _s.OnComplete(() => Destroy(_flame.gameObject));
             }
 
             SoundManager.Instance.PlayAtPosition(burnClip, transform.position); 
