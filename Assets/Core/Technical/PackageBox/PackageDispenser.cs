@@ -33,6 +33,7 @@ namespace LudumDare49
 
             movementSequence = DOTween.Sequence();
             movementSequence.AppendInterval(waitingTime);
+            movementSequence.Append(transform.DOShakePosition(1.0f, .1f, 8));
             movementSequence.Append(currentBox.transform.DOMove((Vector2)transform.position + offsetPosition, .15f));
             movementSequence.Append(currentBox.transform.DOScaleY(.4f, .1f).SetLoops(2, LoopType.Yoyo).SetEase(Ease.OutQuad)); 
         }
