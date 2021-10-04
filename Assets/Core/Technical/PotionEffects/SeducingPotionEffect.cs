@@ -36,7 +36,7 @@ namespace LudumDare49
         {
         }
 
-        public override void OnCollideObject(Collider2D _collider)
+        public override void OnCollideObject(Collider2D _collider, Vector2 _point)
         {
             
         }

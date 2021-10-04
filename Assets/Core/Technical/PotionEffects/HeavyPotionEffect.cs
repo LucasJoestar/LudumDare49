@@ -27,7 +27,7 @@ namespace LudumDare49
         #endregion
 
         #region Behaviour
-        public override void OnCollideObject(Collider2D _collider)
+        public override void OnCollideObject(Collider2D _collider, Vector2 _point)
         {
 
         }

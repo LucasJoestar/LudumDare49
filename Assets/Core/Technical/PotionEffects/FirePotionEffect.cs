@@ -69,7 +69,7 @@ namespace LudumDare49
             dropSequence.OnComplete(DropPotionFromBurn); 
         }
 
-        public override void OnCollideObject(Collider2D _collider)
+        public override void OnCollideObject(Collider2D _collider, Vector2 _point)
         {
 
         }

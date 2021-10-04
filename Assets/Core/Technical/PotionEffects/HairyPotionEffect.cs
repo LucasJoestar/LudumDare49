@@ -18,12 +18,12 @@ namespace LudumDare49
         [SerializeField, Required] private AudioClip hairGrow = null;
         [SerializeField, Required] private new Collider2D collider = null;
 
-        [SerializeField, ReadOnly] private int spawnRate = 2;
-        [SerializeField, ReadOnly] private int spawnCount = 0;
+        private int spawnRate = 3;
+        private int spawnCount = 0;
         #endregion
 
         #region Behaviour
-        public override void OnCollideObject(Collider2D _collider)
+        public override void OnCollideObject(Collider2D _collider, Vector2 _point)
         {
             spawnCount++;
             if (spawnCount < spawnRate)
@@ -31,14 +31,12 @@ namespace LudumDare49
 
             spawnCount = 0;
 
-            Vector2 _pos = _collider.ClosestPoint(collider.bounds.center);
-
             GameObject _hair = Instantiate(hairPrefab);
-            _hair.transform.position = _pos;
+            _hair.transform.position = _point;
             _hair.transform.rotation = Quaternion.identity;
             _hair.transform.SetParent(_collider.transform, true);
 
-            SoundManager.Instance.PlayAtPosition(hairGrow, _pos);
+            SoundManager.Instance.PlayAtPosition(hairGrow, _point);
         }
 
         public override void OnCrashPotion()

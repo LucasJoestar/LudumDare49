@@ -203,7 +203,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 21:24:21
+  lastModifiedDate: 04/10/2021 22:03:43
   IsPersistent: 0
 --- !u!114 &2158073334046728688
 MonoBehaviour:
@@ -258,7 +258,7 @@ MonoBehaviour:
   isRepoping: 0
   carrier: {fileID: 0}
   trigger: {fileID: 0}
-  action: {fileID: 11400000, guid: dd337ec1b7b8097449ea2872b6acbd1f, type: 2}
+  action: {fileID: 11400000, guid: a8a003aca583cd3429c9182bf066de6d, type: 2}
   canBeMixedUp: 0
 --- !u!60 &8508470700756695089
 PolygonCollider2D:

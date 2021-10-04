@@ -49,6 +49,10 @@ PrefabInstance:
       propertyPath: destroyFX
       value: 
       objectReference: {fileID: 2689579920899188353, guid: e2439b9417475ca43afca4c29d90c95f, type: 3}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: shakeAction
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c7a456366075af4ea6d3b3e8132368f, type: 2}
     - target: {fileID: 5608044127364552565, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 16
@@ -231,7 +235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5608044127364552569, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: lastModifiedDate
-      value: 04/10/2021 20:53:19
+      value: 04/10/2021 22:01:37
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}

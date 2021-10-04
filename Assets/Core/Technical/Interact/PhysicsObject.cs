@@ -284,7 +284,7 @@ namespace LudumDare49
 
         #region Collision
         protected static Collider2D[] overlapBuffer = new Collider2D[6];
-        protected static List<Collider2D> currentBuffer = new List<Collider2D>();
+        protected static List<ContactPoint2D> currentBuffer = new List<ContactPoint2D>();
 
         private List<Collider2D> colliderBuffer = new List<Collider2D>();
         private Dictionary<Collider2D, float> collisionBuffer = new Dictionary<Collider2D, float>();
@@ -298,11 +298,11 @@ namespace LudumDare49
             int _count = rigidbody.GetContacts(currentBuffer);
             for (int _i = 0; _i < _count; _i++)
             {
-                Collider2D _collider = currentBuffer[_i];
+                Collider2D _collider = currentBuffer[_i].collider;
                 if (!colliderBuffer.Contains(_collider) && ManageCollider(_collider))
                 {
                     // Collision !
-                    OnCollideObject(_collider);
+                    OnCollideObject(_collider, currentBuffer[_i].point);
                 }
             }
 
@@ -310,7 +310,7 @@ namespace LudumDare49
             colliderBuffer.Resize(currentBuffer.Count);
             for (int _i = 0; _i < _count; _i++)
             {
-                colliderBuffer[_i] = currentBuffer[_i];
+                colliderBuffer[_i] = currentBuffer[_i].collider;
             }
 
             for (int _i = _count; _i < colliderBuffer.Count; _i++)
@@ -351,7 +351,7 @@ namespace LudumDare49
             }
         }
 
-        protected virtual void OnCollideObject(Collider2D _collider)
+        protected virtual void OnCollideObject(Collider2D _collider, Vector2 _point)
         {
         }
 

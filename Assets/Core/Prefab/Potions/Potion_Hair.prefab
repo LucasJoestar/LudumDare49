@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: destroyFX
       value: 
       objectReference: {fileID: 6184988201210076061, guid: 8f47c39408f642c4e9efd35f66e27e85, type: 3}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: shakeAction
+      value: 
+      objectReference: {fileID: 11400000, guid: b53430819bd4a2642adc503b66646154, type: 2}
     - target: {fileID: 5608044127364552565, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 22

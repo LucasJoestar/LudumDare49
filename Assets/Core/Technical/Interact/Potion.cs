@@ -18,6 +18,7 @@ namespace LudumDare49
         [Section("Potion")]
 
         [SerializeField, Required] protected Recipe recipe = null;
+        [SerializeField, Required] protected PotionAction shakeAction = null;
         [SerializeField, Required] protected Collider2D mixInCollider = null;
         [SerializeField, ReadOnly] protected int score = 0;
 
@@ -115,10 +116,10 @@ namespace LudumDare49
             SoundManager.Instance.PlayAtPosition(dropClip, transform.position);
         }
 
-        protected override void OnCollideObject(Collider2D _collider)
+        protected override void OnCollideObject(Collider2D _collider, Vector2 _point)
         {
-            base.OnCollideObject(_collider);
-            if (effect != null) effect.OnCollideObject(_collider);
+            base.OnCollideObject(_collider, _point);
+            if (effect != null) effect.OnCollideObject(_collider, _point);
         }
 
         protected override void OnBrutalCollision(Vector3 _velocity)
@@ -137,6 +138,8 @@ namespace LudumDare49
         {
             base.Shake();
             if (effect != null) effect.OnShake();
+
+            ApplyAction(shakeAction);
         }
 
         // -----------------------
