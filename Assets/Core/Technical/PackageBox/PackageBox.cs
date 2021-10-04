@@ -12,13 +12,15 @@ using UnityEngine.Rendering;
 
 namespace LudumDare49
 {
-    public class PackageBox : SnapTrigger
+    public class PackageBox : PhysicsTrigger
     {
         #region Global Members
         [Section("PackageBox")]
+        [SerializeField] private new Collider2D collider = null; 
         [SerializeField, ReadOnly] private Potion potion = null;
         [SerializeField, ReadOnly] private Queue<PotionAction> pendingActions = new Queue<PotionAction>();
 
+        [SerializeField] private Vector2 snappingOffset = Vector2.zero; 
         [SerializeField] private Vector2 potionOffset = Vector2.zero;
         [SerializeField, Range(-90, 90)] private float potionRotation = -14.0f;
         [SerializeField, Range(.1f, 2.0f)] private float rotationDuration = .1f;
@@ -29,7 +31,9 @@ namespace LudumDare49
 
         [Section("Sending settings")]
         [SerializeField] private Sprite closedSprite;
-        [SerializeField] private AudioClip closingClip; 
+        [SerializeField] private AudioClip closingClip;
+
+        private Sequence snapSequence = null; 
         #endregion
 
         #region Methods
@@ -38,10 +42,27 @@ namespace LudumDare49
             if (sortingGroup == null) sortingGroup = GetComponent<SortingGroup>();
             sortingGroup.sortingOrder = 1;
 
-            if (pendingObject[0] != null && pendingObject[1] != null)
-                return; 
+            if(_object is Potion _potion)
+            {
+                if (potion != null) return; 
+            }
+            else if(_object is Ingredient _ingredient)
+            {
+                if (pendingObject[0] != null && pendingObject[1] != null)
+                    return; 
+            }
 
-            base.OnTrigger(_object); 
+            _object.Snap();
+            _object.GetComponent<Collider2D>().enabled = false; 
+
+            if (snapSequence.IsActive()) snapSequence.Complete();
+            snapSequence = DOTween.Sequence();
+            snapSequence.Join(_object.transform.DOMove((Vector2)transform.position + snappingOffset, .25f).SetEase(Ease.OutCirc));
+            snapSequence.Join(_object.transform.DORotate(Vector3.zero, .25f).SetEase(Ease.OutCirc));
+            snapSequence.Play();
+
+            collider.enabled = false;
+
             snapSequence.OnComplete(() => SetObject(_object));
         }
 
@@ -49,9 +70,11 @@ namespace LudumDare49
         {
             _object.GetComponentInChildren<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
             _object.transform.SetParent(transform);
+
             snapSequence.Kill();
             snapSequence = DOTween.Sequence();
             snapSequence.AppendInterval(.1f);
+
             Vector2 _offsetPosition = Vector2.zero; 
             if (_object is Potion _potion )
             {
@@ -70,7 +93,7 @@ namespace LudumDare49
                 else
                 {
                     pendingObject[1] = _object;
-                    if(pendingObject[0].TryGetComponent<Flame>(out Flame _f) && _object.TryGetComponent<Flame>(out Flame _f2))
+                    if(pendingObject[0].TryGetComponent(out Flame _f) && _object.TryGetComponent(out Flame _f2))
                     {
                         _f.MakeHorny(); 
                         _f2.MakeHorny(); 
@@ -82,7 +105,8 @@ namespace LudumDare49
             }
             snapSequence.Append(_object.transform.DOMove((Vector2)transform.position + _offsetPosition, rotationDuration));
             snapSequence.OnComplete(ApplyPendingActions);
-            hasSnappedObject = false; 
+
+            collider.enabled = true; 
         }
 
         private void ApplyPendingActions()
@@ -104,10 +128,11 @@ namespace LudumDare49
 
         public void ClosePackage()
         {
-            GetComponent<SpriteRenderer>().sprite = closedSprite;
-            potion.GetComponentInChildren<SpriteRenderer>().enabled = false;
+            GetComponentInChildren<SpriteRenderer>().sprite = closedSprite;
+            if(potion != null) potion.GetComponentInChildren<SpriteRenderer>().enabled = false;
             for (int i = 0; i < pendingObject.Length; i++)
             {
+                if (pendingObject[i] == null) continue; 
                 pendingObject[i].GetComponentInChildren<SpriteRenderer>().enabled = false; 
             }
             SoundManager.Instance.PlayAtPosition(closingClip, transform.position);
@@ -125,9 +150,10 @@ namespace LudumDare49
 
         #endregion
 
-        protected override void OnDrawGizmos()
+        protected void OnDrawGizmos()
         {
-            base.OnDrawGizmos();
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawSphere(transform.position + (Vector3)snappingOffset, .1f);
             Gizmos.color = Color.red; 
             Gizmos.DrawSphere(transform.position + (Vector3)potionOffset, .1f);
             Gizmos.color = Color.green;
