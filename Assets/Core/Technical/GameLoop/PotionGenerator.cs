@@ -82,6 +82,11 @@ namespace LudumDare49
 
         private void Update()
         {
+            if (UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                Application.Quit();
+            }
+
             if (!isEnabled)
                 return;
 
