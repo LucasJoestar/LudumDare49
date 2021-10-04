@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111582018050975994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.23, y: -9.08, z: 1.8}
+  m_LocalPosition: {x: -0.23, y: 0.19, z: 1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2150352743180430542}
@@ -50,7 +50,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 21:06:46
+  lastModifiedDate: 04/10/2021 22:02:00
   IsPersistent: 0
 --- !u!199 &8293711031018488837
 ParticleSystemRenderer:
@@ -14698,7 +14698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251195920631341864}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.84, y: -9.08, z: 2.78}
+  m_LocalPosition: {x: -0.84, y: 0.19, z: 2.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3883156133144088664}
@@ -14721,7 +14721,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 21:06:46
+  lastModifiedDate: 04/10/2021 22:02:00
   IsPersistent: 0
 --- !u!199 &5540023309791674864
 ParticleSystemRenderer:
@@ -19589,7 +19589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701055449919764991}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.68, y: -9.08, z: 1.57}
+  m_LocalPosition: {x: -1.68, y: 0.19, z: 1.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5735643460364632458}
@@ -19612,7 +19612,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 21:06:46
+  lastModifiedDate: 04/10/2021 22:02:00
   IsPersistent: 0
 --- !u!199 &6782016468996885055
 ParticleSystemRenderer:
@@ -29311,7 +29311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3709027562464278947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.98, y: -9.08, z: 1.69}
+  m_LocalPosition: {x: -0.98, y: 0.19, z: 1.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1577422350860082558}
@@ -29334,7 +29334,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 21:06:46
+  lastModifiedDate: 04/10/2021 22:02:00
   IsPersistent: 0
 --- !u!199 &6653722681545153000
 ParticleSystemRenderer:
@@ -58586,7 +58586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5117270407089855042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13, y: -9.08, z: 1.14}
+  m_LocalPosition: {x: -0.13, y: 0.19, z: 1.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6823701892885909356}
@@ -58609,7 +58609,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 21:06:46
+  lastModifiedDate: 04/10/2021 22:02:00
   IsPersistent: 0
 --- !u!199 &908674059266583448
 ParticleSystemRenderer:
@@ -63477,7 +63477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5418657425777595994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.13, y: -9.08, z: 1.01}
+  m_LocalPosition: {x: -1.13, y: 0.19, z: 1.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8368809389978690503}
@@ -63500,7 +63500,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 21:06:46
+  lastModifiedDate: 04/10/2021 22:02:00
   IsPersistent: 0
 --- !u!199 &7917432471808386758
 ParticleSystemRenderer:
@@ -78014,7 +78014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6609258080765208059}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.98, y: -9.08, z: 1.11}
+  m_LocalPosition: {x: -0.98, y: 0.19, z: 1.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4414660576813785232}
@@ -78037,7 +78037,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 21:06:46
+  lastModifiedDate: 04/10/2021 22:02:00
   IsPersistent: 0
 --- !u!199 &3926796299097011067
 ParticleSystemRenderer:
@@ -87796,7 +87796,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8225865108200319908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.84, y: -9.08, z: 2.29}
+  m_LocalPosition: {x: -0.84, y: 0.19, z: 2.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9068988332050037189}
@@ -87819,7 +87819,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: C.Azylmarillion
-  lastModifiedDate: 04/10/2021 21:06:46
+  lastModifiedDate: 04/10/2021 22:02:00
   IsPersistent: 0
 --- !u!199 &8768299809772339146
 ParticleSystemRenderer:
