@@ -31,7 +31,9 @@ namespace LudumDare49
 
         [Space(5f)]
 
-        [SerializeField] private Gradient alertGradient = new Gradient();
+        [SerializeField] private Color alertColor = Color.red;
+        [SerializeField, Range(0, 10)] private int alertLoop = 2;
+        [SerializeField, Range(0f, 5f)] private float alertDuration = .5f;
         [SerializeField] private Ease alertEase = Ease.Linear;
 
         [Section("State")]
@@ -47,8 +49,9 @@ namespace LudumDare49
         private void OnEndRoll()
         {
             SoundManager.Instance.PlayAtPosition(alertClip, alertObject.transform.position);
-            alertObject.DOGradientColor(alertGradient, alertClip.length).SetEase(alertEase);
-            
+            alertObject.DOColor(alertColor, alertDuration).SetEase(alertEase).SetLoops(alertLoop, LoopType.Yoyo);
+
+            potion.Rigidbody.isKinematic = false;
             potion.Activate();
         }
 
@@ -63,6 +66,8 @@ namespace LudumDare49
                 potion = Instantiate(potions[Random.Range(0, potions.Length)]);
                 potion.transform.position = generateTransform.position;
                 potion.transform.rotation = Quaternion.identity;
+
+                potion.Rigidbody.isKinematic = true;
 
                 belt.Roll(potion.transform, beltLoop);
 

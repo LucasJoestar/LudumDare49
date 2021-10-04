@@ -35,6 +35,8 @@ namespace LudumDare49
         #endregion
 
         #region Behaviour
+        private Vector3 rightBeltOrigin = Vector3.zero;
+        private Vector3 leftBeltOrigin = Vector3.zero;
         private Sequence sequence = null;
 
         // -----------------------
@@ -51,7 +53,7 @@ namespace LudumDare49
 
             foreach (var _wheel in wheels)
             {
-                sequence.Join(rightBelt.DORotate(new Vector3(0f, 0f, 360f), loopTime, RotateMode.FastBeyond360).SetEase(wheelEase));
+                sequence.Join(_wheel.DORotate(new Vector3(0f, 0f, _wheel.rotation.eulerAngles.z + 360f), loopTime, RotateMode.FastBeyond360).SetEase(wheelEase));
             }
 
             sequence.SetLoops(_loop, LoopType.Restart);
@@ -71,13 +73,16 @@ namespace LudumDare49
                 audio.DOFade(0f, .2f).OnComplete(audio.Stop);
                 OnEndRoll?.Invoke();
 
-                Debug.Log("Stop Roll");
+                rightBelt.position = rightBeltOrigin;
+                leftBelt.position = leftBeltOrigin;
             });
         }
 
         private void Start()
         {
             audio.volume = 0f;
+            rightBeltOrigin = rightBelt.position;
+            leftBeltOrigin = leftBelt.position;
         }
         #endregion
     }
