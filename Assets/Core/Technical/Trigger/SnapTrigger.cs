@@ -10,11 +10,12 @@ using DG.Tweening;
 
 namespace LudumDare49
 {
-    public abstract class SnapTrigger : PhysicsTrigger
+    public class SnapTrigger : PhysicsTrigger
     {
         #region Global Members
         [Section("SnapTrigger")]
         [SerializeField] protected Vector2 snappingOffset = Vector2.zero;
+        [SerializeField] protected new Collider2D collider = null;
 
         [SerializeField, ReadOnly()] protected bool hasSnappedObject = false; 
         protected Sequence snapSequence; 
@@ -32,11 +33,17 @@ namespace LudumDare49
                 snapSequence = DOTween.Sequence();
                 snapSequence.Join(_object.transform.DOMove((Vector2)transform.position + snappingOffset, .25f).SetEase(Ease.OutCirc));
                 snapSequence.Join(_object.transform.DORotate(Vector3.zero, .25f).SetEase(Ease.OutCirc));
-                snapSequence.Play(); 
+                snapSequence.Play();
+
+                collider.enabled = false;
             }
         }
 
-        public override void OnGrabbed(PhysicsObject _object) => hasSnappedObject = false;
+        public override void OnGrabbed(PhysicsObject _object)
+        {
+            hasSnappedObject = false;
+            collider.enabled = true;
+        }
 
 
         protected virtual void OnDrawGizmos()

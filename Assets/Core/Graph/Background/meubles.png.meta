@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: 6258563242993432066
     second: Leaf
+  - first:
+      213: -8401246822645941016
+    second: PotionSocle
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -242,6 +245,27 @@ TextureImporter:
       bones: []
       spriteID: 206b0f63c12ead650800000000000000
       internalID: 6258563242993432066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PotionSocle
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 2531
+        width: 276
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec3fc9c686c86b80800000000000000
+      internalID: -8401246822645941016
       vertices: []
       indices: 
       edges: []
