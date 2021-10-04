@@ -259,7 +259,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 03:08:02
+  lastModifiedDate: 04/10/2021 10:57:18
   IsPersistent: 0
 --- !u!114 &5278052685764389809
 MonoBehaviour:
@@ -280,7 +280,12 @@ MonoBehaviour:
   generatePotionInterval: {x: 25, y: 30}
   beltLoop: 5
   potions:
-  - {fileID: 0}
+  - {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+  - {fileID: 7170677232709008964, guid: 0164a37d28659f84fbff3744ca8918a0, type: 3}
+  - {fileID: 6373616819300466122, guid: 99c65126dd63f9e42aa1de591f59aaa5, type: 3}
+  - {fileID: 8162648772388044549, guid: 1e8fe9d720c0baf40a2a25ec3e198dcf, type: 3}
+  - {fileID: 487674140013206784, guid: b6d3f38be719f3848ba078acb1b8d313, type: 3}
+  - {fileID: 4769151326007432161, guid: 26f0dd2342a2d5145a45d81c8668b778, type: 3}
   alertColor: {r: 1, g: 0, b: 0, a: 0.56078434}
   alertLoop: 6
   alertDuration: 0.75
