@@ -13,8 +13,23 @@ MonoBehaviour:
   m_Name: DAT_Recipe_LifePotion
   m_EditorClassIdentifier: 
   RecipeActions:
-  - name: Chauffer
-    action: {fileID: 11400000, guid: c414f8b743d66e740ae48003f26be2d4, type: 2}
+  - name: Eyes
+    action: {fileID: 11400000, guid: 968bcd1f3f2b7ba48a7df2a5e1feba84, type: 2}
     score: 25
-  ForbiddenActions: []
-  UndesiredActionScore: -20
+  - name: Eyes
+    action: {fileID: 11400000, guid: 968bcd1f3f2b7ba48a7df2a5e1feba84, type: 2}
+    score: 25
+  - name: Candle
+    action: {fileID: 11400000, guid: b855259e3361c3945bc6fded3f55246b, type: 2}
+    score: 25
+  - name: Salt
+    action: {fileID: 11400000, guid: dd337ec1b7b8097449ea2872b6acbd1f, type: 2}
+    score: 25
+  - name: Salt
+    action: {fileID: 11400000, guid: 2fbc17009b049da449cd4576b9d6bab6, type: 2}
+    score: 25
+  ForbiddenActions:
+  - name: Mushroom
+    action: {fileID: 11400000, guid: a48892d6cbac830469aefebc915f531e, type: 2}
+    score: -20
+  UndesiredActionScore: -5
