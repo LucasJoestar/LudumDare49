@@ -136,6 +136,7 @@ namespace LudumDare49
                 pendingObject[i].GetComponentInChildren<SpriteRenderer>().enabled = false; 
             }
             SoundManager.Instance.PlayAtPosition(closingClip, transform.position);
+            SendPackage(); 
         }
 
         #region Score Methods
@@ -143,7 +144,7 @@ namespace LudumDare49
         {
             if(potion != null)
             {
-                //GameManager.Score += potion.Score; 
+                ScoreManager.Instance.IncrementScore(potion.Score);
             }
         }
         #endregion

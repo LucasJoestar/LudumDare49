@@ -44,6 +44,9 @@ TextureImporter:
   - first:
       213: 3052315535316524931
     second: Hearts2
+  - first:
+      213: -1772244045117237821
+    second: PickUpLine
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -405,7 +408,7 @@ TextureImporter:
         width: 118
         height: 116
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -426,7 +429,7 @@ TextureImporter:
         width: 149
         height: 143
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -434,6 +437,27 @@ TextureImporter:
       bones: []
       spriteID: 38f92f8bec00c5a20800000000000000
       internalID: 3052315535316524931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickUpLine
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 510
+        width: 1120
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c55c734e69b767e0800000000000000
+      internalID: -1772244045117237821
       vertices: []
       indices: 
       edges: []
