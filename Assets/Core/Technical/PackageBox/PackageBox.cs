@@ -7,7 +7,8 @@
 using EnhancedEditor;
 using UnityEngine;
 using System.Collections.Generic;
-using DG.Tweening; 
+using DG.Tweening;
+using UnityEngine.Rendering; 
 
 namespace LudumDare49
 {
@@ -17,10 +18,15 @@ namespace LudumDare49
         [Section("PackageBox")]
         [SerializeField, ReadOnly] private Potion potion = null;
         [SerializeField, ReadOnly] private Queue<PotionAction> pendingActions = new Queue<PotionAction>();
-        [SerializeField] private Vector2 waypoint = Vector2.zero;
-        [SerializeField] private Transform wayPointTransform;
-        [SerializeField] private AnimationCurve movementCurve = new AnimationCurve(); 
-        [SerializeField] private AnimationCurve rotationCurve = new AnimationCurve();
+
+        [SerializeField] private Vector2 potionOffset = Vector2.zero;
+        [SerializeField, Range(-90, 90)] private float potionRotation = -14.0f;
+        [SerializeField, Range(.1f, 2.0f)] private float rotationDuration = .1f;
+        [SerializeField] private Vector2[] ingredientOffset = new Vector2[] { }; 
+
+        private static readonly PhysicsObject[] pendingObject = new PhysicsObject[2];
+        [SerializeField] private SortingGroup sortingGroup = null; 
+
         [Section("Sending settings")]
         [SerializeField] private Sprite closedSprite;
         [SerializeField] private AudioClip closingClip; 
@@ -29,47 +35,44 @@ namespace LudumDare49
         #region Methods
         public override void OnTrigger(PhysicsObject _object)
         {
-            hasSnappedObject = true;
-            _object.Rigidbody.velocity = Vector2.zero;
-            _object.Rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
-            wayPointTransform.localPosition = (waypoint + new Vector2(0,_object.GetComponentInChildren<SpriteRenderer>().bounds.extents.y)) / transform.localScale; 
-
-            if (snapSequence != null) snapSequence.Complete();
-            snapSequence = DOTween.Sequence();
-
-            snapSequence.Join(_object.transform.DORotate(Vector3.zero, 0.01f).SetEase(movementCurve));
-
-            snapSequence.Append(_object.transform.DOMove((Vector2)transform.position + waypoint, .8f).OnComplete(() => SetMaskInteraction(_object)));
-            snapSequence.Append(wayPointTransform.DORotate(Vector3.back * 180, .15f).SetLoops(8, LoopType.Incremental).SetEase(rotationCurve)); 
-            //snapSequence.Join(wayPointTransform.transform.DOScale(1.5f, .125f).SetLoops(4, LoopType.Yoyo));
-
-            snapSequence.Append(wayPointTransform.DOMove((Vector2)transform.position + snappingOffset, .25f).OnComplete(() => SetObject(_object)));
-            snapSequence.Play();
-        }
-
-        private void SetMaskInteraction(PhysicsObject _object)
-        {
-            _object.transform.SetParent(wayPointTransform); 
-            _object.GetComponentInChildren<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleOutsideMask; 
+            if (sortingGroup == null) sortingGroup = GetComponent<SortingGroup>();
+            sortingGroup.sortingOrder = 1;
+            base.OnTrigger(_object); 
+            snapSequence.OnComplete(() => SetObject(_object));
         }
 
         private void SetObject(PhysicsObject _object)
         {
+            _object.GetComponentInChildren<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
             _object.transform.SetParent(transform);
-
+            snapSequence.Kill();
+            snapSequence = DOTween.Sequence();
+            snapSequence.AppendInterval(.1f);
+            Vector2 _offsetPosition = Vector2.zero; 
             if (_object is Potion)
             {
+                snapSequence.Append(_object.transform.DORotate(Vector3.forward * potionRotation, rotationDuration)); 
+                _offsetPosition = potionOffset; 
                 potion = (Potion)_object;
-                ApplyPendingActions();
             }
             else if (_object is Ingredient)
             {
-                pendingActions.Enqueue((_object as Ingredient).Action);
-                if (potion != null)
+                snapSequence.Append(_object.transform.DORotate(Vector3.zero, rotationDuration)); 
+                if (pendingObject[0] == null)
                 {
-                    ApplyPendingActions();
+                    pendingObject[0] = _object;
+                    _offsetPosition = ingredientOffset[0]; 
                 }
+                else
+                {
+                    pendingObject[1] = _object;
+                    _offsetPosition = ingredientOffset[1]; 
+                }
+                pendingActions.Enqueue((_object as Ingredient).Action);
             }
+            snapSequence.Append(_object.transform.DOMove((Vector2)transform.position + _offsetPosition, rotationDuration));
+            snapSequence.OnComplete(ApplyPendingActions); 
+
         }
 
         private void ApplyPendingActions()
@@ -92,6 +95,11 @@ namespace LudumDare49
         public void ClosePackage()
         {
             GetComponent<SpriteRenderer>().sprite = closedSprite;
+            potion.GetComponentInChildren<SpriteRenderer>().enabled = false;
+            for (int i = 0; i < pendingObject.Length; i++)
+            {
+                pendingObject[i].GetComponentInChildren<SpriteRenderer>().enabled = false; 
+            }
             SoundManager.Instance.PlayAtPosition(closingClip, transform.position);
         }
 
@@ -110,7 +118,13 @@ namespace LudumDare49
         protected override void OnDrawGizmos()
         {
             base.OnDrawGizmos();
-            Gizmos.DrawSphere(transform.position + (Vector3)waypoint, .1f); 
+            Gizmos.color = Color.red; 
+            Gizmos.DrawSphere(transform.position + (Vector3)potionOffset, .1f);
+            Gizmos.color = Color.green;
+            for (int i = 0; i < ingredientOffset.Length; i++)
+            {
+                Gizmos.DrawSphere(transform.position + (Vector3)ingredientOffset[i], .1f);
+            }
         }
     }
 }

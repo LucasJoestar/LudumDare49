@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc536e856df75ce419ddfc39d4549e5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useTimeInterval: 0
+  intervalTime: 10
   freezingSpeedCoeff: 0.75
   freezingAudioClip: {fileID: 0}
   freezingEffect: {fileID: 7625533484666956819, guid: 91020d96dd6dd6a4aa2c41654a12ad6b, type: 3}
@@ -39,6 +41,14 @@ PrefabInstance:
       propertyPath: recipe
       value: 
       objectReference: {fileID: 11400000, guid: b54f29f0ba40df9429f317608ddfd83a, type: 2}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: bubbleFX
+      value: 
+      objectReference: {fileID: 594697899167084096, guid: 4a9df4474ac072f42b2956c8d9f9ba6a, type: 3}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: destroyFX
+      value: 
+      objectReference: {fileID: 2689579920899188353, guid: e2439b9417475ca43afca4c29d90c95f, type: 3}
     - target: {fileID: 5608044127364552565, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 16
@@ -221,7 +231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5608044127364552569, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: lastModifiedDate
-      value: 04/10/2021 10:54:22
+      value: 04/10/2021 20:53:19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}

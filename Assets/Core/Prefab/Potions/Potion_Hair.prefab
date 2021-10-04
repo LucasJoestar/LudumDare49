@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &8083795744998979458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7170677232709008962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8cb0ec879f05f94c91031f792cd9cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useTimeInterval: 0
+  intervalTime: 10
+  hairPrefab: {fileID: 7972340077380318966, guid: 95220411041fefc4ea5cae4726c1fef1, type: 3}
+  hairGrow: {fileID: 8300000, guid: fdbf00913d91b92439cd3f4ebc8eb20f, type: 3}
+  collider: {fileID: 7170677232709008960}
 --- !u!1001 &3337337302964660533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16,9 +33,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6997616985800771554, guid: b9e2931215399a2439d7a4b98b254e8a, type: 3}
     - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: recipe
       value: 
       objectReference: {fileID: 11400000, guid: ee1ac8bcd0df44d4f9ba035774b5d67a, type: 2}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: destroyFX
+      value: 
+      objectReference: {fileID: 6184988201210076061, guid: 8f47c39408f642c4e9efd35f66e27e85, type: 3}
     - target: {fileID: 5608044127364552565, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 22
@@ -281,7 +306,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5608044127364552569, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: lastModifiedDate
-      value: 04/10/2021 10:54:41
+      value: 04/10/2021 20:52:08
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 796445538470318154, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+--- !u!1 &7170677232709008962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5608044127364552567, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+  m_PrefabInstance: {fileID: 3337337302964660533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &7170677232709008960 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5608044127364552565, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+  m_PrefabInstance: {fileID: 3337337302964660533}
+  m_PrefabAsset: {fileID: 0}

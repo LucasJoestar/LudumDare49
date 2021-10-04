@@ -24,7 +24,9 @@ namespace LudumDare49
         public abstract void OnGrabPotion(PlayerCursor _cursor);
         public abstract void OnDropPotion();
         public abstract void OnCrashPotion();
+        public abstract void OnCollideObject(Collider2D _collider);
         public abstract void OnTimeInterval();
+        public abstract void OnRecipeAction();
         public abstract void OnForbiddenAction();
         public abstract void OnShake();
         public abstract void OnStart();
