@@ -130,7 +130,7 @@ MonoBehaviour:
     m_Bits: 36992
   triggerMask:
     serializedVersion: 2
-    m_Bits: 8704
+    m_Bits: 270848
   collisionLayer:
     serializedVersion: 2
     m_Bits: 32768
@@ -148,6 +148,7 @@ MonoBehaviour:
   carrier: {fileID: 0}
   trigger: {fileID: 0}
   action: {fileID: 11400000, guid: a48892d6cbac830469aefebc915f531e, type: 2}
+  canBeMixedUp: 1
 --- !u!50 &6868987331229172295
 Rigidbody2D:
   serializedVersion: 4

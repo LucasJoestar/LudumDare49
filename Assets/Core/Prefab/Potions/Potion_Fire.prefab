@@ -272,7 +272,7 @@ MonoBehaviour:
     m_Bits: 4224
   triggerMask:
     serializedVersion: 2
-    m_Bits: 10496
+    m_Bits: 272640
   collisionLayer:
     serializedVersion: 2
     m_Bits: 32768
@@ -391,3 +391,5 @@ MonoBehaviour:
   minMaxFireEffect: {x: 1, y: 2}
   shakeDuration: 1
   flameForce: 2
+  waitingTime: 1
+  shrinkingDuration: 1
