@@ -37,6 +37,10 @@ namespace LudumDare49
         {
             if (sortingGroup == null) sortingGroup = GetComponent<SortingGroup>();
             sortingGroup.sortingOrder = 1;
+
+            if (pendingObject[0] != null && pendingObject[1] != null)
+                return; 
+
             base.OnTrigger(_object); 
             snapSequence.OnComplete(() => SetObject(_object));
         }
@@ -49,13 +53,13 @@ namespace LudumDare49
             snapSequence = DOTween.Sequence();
             snapSequence.AppendInterval(.1f);
             Vector2 _offsetPosition = Vector2.zero; 
-            if (_object is Potion)
+            if (_object is Potion _potion )
             {
                 snapSequence.Append(_object.transform.DORotate(Vector3.forward * potionRotation, rotationDuration)); 
                 _offsetPosition = potionOffset; 
-                potion = (Potion)_object;
+                potion = _potion;
             }
-            else if (_object is Ingredient)
+            else if (_object is Ingredient _ingredient)
             {
                 snapSequence.Append(_object.transform.DORotate(Vector3.zero, rotationDuration)); 
                 if (pendingObject[0] == null)
@@ -66,13 +70,19 @@ namespace LudumDare49
                 else
                 {
                     pendingObject[1] = _object;
+                    if(pendingObject[0].TryGetComponent<Flame>(out Flame _f) && _object.TryGetComponent<Flame>(out Flame _f2))
+                    {
+                        _f.MakeHorny(); 
+                        _f2.MakeHorny(); 
+                    }
                     _offsetPosition = ingredientOffset[1]; 
                 }
-                pendingActions.Enqueue((_object as Ingredient).Action);
+                
+                pendingActions.Enqueue(_ingredient.Action);
             }
             snapSequence.Append(_object.transform.DOMove((Vector2)transform.position + _offsetPosition, rotationDuration));
-            snapSequence.OnComplete(ApplyPendingActions); 
-
+            snapSequence.OnComplete(ApplyPendingActions);
+            hasSnappedObject = false; 
         }
 
         private void ApplyPendingActions()
