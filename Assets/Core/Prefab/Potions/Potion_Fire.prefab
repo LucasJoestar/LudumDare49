@@ -379,5 +379,7 @@ MonoBehaviour:
   useTimeInterval: 0
   intervalTime: 10
   dropDelay: 2
-  fireEffect: {fileID: 0}
+  fireEffect: {fileID: 1958806528574181352, guid: e45ba6459c917314ea2f2c4ce2787855, type: 3}
   burnClip: {fileID: 0}
+  minMaxFireEffect: {x: 1, y: 2}
+  shakeDuration: 1

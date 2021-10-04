@@ -52,10 +52,12 @@ namespace LudumDare49
 
         public override void OnGrabbed(PhysicsObject _object)
         {
-            if(hasSnappedObject && _object == potion)
+            Debug.Log("Test Grab"); 
+            if(hasSnappedObject && (_object as Potion) == potion)
             {
                 hasSnappedObject = false;
-                potion = null; 
+                potion = null;
+                base.OnGrabbed(_object);
             }
         }
 
