@@ -20,7 +20,7 @@ namespace LudumDare49
         #region Behaviour
         public override void OnTrigger(PhysicsObject _object)
         {
-            if (_object is Ingredient _ingredient)
+            if (_object is Ingredient _ingredient && _ingredient.CanBeMixedUp)
             {
                 // Apply action.
                 potion.ApplyAction(_ingredient.Action);

@@ -415,7 +415,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 01:13:19
+  lastModifiedDate: 04/10/2021 15:34:11
   IsPersistent: 0
 --- !u!222 &5458748992448039391
 CanvasRenderer:
@@ -480,9 +480,9 @@ MonoBehaviour:
   currentSpeed: 0
   layer:
     serializedVersion: 2
-    m_Bits: 91648
-  inactiveResetTime: 0.1
-  shakeLoops: 7
+    m_Bits: 115776
+  inactiveResetTime: 0.15
+  shakeLoops: 5
   shakeCount: 0
   inactiveTime: 0
   joint: {fileID: 5458748991241541222}
