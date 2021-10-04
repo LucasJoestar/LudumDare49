@@ -295,6 +295,7 @@ MonoBehaviour:
   remainingActions: []
   grabClip: {fileID: 8300000, guid: 1e9ccc78592ab1b41822e92b9e8c2a93, type: 3}
   dropClip: {fileID: 8300000, guid: 4eade7ad8bde04d4c9db45ebe907925c, type: 3}
+  mixClip: {fileID: 8300000, guid: b006408b0466ba44c8e5102d609d705a, type: 3}
   successClip: {fileID: 8300000, guid: b10f5178eb167c243aa5032af9d9c7c2, type: 3}
   failureClip: {fileID: 8300000, guid: 2d5dc2f2dffc36a428ca0949492c6a35, type: 3}
   bubbleFX: {fileID: 1037309486743709533, guid: cbc4fb4ac846e7f4fb7f0c446ea78cb9, type: 3}

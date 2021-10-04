@@ -1624,7 +1624,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 12:08:16
+  lastModifiedDate: 04/10/2021 21:09:32
   IsPersistent: 0
 --- !u!212 &3494640383768003159
 SpriteRenderer:
@@ -1690,7 +1690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activate: {fileID: 3494640384060898631}
-  clip: {fileID: 8300000, guid: 67cdd6c624f10db47b1a48c5a76c5a22, type: 3}
+  clip: {fileID: 8300000, guid: bc612431ec49c924fa1b6ac217a17c19, type: 3}
 --- !u!60 &3494640383768003153
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1873,7 +1873,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 16:53:33
+  lastModifiedDate: 04/10/2021 21:09:32
   IsPersistent: 0
 --- !u!212 &3494640384014004656
 SpriteRenderer:
@@ -1939,7 +1939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activate: {fileID: 3494640384047403458}
-  clip: {fileID: 8300000, guid: 67cdd6c624f10db47b1a48c5a76c5a22, type: 3}
+  clip: {fileID: 8300000, guid: bc612431ec49c924fa1b6ac217a17c19, type: 3}
 --- !u!60 &3494640384014004658
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2087,7 +2087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activate: {fileID: 3494640384014004659}
-  clip: {fileID: 8300000, guid: ee144b5ac96912346bea81be7c1db305, type: 3}
+  clip: {fileID: 8300000, guid: 1f94676a85e6c0341bd1f19edcbb9c12, type: 3}
 --- !u!60 &3494640384047403463
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2245,7 +2245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activate: {fileID: 3494640383768003154}
-  clip: {fileID: 8300000, guid: ee144b5ac96912346bea81be7c1db305, type: 3}
+  clip: {fileID: 8300000, guid: 1f94676a85e6c0341bd1f19edcbb9c12, type: 3}
 --- !u!60 &3494640384060898629
 PolygonCollider2D:
   m_ObjectHideFlags: 0

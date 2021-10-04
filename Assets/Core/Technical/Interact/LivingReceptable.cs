@@ -39,8 +39,8 @@ namespace LudumDare49
             SpriteRenderer _sprite = _instance.GetComponentInChildren<SpriteRenderer>();
 
             _instance.transform.position = _transform.position;
-            _instance.transform.rotation = Random.rotation;
-            _sprite.color = Color.clear;
+            _instance.transform.rotation = Quaternion.identity;
+            _sprite.color = new Color(1f, 1f, 1f, 0f);
 
             Sequence _s = DOTween.Sequence();
             _s.Append(_sprite.DOFade(1f, 1f));

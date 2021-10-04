@@ -35,7 +35,7 @@ PrefabInstance:
     - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: effect
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8083795744998979458}
     - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: recipe
       value: 
