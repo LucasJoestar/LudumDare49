@@ -85,7 +85,7 @@ namespace LudumDare49
         public virtual void Snatch()
         {
             PhysicsObject _snatch = Instantiate(snatch);
-            _snatch.transform.position = transform.position;
+            _snatch.transform.position = cursor.WorldTransform.position;
             _snatch.transform.rotation = Quaternion.identity;
 
             cursor.SetInteraction(_snatch);

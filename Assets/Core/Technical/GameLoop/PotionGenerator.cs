@@ -46,7 +46,7 @@ namespace LudumDare49
 
         private void OnEndRoll()
         {
-            AudioSource.PlayClipAtPoint(alertClip, alertObject.transform.position);
+            SoundManager.Instance.PlayAtPosition(alertClip, alertObject.transform.position);
             alertObject.DOGradientColor(alertGradient, alertClip.length).SetEase(alertEase);
             
             potion.Activate();

@@ -127,7 +127,7 @@ MonoBehaviour:
     m_Bits: 4225
   triggerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 131584
   collisionLayer:
     serializedVersion: 2
     m_Bits: 16384
