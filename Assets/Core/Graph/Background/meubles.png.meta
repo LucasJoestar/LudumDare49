@@ -229,10 +229,10 @@ TextureImporter:
       name: Leaf
       rect:
         serializedVersion: 2
-        x: 1380
-        y: 1775
-        width: 439
-        height: 666
+        x: 1707
+        y: 2248
+        width: 440
+        height: 690
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

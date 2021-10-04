@@ -26,6 +26,13 @@ namespace LudumDare49
         [SerializeField, Range(0f, 100f)] protected float wobbleForce = 1f;
         [SerializeField] protected bool destroyOnSnatched = false;
 
+        [Section("FX")]
+
+        [SerializeField] private ParticleSystem fx = null;
+        [SerializeField] private AudioClip fxClip = null;
+
+        [SerializeField] private AudioClip interactClip = null;
+
         [Section("State")]
 
         [SerializeField, ReadOnly] protected bool isBeingSnatched = false;
@@ -48,6 +55,9 @@ namespace LudumDare49
 
             rigidbody.velocity = Vector2.zero;
             buffer = handTransform.position;
+
+            // Audio.
+            SoundManager.Instance.PlayAtPosition(interactClip, transform.position);
         }
 
         public virtual void Drop()
@@ -80,6 +90,9 @@ namespace LudumDare49
                 _angles.z = _rotation;
                 rigidbody.transform.DORotate(_angles, .5f, RotateMode.Fast).SetEase(Ease.InOutQuad).OnComplete(Wobble);
             }
+
+            // Audio.
+            SoundManager.Instance.PlayAtPosition(interactClip, transform.position);
         }
 
         public virtual void Snatch()
@@ -90,6 +103,16 @@ namespace LudumDare49
 
             cursor.SetInteraction(_snatch);
             isBeingSnatched = false;
+
+            // FX.
+            if (fx != null)
+            {
+                var _fx = Instantiate(fx);
+                _fx.transform.position = transform.position;
+                _fx.transform.rotation = Quaternion.identity;
+
+                SoundManager.Instance.PlayAtPosition(fxClip, transform.position);
+            }
         }
 
         // -----------------------

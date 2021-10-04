@@ -304,7 +304,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 14:38:25
+  lastModifiedDate: 04/10/2021 16:17:18
   IsPersistent: 0
 --- !u!114 &6080647811584796497
 MonoBehaviour:
@@ -323,7 +323,7 @@ MonoBehaviour:
   carrierPrefab: {fileID: 3594512599462764317, guid: 5612ea840722f67409131c95f498b155, type: 3}
   group: {fileID: 1424287760}
   shakeAudio: {fileID: 8300000, guid: 6f9accfdce0f26547973f818dd80ccad, type: 3}
-  grabPoint: {x: 0, y: 0.8, z: 0}
+  grabPoint: {x: 0, y: 1.2, z: 0}
   destroyFX: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
   destroyFXClip: {fileID: 8300000, guid: 4ba83454aee076747ae89d7dc7d448a7, type: 3}
   physicsMask:
@@ -360,6 +360,7 @@ MonoBehaviour:
   carrier: {fileID: 0}
   trigger: {fileID: 0}
   action: {fileID: 11400000, guid: dd337ec1b7b8097449ea2872b6acbd1f, type: 2}
+  canBeMixedUp: 0
 --- !u!60 &6080647811584796498
 PolygonCollider2D:
   m_ObjectHideFlags: 0

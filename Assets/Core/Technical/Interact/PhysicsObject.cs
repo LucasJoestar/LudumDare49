@@ -95,6 +95,8 @@ namespace LudumDare49
             _joint.connectedBody = rigidbody;
             _joint.connectedAnchor = grabPoint;
 
+            group.sortingOrder += 5;
+
             for (int i = 0; i < positionBuffer.Length; i++)
             {
                 positionBuffer[i] = transform.position; 
@@ -118,6 +120,8 @@ namespace LudumDare49
 
             Vector2 _dir = positionBuffer[0] - positionBuffer[positionBuffer.Length - 1];
             rigidbody.velocity = _dir * inertiaCoef;
+
+            group.sortingOrder -= 5;
 
             SetLayer(collisionLayer);
             DoOverlap();

@@ -245,7 +245,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 10:53:37
+  lastModifiedDate: 04/10/2021 16:26:24
   IsPersistent: 0
 --- !u!114 &5608044127364552561
 MonoBehaviour:
@@ -262,11 +262,11 @@ MonoBehaviour:
   rigidbody: {fileID: 5608044127364552564}
   collider: {fileID: 5608044127364552565}
   carrierPrefab: {fileID: 0}
-  group: {fileID: 0}
+  group: {fileID: 5608044127364552566}
   shakeAudio: {fileID: 0}
   grabPoint: {x: 0, y: 1.52, z: 0}
   destroyFX: {fileID: 0}
-  destroyFXClip: {fileID: 0}
+  destroyFXClip: {fileID: 8300000, guid: ae2692fa8c7f2754ea6b31dc74e13e45, type: 3}
   physicsMask:
     serializedVersion: 2
     m_Bits: 4224
