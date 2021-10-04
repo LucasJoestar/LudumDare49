@@ -11,18 +11,18 @@ TagManager:
   - 
   - Water
   - UI
-  - Grabbed
+  - NoCollision
   - Bounds
   - Snap
-  - Potion
+  - MixInPotion
   - Stamp
   - Package
   - Platform
-  - Door
+  - Trash
   - Ingredient
   - Physics
   - Interact
-  - Trash
+  - 
   - 
   - 
   - 
