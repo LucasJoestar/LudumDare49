@@ -21,7 +21,7 @@ namespace LudumDare49
         #region Behaviour
         public void Interact()
         {
-            AudioSource.PlayClipAtPoint(clip, transform.position);
+            SoundManager.Instance.PlayAtPosition(clip, transform.position);
 
             activate.SetActive(true);
             gameObject.SetActive(false);

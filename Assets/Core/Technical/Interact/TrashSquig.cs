@@ -134,7 +134,7 @@ namespace LudumDare49
                         // Audio.
                         audio.Stop();
                         audio.volume = 0f;
-                        AudioSource.PlayClipAtPoint(eatClip, sprite.transform.position);
+                        SoundManager.Instance.PlayAtPosition(eatClip, sprite.transform.position);
                     }
                     else if (!generalCollider.Distance(target.Collider).isOverlapped)
                     {
@@ -155,6 +155,8 @@ namespace LudumDare49
 
             void Hide(Sprite _sprite)
             {
+                Debug.Log("Hide");
+
                 // Kill sequence.
                 if (sequence.IsActive())
                     sequence.Kill(false);
