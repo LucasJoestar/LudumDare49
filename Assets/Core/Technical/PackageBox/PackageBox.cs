@@ -8,7 +8,8 @@ using EnhancedEditor;
 using UnityEngine;
 using System.Collections.Generic;
 using DG.Tweening;
-using UnityEngine.Rendering; 
+using UnityEngine.Rendering;
+using TMPro; 
 
 namespace LudumDare49
 {
@@ -32,6 +33,9 @@ namespace LudumDare49
         [Section("Sending settings")]
         [SerializeField] private Sprite closedSprite;
         [SerializeField] private AudioClip closingClip;
+
+        [Section("Potion Score")]
+        [SerializeField] private GameObject canvas = null; 
 
         private Sequence snapSequence = null; 
         #endregion
@@ -144,8 +148,16 @@ namespace LudumDare49
         {
             if(potion != null)
             {
-
+                //canvas.SetActive(true);
+                //TextMeshPro _txt = canvas.GetComponentInChildren<TextMeshPro>();
+                //_txt.text = potion.Score > 0 ? "+" : string.Empty;
+                //_txt.color = potion.Score > 0 ? Color.green : Color.red; 
+                //_txt.text += potion.Score; 
                 ScoreManager.Instance.IncrementScore(potion.Score);
+                //if(snapSequence.IsActive())
+                //    snapSequence.Kill(); 
+                //snapSequence = DOTween.Sequence();
+                //snapSequence.Join(canvas.transform.DOMoveY(10, 10)); 
             }
         }
         #endregion
