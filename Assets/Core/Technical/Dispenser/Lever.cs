@@ -27,7 +27,14 @@ namespace LudumDare49
                 leverSequence.Kill();
             leverSequence = DOTween.Sequence();
             leverSequence.Append(transform.DOLocalRotate(new Vector3(0, 0, -70), .5f).OnComplete(OnLeverPull.Invoke));
-            leverSequence.AppendInterval(returnTime);
+            
+        }
+
+        public void ResetLever()
+        {
+            if (leverSequence.IsActive())
+                leverSequence.Kill();
+            leverSequence = DOTween.Sequence();
             leverSequence.Append(transform.DOLocalRotate(Vector3.zero, .5f));
         }
         #endregion

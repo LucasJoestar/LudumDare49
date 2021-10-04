@@ -40,14 +40,22 @@ namespace LudumDare49
 
         public void ValidatePackage()
         {
-            conveyorBelt.Roll(currentBox.transform); 
+            // Return lever at original rotation
+            lever.ResetLever();
+            if (!movementSequence.IsPlaying())
+            {
+                currentBox.ClosePackage(); 
+                conveyorBelt.Roll(currentBox.transform);
+            }
         }
 
         public void OnPackageSent()
         {
             // UPDATE SCORE HERE
             Destroy(currentBox.gameObject);
-            DispensePackage(); 
+            DispensePackage();
+            // Return lever at original rotation
+            //lever.ResetLever();
         }
 
         private void Start()

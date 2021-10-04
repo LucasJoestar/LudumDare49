@@ -3416,7 +3416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35b14a04ab42644eb8f34e10ccb0f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkedDispenser: {fileID: 0}
+  returnTime: 1
 --- !u!61 &1695692320157515517
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3455,6 +3455,7 @@ GameObject:
   - component: {fileID: 2141864637554129550}
   - component: {fileID: 3611210919981909512}
   - component: {fileID: 581930194338104299}
+  - component: {fileID: 5773604946029184223}
   m_Layer: 17
   m_Name: BoxGenerator
   m_TagString: Untagged
@@ -3491,8 +3492,8 @@ MonoBehaviour:
   comment: 
   Tags:
     Tags: []
-  lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 10:02:14
+  lastModifiedBy: Alexis_Admin
+  lastModifiedDate: 04/10/2021 10:59:53
   IsPersistent: 0
 --- !u!212 &3611210919981909512
 SpriteRenderer:
@@ -3556,3 +3557,20 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
+--- !u!114 &5773604946029184223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4677989292710465500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479fe533adf3ba945838527fb0cc498a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  packagePrefab: {fileID: 8529524704502246472, guid: 83da5ded4d4b39a47a70b42f777ab3e1, type: 3}
+  conveyorBelt: {fileID: 1938371274672024227}
+  lever: {fileID: 6521975462869751413}
+  waitingTime: 1
+  offsetPosition: {x: 0, y: -6.75}
