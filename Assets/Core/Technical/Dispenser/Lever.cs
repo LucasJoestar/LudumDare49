@@ -16,18 +16,19 @@ namespace LudumDare49
         #region Global Members
         public event Action OnLeverPull = null; 
         [Section("Lever")]
-        [SerializeField, Range(.1f, 5.0f)] private float returnTime = 1.0f;
-        private Sequence leverSequence = null; 
+        private Sequence leverSequence = null;
+        private Collider2D leverCollider; 
         #endregion
 
         #region Methods
         void IInteractObject.Interact()
         {
             if (leverSequence.IsActive())
-                leverSequence.Kill();
+                leverSequence.Kill(); 
+
+            leverCollider.enabled = false; 
             leverSequence = DOTween.Sequence();
             leverSequence.Append(transform.DOLocalRotate(new Vector3(0, 0, -70), .5f).OnComplete(OnLeverPull.Invoke));
-            
         }
 
         public void ResetLever()
@@ -35,7 +36,12 @@ namespace LudumDare49
             if (leverSequence.IsActive())
                 leverSequence.Kill();
             leverSequence = DOTween.Sequence();
-            leverSequence.Append(transform.DOLocalRotate(Vector3.zero, .5f));
+            leverSequence.Append(transform.DOLocalRotate(Vector3.zero, .5f)).OnComplete(() => leverCollider.enabled = true );  ;
+        }
+
+        private void Awake()
+        {
+            leverCollider = GetComponent<Collider2D>(); 
         }
         #endregion
     }
