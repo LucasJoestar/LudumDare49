@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2516728911840802574, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
+      propertyPath: actionPotion
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a2216853c8c25c46b55a6d117d603a0, type: 2}
     - target: {fileID: 2516728911840802579, guid: 6143652715bb4864fb807acc19a0d114, type: 3}
       propertyPath: lastModifiedDate
       value: 04/10/2021 09:56:28

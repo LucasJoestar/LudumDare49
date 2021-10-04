@@ -58,6 +58,11 @@ namespace LudumDare49
                 SoundManager.Instance.PlayAtPosition(mixClip, transform.position);
             }
 
+            if(_action.AudioClip)
+            {
+                SoundManager.Instance.PlayAtPosition(_action.AudioClip, transform.position);
+            }
+            
             var _match = remainingActions.Find(a => a.Action == _action);
             if (_match != null)
             {
