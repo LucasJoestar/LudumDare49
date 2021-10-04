@@ -43,14 +43,17 @@ namespace LudumDare49
                 _source = audioSourcePool[i];
                 _source.transform.position = _position;
                 _source.PlayOneShot(_clip, _volume);
+                Debug.Log("Sound");
                 return; 
             }
+            /*
             _source = Instantiate(audioSourcePool[0], transform);           
             _source.playOnAwake = false;
             _source.outputAudioMixerGroup = mixer.outputAudioMixerGroup;
             _source.clip = _clip;
             _source.loop = false;
             _source.PlayOneShot(_clip, _volume);
+            */
         }
 
         public void ApplyAudioEffect(AudioEffectState _effectState)
