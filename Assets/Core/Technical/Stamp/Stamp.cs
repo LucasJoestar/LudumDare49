@@ -22,6 +22,8 @@ namespace LudumDare49
         [SerializeField] private SpriteRenderer spriteRenderer = null;
         [SerializeField] private Sprite normalSprite = null; 
         [SerializeField] private Sprite grabbedSprite = null;
+        [Section("Stamp Sound")]
+        [SerializeField] private AudioClip[] stampClips = new AudioClip[] { }; 
         [Section("package Detection")]
         [SerializeField, HelpBox("Layer mask of the package object", MessageType.Info)] private LayerMask packageLayer;
         [SerializeField] private PotionAction action; 
@@ -107,6 +109,8 @@ namespace LudumDare49
                     marks[i] = marks[i - 1];
                 }
             }
+            AudioClip _selectedClip = stampClips[Random.Range(0, stampClips.Length)];
+            SoundManager.Instance.PlayAtPosition(_selectedClip, transform.position);
         }
 
         private static RaycastHit2D[] hits = new RaycastHit2D[5]; 

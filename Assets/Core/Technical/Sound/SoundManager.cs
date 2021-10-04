@@ -39,7 +39,7 @@ namespace LudumDare49
             AudioSource _source;
             for (int i = 0; i < audioSourcePool.Count; i++)
             {
-                if (audioSourcePool[i].isPlaying) continue;
+                if (audioSourcePool[i].clip != null && audioSourcePool[i].time < audioSourcePool[i].clip.length) continue;
                 _source = audioSourcePool[i];
                 _source.transform.position = _position;
                 _source.PlayOneShot(_clip, _volume);
@@ -49,7 +49,8 @@ namespace LudumDare49
             _source.playOnAwake = false;
             _source.outputAudioMixerGroup = mixer.outputAudioMixerGroup;
             _source.clip = _clip;
-            _source.loop = false; 
+            _source.loop = false;
+            _source.PlayOneShot(_clip, _volume);
         }
 
         public void ApplyAudioEffect(AudioEffectState _effectState)
