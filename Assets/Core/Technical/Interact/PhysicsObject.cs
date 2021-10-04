@@ -344,6 +344,9 @@ namespace LudumDare49
             for (int _i = ignoredColliders.Count; _i-- > 0;)
             {
                 Collider2D _collider = overlapBuffer[_i];
+                if (_collider == collider)
+                    continue;
+
                 ColliderDistance2D _distance = collider.Distance(_collider);
 
                 if (!_distance.isOverlapped)

@@ -26,6 +26,18 @@ TextureImporter:
   - first:
       213: 7374845061861626600
     second: Feather
+  - first:
+      213: -6931339683150358059
+    second: Candl
+  - first:
+      213: -8179040606652740800
+    second: Bottle
+  - first:
+      213: 3220665290143086019
+    second: FeathBox
+  - first:
+      213: 3434086634727231013
+    second: Mouth
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -290,6 +302,90 @@ TextureImporter:
       bones: []
       spriteID: 8e25ec99286b85660800000000000000
       internalID: 7374845061861626600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Candl
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1137
+        width: 568
+        height: 724
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d91140384feecf90800000000000000
+      internalID: -6931339683150358059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottle
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 1152
+        width: 481
+        height: 788
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04bc7f417e53e7e80800000000000000
+      internalID: -8179040606652740800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeathBox
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 1301
+        width: 869
+        height: 501
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5b86f740a12bc20800000000000000
+      internalID: 3220665290143086019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 2274
+        width: 796
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e45d6899358af20800000000000000
+      internalID: 3434086634727231013
       vertices: []
       indices: 
       edges: []
