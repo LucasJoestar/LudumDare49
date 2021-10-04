@@ -121,6 +121,12 @@ namespace LudumDare49
             Debug.Log("Shake!");
         }
 
+        public virtual void Snap()
+        {
+            rigidbody.velocity = Vector2.zero;
+            rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
+
         public virtual void Eat()
         {
             LoseObject();
