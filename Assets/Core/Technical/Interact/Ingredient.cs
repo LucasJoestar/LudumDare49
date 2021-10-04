@@ -17,5 +17,38 @@ namespace LudumDare49
         [SerializeField] private PotionAction action = null;
         public PotionAction Action => action;
         #endregion
+
+        #region Behaviour
+        public override void Shake()
+        {
+            base.Shake();
+
+            // Mix in.
+            int _count = OverlapCollider(triggerMask, true);
+            if (_count > 0)
+            {
+                float _bestDistance = 999f;
+                int _bestIndex = -1;
+
+                for (int _i = 0; _i < _count; _i++)
+                {
+                    Collider2D _overlap = overlapBuffer[_i];
+                    float _distanceValue = Mathf.Abs(Vector2.Distance(rigidbody.position, _overlap.attachedRigidbody.position));
+
+                    if (_overlap.isTrigger && (_distanceValue < _bestDistance))
+                    {
+                        _bestDistance = _distanceValue;
+                        _bestIndex = _i;
+                    }
+                }
+
+                // Trigger.
+                if ((_bestIndex > -1) && overlapBuffer[_bestIndex].TryGetComponent(out AddInPotionTrigger _trigger))
+                {
+                    _trigger.OnTrigger(this);
+                }
+            }
+        }
+        #endregion
     }
 }

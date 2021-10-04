@@ -1,5 +1,101 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1186914461706166850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4888064733328324287}
+  - component: {fileID: 4876267986790450912}
+  - component: {fileID: 1360051794484957388}
+  m_Layer: 12
+  m_Name: CabinetCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4888064733328324287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186914461706166850}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6535742902435603958}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4876267986790450912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186914461706166850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877eb788512e6904897eca70a462a2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comment: 
+  Tags:
+    Tags: []
+  lastModifiedBy: Lucas
+  lastModifiedDate: 04/10/2021 12:17:56
+  IsPersistent: 0
+--- !u!60 &1360051794484957388
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186914461706166850}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.059826, y: -4.5858073}
+      - {x: 2.075749, y: -0.010202885}
+      - {x: 1.1494198, y: 0.093223095}
+      - {x: 0.258869, y: 0.37726688}
+      - {x: -0.839365, y: 0.44044113}
+      - {x: -1.9050568, y: 0.05717516}
+      - {x: -2.6712635, y: 0.08341408}
+      - {x: -2.661204, y: -1.5733037}
+      - {x: 1.6945474, y: -1.5107636}
+      - {x: 1.8837953, y: -1.686152}
+      - {x: -2.6240432, y: -1.693172}
+      - {x: -2.6633065, y: -3.0018659}
+      - {x: 1.7675233, y: -2.9725995}
+      - {x: 1.8514385, y: -3.0890985}
+      - {x: -2.6760356, y: -3.1314006}
+      - {x: -2.7507718, y: -4.6585727}
+      - {x: -2.9744074, y: -4.679926}
+      - {x: -3.0113578, y: 0.44027543}
+      - {x: -2.5782957, y: 0.5131178}
+      - {x: 2.3002706, y: 0.44871926}
+      - {x: 2.2905273, y: -4.6154156}
 --- !u!1 &3494640382435088530
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +320,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3494640382614043466}
   - component: {fileID: 3494640382614043465}
-  m_Layer: 13
+  - component: {fileID: 3630387864979847744}
+  m_Layer: 12
   m_Name: FridgeDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,8 +360,53 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 00:37:55
+  lastModifiedDate: 04/10/2021 12:07:54
   IsPersistent: 0
+--- !u!60 &3630387864979847744
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3494640382614043467}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4.109725, y: -1.8663678}
+      - {x: 3.8487217, y: -1.7912741}
+      - {x: 3.9604163, y: -0.33869457}
+      - {x: 9.539972, y: -0.2342987}
+      - {x: 9.923757, y: -0.80461645}
+      - {x: 9.841094, y: -4.723601}
+      - {x: 10.268816, y: -4.660484}
+      - {x: 10.318073, y: -0.51112795}
+      - {x: 10.085454, y: 0.055844307}
+      - {x: 3.932377, y: 0.20244694}
+      - {x: 3.5544763, y: -0.43801522}
+      - {x: 3.607938, y: -4.6092887}
+      - {x: 3.9354095, y: -4.655851}
+      - {x: 3.9052234, y: -3.684811}
+      - {x: 9.670968, y: -3.5117946}
+      - {x: 9.325004, y: -3.357675}
+      - {x: 3.8900583, y: -3.4623303}
+      - {x: 3.9318347, y: -2.1713614}
+      - {x: 9.671297, y: -1.9995978}
+      - {x: 9.006597, y: -1.8274264}
 --- !u!1 &3494640382874029283
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +458,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 10:37:03
+  lastModifiedDate: 04/10/2021 12:08:16
   IsPersistent: 0
 --- !u!212 &3494640382874029287
 SpriteRenderer:
@@ -535,7 +677,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3494640383212293321}
   - component: {fileID: 3494640383212293320}
-  m_Layer: 13
+  - component: {fileID: 4652096687680454315}
+  m_Layer: 12
   m_Name: RightCabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,8 +717,57 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 00:47:38
+  lastModifiedDate: 04/10/2021 12:15:41
   IsPersistent: 0
+--- !u!60 &4652096687680454315
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3494640383212293322}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -3.0380661, y: 0.51385975}
+      - {x: -7.047222, y: 0.4809487}
+      - {x: -7.007634, y: -4.63733}
+      - {x: -6.8611345, y: -4.6544533}
+      - {x: -6.866392, y: 0.3326726}
+      - {x: -3.2872837, y: 0.3218999}
+      - {x: -3.3171027, y: -0.77901125}
+      - {x: -6.494256, y: -0.81929636}
+      - {x: -6.809857, y: -0.9176469}
+      - {x: -3.3090007, y: -0.95871925}
+      - {x: -3.508555, y: -2.4629683}
+      - {x: -3.3096526, y: -2.4219985}
+      - {x: -6.6674128, y: -2.4630513}
+      - {x: -6.8141303, y: -2.5656476}
+      - {x: -3.3304448, y: -2.5939593}
+      - {x: -3.2978835, y: -3.9765964}
+      - {x: -6.6564, y: -3.9661307}
+      - {x: -6.8199086, y: -4.144097}
+      - {x: -3.30229, y: -4.1647887}
+      - {x: -3.303488, y: -4.7236733}
+      - {x: -2.9991167, y: -4.715574}
+      - {x: -3.0558617, y: -4.4229436}
+      - {x: -3.0963693, y: -3.6645813}
+      - {x: -3.0572624, y: -2.5393133}
 --- !u!1 &3494640383344649971
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +818,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 10:37:03
+  lastModifiedDate: 04/10/2021 12:08:16
   IsPersistent: 0
 --- !u!212 &3494640383344649974
 SpriteRenderer:
@@ -773,7 +965,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 10:37:09
+  lastModifiedDate: 04/10/2021 12:08:16
   IsPersistent: 0
 --- !u!212 &3494640383768003159
 SpriteRenderer:
@@ -880,7 +1072,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3494640384002429267}
   - component: {fileID: 3494640384002429266}
-  m_Layer: 13
+  - component: {fileID: 8537510549518409846}
+  m_Layer: 12
   m_Name: LeftCabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -919,8 +1112,57 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 00:42:04
+  lastModifiedDate: 04/10/2021 12:11:22
   IsPersistent: 0
+--- !u!60 &8537510549518409846
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3494640384002429356}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -6.7887864, y: 0.51385975}
+      - {x: -10.696988, y: 0.4809487}
+      - {x: -10.668104, y: -4.573144}
+      - {x: -10.521601, y: -4.6009645}
+      - {x: -10.419876, y: 0.3326726}
+      - {x: -7.001985, y: 0.27626753}
+      - {x: -7.022447, y: -0.7904191}
+      - {x: -9.994256, y: -0.81929636}
+      - {x: -10.341953, y: -0.8962517}
+      - {x: -7.0485687, y: -0.91308737}
+      - {x: -7.008555, y: -2.4629683}
+      - {x: -7.049221, y: -2.4219985}
+      - {x: -10.178113, y: -2.4630513}
+      - {x: -10.41041, y: -2.544252}
+      - {x: -7.0129733, y: -2.5597348}
+      - {x: -6.9918203, y: -3.999413}
+      - {x: -10.295474, y: -3.9982238}
+      - {x: -10.405485, y: -4.1013055}
+      - {x: -6.996226, y: -4.1761966}
+      - {x: -7.0430565, y: -4.7122645}
+      - {x: -6.7272773, y: -4.6585336}
+      - {x: -6.772614, y: -4.377311}
+      - {x: -6.7768726, y: -3.5505009}
+      - {x: -6.796831, y: -2.4708643}
 --- !u!1 &3494640384014004659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3494640384047403457
 Transform:
   m_ObjectHideFlags: 0
@@ -1119,7 +1361,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 10:37:09
+  lastModifiedDate: 04/10/2021 12:06:00
   IsPersistent: 0
 --- !u!212 &3494640384047403461
 SpriteRenderer:
@@ -1246,7 +1488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3494640384060898630
 Transform:
   m_ObjectHideFlags: 0
@@ -1277,7 +1519,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 10:37:09
+  lastModifiedDate: 04/10/2021 12:08:16
   IsPersistent: 0
 --- !u!212 &3494640384060898635
 SpriteRenderer:
@@ -1713,6 +1955,7 @@ Transform:
   m_Children:
   - {fileID: 6535742901802894496}
   - {fileID: 6535742902599094214}
+  - {fileID: 4888064733328324287}
   m_Father: {fileID: 6535742901477494785}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

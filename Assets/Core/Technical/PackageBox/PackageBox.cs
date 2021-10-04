@@ -32,7 +32,7 @@ namespace LudumDare49
             hasSnappedObject = true;
             _object.Rigidbody.velocity = Vector2.zero;
             _object.Rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
-            wayPointTransform.localPosition = (waypoint + new Vector2(0,_object.GetComponent<SpriteRenderer>().bounds.extents.y)) / transform.localScale; 
+            wayPointTransform.localPosition = (waypoint + new Vector2(0,_object.GetComponentInChildren<SpriteRenderer>().bounds.extents.y)) / transform.localScale; 
 
             if (snapSequence != null) snapSequence.Complete();
             snapSequence = DOTween.Sequence();
@@ -50,7 +50,7 @@ namespace LudumDare49
         private void SetMaskInteraction(PhysicsObject _object)
         {
             _object.transform.SetParent(wayPointTransform); 
-            _object.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleOutsideMask; 
+            _object.GetComponentInChildren<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleOutsideMask; 
         }
 
         private void SetObject(PhysicsObject _object)
