@@ -156,8 +156,8 @@ MonoBehaviour:
   comment: 
   Tags:
     Tags: []
-  lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 09:27:21
+  lastModifiedBy: Alexis_Admin
+  lastModifiedDate: 04/10/2021 14:48:57
   IsPersistent: 0
 --- !u!114 &1938371274672024227
 MonoBehaviour:
@@ -178,6 +178,8 @@ MonoBehaviour:
   wheels:
   - {fileID: 1938371274920489415}
   - {fileID: 1938371275164324066}
+  - {fileID: 1938371276038781049}
+  - {fileID: 1938371276658887872}
   loopTime: 0.2
   beltEase: 1
   wheelEase: 1
@@ -3416,7 +3418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35b14a04ab42644eb8f34e10ccb0f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  returnTime: 1
 --- !u!61 &1695692320157515517
 BoxCollider2D:
   m_ObjectHideFlags: 0

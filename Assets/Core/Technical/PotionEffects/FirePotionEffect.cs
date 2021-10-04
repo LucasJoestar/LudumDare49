@@ -52,6 +52,10 @@ namespace LudumDare49
             // potion.Crush();
         }
 
+        public override void OnStart()
+        {
+        }
+
         public override void OnTimeInterval()
         {
             // Destroy Potion from Potion Script
