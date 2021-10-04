@@ -68,6 +68,8 @@ namespace LudumDare49
         {
             base.Snap();
             mixInCollider.gameObject.SetActive(true);
+
+            SetLayer(ignoreLayer);
         }
 
         // -----------------------
@@ -78,12 +80,14 @@ namespace LudumDare49
             score += _recipeAction.Score;
 
             // Feedback.
-            //AudioSource.PlayClipAtPoint(_potionAction.AudioClip, rigidbody.position);
             SoundManager.Instance.PlayAtPosition(_potionAction.AudioClip, rigidbody.position); 
-            ParticleSystem _particle = Instantiate(_potionAction.Particles);
-            _particle.transform.position = transform.position + particleOffset;
-            _particle.transform.rotation = Quaternion.identity;
-
+            if (_potionAction.Particles)
+            {
+                ParticleSystem _particle = Instantiate(_potionAction.Particles);
+                _particle.transform.position = transform.position + particleOffset;
+                _particle.transform.rotation = Quaternion.identity;
+            }
+            
             // Update recipe.
             remainingActions.Remove(_recipeAction);
         }

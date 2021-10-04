@@ -18,7 +18,8 @@ namespace LudumDare49
 
         [SerializeField, Required] protected new Rigidbody2D rigidbody = null;
         [SerializeField, Required] protected new Collider2D collider = null;
-        [SerializeField, Required] protected SpriteRenderer carrierPrefab = null;
+        [SerializeField, Required] protected Transform carrierPrefab = null;
+        [SerializeField] private AudioClip shakeAudio = null;
 
         public Rigidbody2D Rigidbody => rigidbody;
         public Collider2D Collider => collider;
@@ -52,7 +53,7 @@ namespace LudumDare49
         [Space(5f)]
 
         [SerializeField, ReadOnly] protected bool isRepoping = false;
-        [SerializeField, ReadOnly] protected SpriteRenderer carrier = null;
+        [SerializeField, ReadOnly] protected Transform carrier = null;
 
         // -----------------------
 
@@ -118,7 +119,9 @@ namespace LudumDare49
 
         public virtual void Shake()
         {
-            Debug.Log("Shake!");
+            // Sound.
+            if (shakeAudio != null)
+                SoundManager.Instance.PlayAtPosition(shakeAudio, transform.position);
         }
 
         public virtual void Snap()
@@ -158,7 +161,7 @@ namespace LudumDare49
 
             // Carrier.
             carrier = Instantiate(carrierPrefab);
-            carrier.transform.position = carrierAnchor.position;
+            carrier.position = carrierAnchor.position;
 
             Vector3 _anchorOffset = carrierAnchor.position - transform.position;
             float _duration = Vector2.Distance(transform.position, repopPosition.position) / repopSpeed;
@@ -170,7 +173,9 @@ namespace LudumDare49
             repopSequence.Append(transform.DOMove(repopPosition.position, _duration));
             repopSequence.Join(carrier.transform.DOMove(repopPosition.position + _anchorOffset, _duration));
 
-            carrier.flipX = Mathf.Sign(repopPosition.position.x - transform.position.x) < 0f;
+            Vector3 _scale = carrier.localScale;
+            _scale.x = Mathf.Sign(repopPosition.position.x - transform.position.x);
+            carrier.localScale = _scale;
 
             repopSequence.OnComplete(() =>
             {
@@ -186,8 +191,11 @@ namespace LudumDare49
             Vector3 _destination = carrierDepopPositions[Random.Range(0, carrierDepopPositions.Length)].position;
             float _duration = Vector2.Distance(transform.position, _destination) / (repopSpeed * 2f);
 
-            carrier.transform.DOMove(_destination, _duration).OnComplete(() => Destroy(carrier.gameObject));
-            carrier.flipX = Mathf.Sign(_destination.x - transform.position.x) < 0f;
+            Vector3 _scale = carrier.localScale;
+            _scale.x = Mathf.Sign(repopPosition.position.x - transform.position.x);
+            carrier.localScale = _scale;
+
+            carrier.DOMove(_destination, _duration).OnComplete(() => Destroy(carrier.gameObject));
         }
 
         protected virtual void OnBecameInvisible()
