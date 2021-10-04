@@ -215,7 +215,7 @@ namespace LudumDare49
             Gizmos.DrawSphere(transform.position + grabPoint, .1f);
         }
 
-        protected virtual void Start()
+        protected virtual void Awake()
         {
             contactFilter.useLayerMask = true;
             contactFilter.useTriggers = true;

@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 205637646683124598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.29, y: -0.98, z: -1.9488856}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -51,8 +51,8 @@ MonoBehaviour:
   comment: 
   Tags:
     Tags: []
-  lastModifiedBy: Alexis_Admin
-  lastModifiedDate: 04/10/2021 02:07:33
+  lastModifiedBy: Lucas
+  lastModifiedDate: 04/10/2021 11:11:39
   IsPersistent: 0
 --- !u!114 &205637646683124593
 MonoBehaviour:
@@ -67,8 +67,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handTransform: {fileID: 0}
-  returningSpeed: 5
+  returningSpeed: 1.5
   spriteRenderer: {fileID: 205637646683124594}
+  group: {fileID: 205637646683124605}
   normalSprite: {fileID: -2791575380922999224, guid: 5738124e593656e47b6c41799ca8ca3b, type: 3}
   grabbedSprite: {fileID: -3387579398826105982, guid: 5738124e593656e47b6c41799ca8ca3b, type: 3}
   stampClips:
@@ -166,7 +167,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -190,6 +191,6 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205637646683124598}
   m_Enabled: 1
-  m_SortingLayerID: -315832941
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 1
