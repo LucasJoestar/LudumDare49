@@ -31,6 +31,9 @@ namespace LudumDare49
 
         [HelpBox("Magenta", MessageType.Info)]
         [SerializeField] protected Vector3 particleOffset = new Vector3();
+
+        [Section("Potion Effect")]
+        [SerializeField] private PotionEffect effect; 
         #endregion
 
         #region Behaviour
@@ -49,6 +52,7 @@ namespace LudumDare49
                 {
                     // Forbidden action.
                     OnForbiddenAction(_match, _action);
+                    if (effect != null) effect.OnForbiddenAction(); 
                 }
                 else
                 {
@@ -62,6 +66,7 @@ namespace LudumDare49
         {
             base.Grab(_cursor, _joint);
             mixInCollider.gameObject.SetActive(false);
+            if(effect != null) effect.OnGrabPotion(_cursor); 
         }
 
         public override void Snap()
@@ -70,6 +75,17 @@ namespace LudumDare49
             mixInCollider.gameObject.SetActive(true);
         }
 
+        public override void Drop()
+        {
+            base.Drop();
+            if (effect != null) effect.OnDropPotion(); 
+        }
+
+        public override void Shake()
+        {
+            base.Shake();
+            if (effect != null) effect.OnShake();
+        }
         // -----------------------
 
         protected virtual void OnRecipeAction(RecipeAction _recipeAction, PotionAction _potionAction)

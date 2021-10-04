@@ -29,7 +29,7 @@ namespace LudumDare49
         #region Methods
         public override void OnTrigger(PhysicsObject _object)
         {
-            HasSnappedObject = true;
+            hasSnappedObject = true;
             _object.Rigidbody.velocity = Vector2.zero;
             _object.Rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
             wayPointTransform.localPosition = (waypoint + new Vector2(0,_object.GetComponent<SpriteRenderer>().bounds.extents.y)) / transform.localScale; 

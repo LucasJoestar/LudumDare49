@@ -28,7 +28,7 @@ namespace LudumDare49
         private Sequence dispenserSequence = null;
         public void ActivateDispenser()
         {
-            if (!HasSnappedObject)
+            if (!hasSnappedObject)
             {
                 // Return lever at original rotation
                 pipeLever.ResetLever();
@@ -43,10 +43,19 @@ namespace LudumDare49
 
         public override void OnTrigger(PhysicsObject _object)
         {
-            if(_object is Potion)
+            if(!hasSnappedObject && _object is Potion _potion)
             {
+                potion = _potion ;
                 base.OnTrigger(_object);
-                potion = _object as Potion;
+            }
+        }
+
+        public override void OnGrabbed(PhysicsObject _object)
+        {
+            if(hasSnappedObject && _object == potion)
+            {
+                hasSnappedObject = false;
+                potion = null; 
             }
         }
 

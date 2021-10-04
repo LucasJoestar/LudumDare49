@@ -207,7 +207,7 @@ namespace LudumDare49
                     for (int _i = 0; _i < _amount; _i++)
                     {
                         GameObject _object = hits[_i].collider.gameObject;
-                        Debug.Log("Interact => " + _object.name);
+                        //Debug.Log("Interact => " + _object.name);
                     }
                     #endif
 
