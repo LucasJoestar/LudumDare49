@@ -31,6 +31,7 @@ namespace LudumDare49
 
         [SerializeField, Required] protected AudioClip grabClip = null;
         [SerializeField, Required] protected AudioClip dropClip = null;
+        [SerializeField, Required] protected AudioClip mixClip = null;
 
         [SerializeField, Required] protected AudioClip successClip = null;
         [SerializeField, Required] protected AudioClip failureClip = null;
@@ -53,8 +54,10 @@ namespace LudumDare49
             if (_mixIngredient)
             {
                 GameObject _particle = Instantiate(bubbleFX);
-                _particle.transform.position = transform.position + grabPoint;
+                _particle.transform.position = transform.position + grabPoint + new Vector3(0f, .5f, 0f);
                 _particle.transform.rotation = Quaternion.identity;
+
+                SoundManager.Instance.PlayAtPosition(mixClip, transform.position);
             }
 
             var _match = remainingActions.Find(a => a.Action == _action);

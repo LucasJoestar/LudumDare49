@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 403424030}
   - component: {fileID: 403424029}
   - component: {fileID: 403424028}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Hairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7972340077380318966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 7972340077930061636}
   m_Father: {fileID: 0}
@@ -53,7 +53,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 20:34:04
+  lastModifiedDate: 04/10/2021 21:45:25
   IsPersistent: 0
 --- !u!95 &7972340077380318960
 Animator:
@@ -116,10 +116,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.34, y: 0.33}
+  m_Offset: {x: 0.34, y: 1.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.37, y: 1.49}
+  m_Size: {x: 7.84, y: 3.77}
   m_EdgeRadius: 0
 --- !u!114 &403424028
 MonoBehaviour:
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 7972340077930061636}
   - component: {fileID: 7972340077930061638}
   - component: {fileID: 7972340077930061639}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 00:01:10
+  lastModifiedDate: 04/10/2021 21:45:25
   IsPersistent: 0
 --- !u!212 &7972340077930061639
 SpriteRenderer:

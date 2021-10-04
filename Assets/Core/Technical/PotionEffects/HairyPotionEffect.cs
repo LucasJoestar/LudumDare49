@@ -18,8 +18,8 @@ namespace LudumDare49
         [SerializeField, Required] private AudioClip hairGrow = null;
         [SerializeField, Required] private new Collider2D collider = null;
 
-        private int spawnRate = 2;
-        private int spawnCount = 0;
+        [SerializeField, ReadOnly] private int spawnRate = 2;
+        [SerializeField, ReadOnly] private int spawnCount = 0;
         #endregion
 
         #region Behaviour

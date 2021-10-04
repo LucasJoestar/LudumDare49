@@ -306,7 +306,18 @@ namespace LudumDare49
                 }
             }
 
-            colliderBuffer = currentBuffer;
+            // Update buffer.
+            colliderBuffer.Resize(currentBuffer.Count);
+            for (int _i = 0; _i < _count; _i++)
+            {
+                colliderBuffer[_i] = currentBuffer[_i];
+            }
+
+            for (int _i = _count; _i < colliderBuffer.Count; _i++)
+            {
+                colliderBuffer[_i] = null;
+            }
+            
 
             bool _doCollide = _count > 0;
             if (_doCollide != doCollide)
@@ -330,8 +341,12 @@ namespace LudumDare49
                     collisionBuffer.Add(_collider, Time.time);
                 }
                 else if (Time.time - collisionBuffer[_collider] < .5f)
+                {
+                    collisionBuffer[_collider] = Time.time;
                     return false;
+                }
 
+                collisionBuffer[_collider] = Time.time;
                 return true;
             }
         }

@@ -529,7 +529,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 10:38:16
+  lastModifiedDate: 04/10/2021 21:05:14
   IsPersistent: 0
 --- !u!114 &4357815767187833438
 MonoBehaviour:
@@ -547,7 +547,7 @@ MonoBehaviour:
   eatCollider: {fileID: 4357815766861775230}
   sprite: {fileID: 4357815767012652471}
   audio: {fileID: 4357815767187833439}
-  eatClip: {fileID: 8300000, guid: 062a457ea75e6a449bf1bca18990c50f, type: 3}
+  eatClip: {fileID: 8300000, guid: 4a44cc57f33fca544b74b5cf4e200425, type: 3}
   waitSprite: {fileID: -6897034481932358972, guid: 69b8656dff50cc64e98c44c583fea326, type: 3}
   eatSprite: {fileID: -5319053187403754251, guid: 69b8656dff50cc64e98c44c583fea326, type: 3}
   happySprite: {fileID: -6611745860173732665, guid: 69b8656dff50cc64e98c44c583fea326, type: 3}

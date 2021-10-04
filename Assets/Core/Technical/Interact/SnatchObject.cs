@@ -74,12 +74,15 @@ namespace LudumDare49
             cursor.RemoveSpeedCoef(this);
 
             // Wobble.
-            Wobble();
+            if (!destroyOnSnatched)
+            {
+                Wobble();
+            }
         }
 
         public virtual void Shake()
         {
-            Debug.Log("Nothing happens.");
+            
         }
 
         protected virtual void Wobble()
@@ -130,6 +133,7 @@ namespace LudumDare49
 
             if (destroyOnSnatched)
             {
+                cursor.Drop();
                 Destroy(transform.gameObject);
             }
         }
