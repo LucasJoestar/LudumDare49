@@ -144,6 +144,7 @@ namespace LudumDare49
         {
             if(potion != null)
             {
+
                 ScoreManager.Instance.IncrementScore(potion.Score);
             }
         }
