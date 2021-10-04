@@ -21,7 +21,7 @@ namespace LudumDare49
         [SerializeField, ReadOnly] private Potion potion = null;
         [Section("Feedback")]
         [SerializeField] private ParticleSystem particle;
-        [SerializeField] private AudioClip audioClip; 
+        [SerializeField] private AudioClip audioClip;
         #endregion
 
         #region Methods
@@ -52,9 +52,6 @@ namespace LudumDare49
 
         public void ApplyPotionAction()
         {
-            potion.ApplyAction(actionPotion);
-            // Return lever at original rotation
-            pipeLever.ResetLever();
         }
 
         private void Start()
