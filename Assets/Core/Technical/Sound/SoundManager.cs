@@ -40,6 +40,7 @@ namespace LudumDare49
         #region Methods
         public void PlayAtPosition(AudioClip _clip, Vector2 _position, float _volume = 1.0f)
         {
+            if (_clip == null) return; 
             AudioSource _source;
             Sequence _s;
             for (int i = 0; i < audioSourcePool.Count; i++)

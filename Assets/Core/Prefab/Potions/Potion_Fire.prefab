@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 5608044127364552564}
   - component: {fileID: 5608044127364552565}
   - component: {fileID: 5608044127364552566}
+  - component: {fileID: 796445538470318154}
   m_Layer: 15
   m_Name: Potion_Fire
   m_TagString: Untagged
@@ -290,6 +291,7 @@ MonoBehaviour:
   score: 0
   remainingActions: []
   particleOffset: {x: 0, y: 0, z: 0}
+  effect: {fileID: 796445538470318154}
 --- !u!50 &5608044127364552564
 Rigidbody2D:
   serializedVersion: 4
@@ -359,3 +361,20 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
+--- !u!114 &796445538470318154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5608044127364552567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee4a8cd8663e674c8b30385e392b26b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useTimeInterval: 0
+  intervalTime: 10
+  dropDelay: 2
+  fireEffect: {fileID: 0}
+  burnClip: {fileID: 0}

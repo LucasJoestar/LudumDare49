@@ -16,25 +16,27 @@ namespace LudumDare49
         [Section("SnapTrigger")]
         [SerializeField] protected Vector2 snappingOffset = Vector2.zero;
 
-        public bool HasSnappedObject { get; protected set; } = false; 
+        [SerializeField, ReadOnly()] protected bool hasSnappedObject = false; 
         protected Sequence snapSequence; 
         #endregion
 
         #region Methods
         public override void OnTrigger(PhysicsObject _object)
         {
-            if (HasSnappedObject) return; 
-            HasSnappedObject = true;
-            _object.Snap();
+            if (!hasSnappedObject)
+            {
+                hasSnappedObject = true;
+                _object.Snap();
 
-            if (snapSequence != null) snapSequence.Complete(); 
-            snapSequence = DOTween.Sequence();
-            snapSequence.Join(_object.transform.DOMove((Vector2)transform.position + snappingOffset, .25f).SetEase(Ease.OutCirc));
-            snapSequence.Join(_object.transform.DORotate(Vector3.zero, .25f).SetEase(Ease.OutCirc));
-            snapSequence.Play(); 
+                if (snapSequence.IsActive()) snapSequence.Complete(); 
+                snapSequence = DOTween.Sequence();
+                snapSequence.Join(_object.transform.DOMove((Vector2)transform.position + snappingOffset, .25f).SetEase(Ease.OutCirc));
+                snapSequence.Join(_object.transform.DORotate(Vector3.zero, .25f).SetEase(Ease.OutCirc));
+                snapSequence.Play(); 
+            }
         }
 
-        public override void OnGrabbed(PhysicsObject _object) => HasSnappedObject = false;
+        public override void OnGrabbed(PhysicsObject _object) => hasSnappedObject = false;
 
 
         protected virtual void OnDrawGizmos()
