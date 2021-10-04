@@ -13,8 +13,23 @@ MonoBehaviour:
   m_Name: DAT_Recipe_LovePotion
   m_EditorClassIdentifier: 
   RecipeActions:
-  - name: Chauffer
-    action: {fileID: 11400000, guid: c414f8b743d66e740ae48003f26be2d4, type: 2}
+  - name: Squid
+    action: {fileID: 11400000, guid: 5a2216853c8c25c46b55a6d117d603a0, type: 2}
     score: 25
-  ForbiddenActions: []
-  UndesiredActionScore: -20
+  - name: Leaf
+    action: {fileID: 11400000, guid: 3b63aaeac36b20449ba62b6ad587abb3, type: 2}
+    score: 25
+  - name: Mandrake
+    action: {fileID: 11400000, guid: a8a003aca583cd3429c9182bf066de6d, type: 2}
+    score: 25
+  - name: Rat
+    action: {fileID: 11400000, guid: 012e5f8f72977be499b256f25831645e, type: 2}
+    score: 25
+  - name: Stamp
+    action: {fileID: 11400000, guid: 7c0f0678be79269458796053756bc207, type: 2}
+    score: 25
+  ForbiddenActions:
+  - name: Salt
+    action: {fileID: 11400000, guid: dd337ec1b7b8097449ea2872b6acbd1f, type: 2}
+    score: -20
+  UndesiredActionScore: -5

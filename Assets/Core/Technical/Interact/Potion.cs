@@ -34,9 +34,6 @@ namespace LudumDare49
         [SerializeField, Required] protected AudioClip dropClip = null;
         [SerializeField, Required] protected AudioClip mixClip = null;
 
-        [SerializeField, Required] protected AudioClip successClip = null;
-        [SerializeField, Required] protected AudioClip failureClip = null;
-
         [Section("Feedback")]
 
         [SerializeField, Required] protected GameObject bubbleFX = null;
@@ -66,13 +63,13 @@ namespace LudumDare49
             {
                 // Recipe action.
                 OnRecipeAction(_match, _action);
-                SoundManager.Instance.PlayAtPosition(successClip, transform.position);
+                //SoundManager.Instance.PlayAtPosition(successClip, transform.position);
 
                 if (effect != null) effect.OnRecipeAction();
             }
             else
             {
-                SoundManager.Instance.PlayAtPosition(failureClip, transform.position);
+                //SoundManager.Instance.PlayAtPosition(failureClip, transform.position);
                 _match = Array.Find(recipe.ForbiddenActions, a => a.Action == _action);
 
                 if (_match != null)

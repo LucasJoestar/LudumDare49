@@ -34,6 +34,7 @@ namespace LudumDare49
                 pipeLever.ResetLever();
                 return;
             }
+            SoundManager.Instance.PlayAtPosition(audioClip, transform.position); 
             if (dispenserSequence.IsActive()) dispenserSequence.Complete(); 
             dispenserSequence = DOTween.Sequence();
             dispenserSequence.Append(pipeTransform.DOShakePosition(1.0f, .1f, 8));

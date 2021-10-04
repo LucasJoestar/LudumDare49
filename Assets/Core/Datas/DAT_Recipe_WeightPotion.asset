@@ -13,8 +13,20 @@ MonoBehaviour:
   m_Name: DAT_Recipe_WeightPotion
   m_EditorClassIdentifier: 
   RecipeActions:
-  - name: Chauffer
-    action: {fileID: 11400000, guid: c414f8b743d66e740ae48003f26be2d4, type: 2}
+  - name: Mushroom
+    action: {fileID: 11400000, guid: a48892d6cbac830469aefebc915f531e, type: 2}
     score: 25
-  ForbiddenActions: []
-  UndesiredActionScore: -20
+  - name: Gummy
+    action: {fileID: 11400000, guid: 718b5540a97523642a3ae5ceae22a3c8, type: 2}
+    score: 25
+  - name: Feather
+    action: {fileID: 11400000, guid: b378eec497c72f54980f371b3f88babf, type: 2}
+    score: 25
+  - name: Stamp
+    action: {fileID: 11400000, guid: 7c0f0678be79269458796053756bc207, type: 2}
+    score: 25
+  ForbiddenActions:
+  - name: Rat
+    action: {fileID: 11400000, guid: 012e5f8f72977be499b256f25831645e, type: 2}
+    score: -20
+  UndesiredActionScore: -5

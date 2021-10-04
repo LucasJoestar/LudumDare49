@@ -77,7 +77,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 002fd5929b8e190488760b315c9ac022, type: 3}
   packageLayer:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 264192
   action: {fileID: 0}
   marks:
   - {fileID: 0}
