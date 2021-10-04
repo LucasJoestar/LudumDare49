@@ -1,26 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &7750992902492255600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487674140013206790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 189aef03575f9934aa2cdc9ad9508d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useTimeInterval: 1
-  intervalTime: 2
-  pickupLines:
-  - {fileID: 6187296770043771527, guid: de6e5692dd620964d8556af2baed7c23, type: 3}
-  pickupLinesClip:
-  - {fileID: 8300000, guid: 1e09f109eed526a4988fa0cb89fe2b89, type: 3}
-  - {fileID: 8300000, guid: b43a2ef94b571ee4c910778072567593, type: 3}
-  - {fileID: 8300000, guid: 122855cb642d5a1458b0a55b5eeae43b, type: 3}
-  instantiateForce: 10
 --- !u!82 &2965914998182466192
 AudioSource:
   m_ObjectHideFlags: 0
@@ -117,6 +96,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7750992902492255600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487674140013206790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189aef03575f9934aa2cdc9ad9508d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useTimeInterval: 1
+  intervalTime: 2
+  pickupLines:
+  - {fileID: 6187296770043771527, guid: de6e5692dd620964d8556af2baed7c23, type: 3}
+  pickupLinesClip:
+  - {fileID: 8300000, guid: 1e09f109eed526a4988fa0cb89fe2b89, type: 3}
+  - {fileID: 8300000, guid: b43a2ef94b571ee4c910778072567593, type: 3}
+  - {fileID: 8300000, guid: 122855cb642d5a1458b0a55b5eeae43b, type: 3}
+  instantiateForce: 10
 --- !u!1001 &5410889548108794481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140,6 +140,10 @@ PrefabInstance:
       propertyPath: recipe
       value: 
       objectReference: {fileID: 11400000, guid: 6e52fffde17a0094186ce4118eb9253e, type: 2}
+    - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
+      propertyPath: bubbleFX
+      value: 
+      objectReference: {fileID: 334840741222901764, guid: 2cfbc03bc1e7b4445a9ff9bb78d1c072, type: 3}
     - target: {fileID: 5608044127364552565, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 25

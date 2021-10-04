@@ -107,11 +107,15 @@ namespace LudumDare49
 
         public virtual void Snatch()
         {
-            PhysicsObject _snatch = Instantiate(snatch);
-            _snatch.transform.position = cursor.WorldTransform.position;
-            _snatch.transform.rotation = Quaternion.identity;
+            if (snatch != null)
+            {
+                PhysicsObject _snatch = Instantiate(snatch);
+                _snatch.transform.position = cursor.WorldTransform.position;
+                _snatch.transform.rotation = Quaternion.identity;
 
-            cursor.SetInteraction(_snatch);
+                cursor.SetInteraction(_snatch);
+            }
+            
             isBeingSnatched = false;
 
             // FX.
@@ -122,6 +126,11 @@ namespace LudumDare49
                 _fx.transform.rotation = Quaternion.identity;
 
                 SoundManager.Instance.PlayAtPosition(fxClip, transform.position);
+            }
+
+            if (destroyOnSnatched)
+            {
+                Destroy(transform.gameObject);
             }
         }
 

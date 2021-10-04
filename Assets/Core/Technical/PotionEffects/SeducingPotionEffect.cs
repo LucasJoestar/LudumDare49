@@ -18,6 +18,7 @@ namespace LudumDare49
         [SerializeField] private AudioClip[] pickupLinesClip = new AudioClip[] { }; 
         [SerializeField] private float instantiateForce = 10.0f;
         #endregion
+
         #region Overriden Methods
         public override void OnCrashPotion()
         {
@@ -33,6 +34,16 @@ namespace LudumDare49
 
         public override void OnGrabPotion(PlayerCursor _cursor)
         {
+        }
+
+        public override void OnCollideObject(Collider2D _collider)
+        {
+            
+        }
+
+        public override void OnRecipeAction()
+        {
+            
         }
 
         public override void OnShake()
