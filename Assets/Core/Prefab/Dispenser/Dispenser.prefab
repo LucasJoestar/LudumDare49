@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35b14a04ab42644eb8f34e10ccb0f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkedDispenser: {fileID: 2516728911840802574}
+  returnTime: 1
 --- !u!50 &2516728910545728079
 Rigidbody2D:
   serializedVersion: 4
@@ -482,6 +482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snappingOffset: {x: 0, y: -0.75}
   pipeTransform: {fileID: 2516728910621993783}
+  pipeLever: {fileID: 2516728910545728078}
   actionPotion: {fileID: 11400000, guid: c414f8b743d66e740ae48003f26be2d4, type: 2}
   potion: {fileID: 0}
   particle: {fileID: 0}
