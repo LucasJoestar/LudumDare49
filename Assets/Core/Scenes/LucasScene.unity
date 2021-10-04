@@ -1126,10 +1126,6 @@ PrefabInstance:
       propertyPath: gameCamera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 5458748992448039389, guid: 8932da304c6fe7c42b965864d7ece8b9, type: 3}
-      propertyPath: lastModifiedDate
-      value: 04/10/2021 15:34:18
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8932da304c6fe7c42b965864d7ece8b9, type: 3}
 --- !u!1001 &7695784674581298706
