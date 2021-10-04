@@ -43,7 +43,7 @@ namespace LudumDare49
                 if (!(_b is RaycastHit2D _bHit) || !_bHit.transform || !_bHit.transform.TryGetComponent<SortingGroup>(out var _bGroup))
                     return -1;
 
-                return _aGroup.sortingOrder.CompareTo(_bGroup.sortingOrder);
+                return _bGroup.sortingOrder.CompareTo(_aGroup.sortingOrder);
             }
         }
         #endregion

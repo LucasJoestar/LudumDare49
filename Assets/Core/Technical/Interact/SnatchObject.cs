@@ -32,6 +32,7 @@ namespace LudumDare49
         [SerializeField] private AudioClip fxClip = null;
 
         [SerializeField] private AudioClip interactClip = null;
+        [SerializeField] private Animator animator = null;
 
         [Section("State")]
 
@@ -55,6 +56,11 @@ namespace LudumDare49
 
             rigidbody.velocity = Vector2.zero;
             buffer = handTransform.position;
+
+            if (animator)
+            {
+                animator.SetBool("Grab", true);
+            }
 
             // Audio.
             SoundManager.Instance.PlayAtPosition(interactClip, transform.position);
@@ -89,6 +95,10 @@ namespace LudumDare49
             {
                 _angles.z = _rotation;
                 rigidbody.transform.DORotate(_angles, .5f, RotateMode.Fast).SetEase(Ease.InOutQuad).OnComplete(Wobble);
+            }
+            else if (animator)
+            {
+                animator.SetBool("Grab", false);
             }
 
             // Audio.

@@ -23,7 +23,7 @@ namespace LudumDare49
             if (_object is Ingredient _ingredient && _ingredient.CanBeMixedUp)
             {
                 // Apply action.
-                potion.ApplyAction(_ingredient.Action);
+                potion.ApplyAction(_ingredient.Action, true);
 
                 // Disappear.
                 Destroy(_ingredient.gameObject);

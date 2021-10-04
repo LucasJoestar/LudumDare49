@@ -55,6 +55,7 @@ namespace LudumDare49
         {
             if(hasSnappedObject && (_object as Potion) == potion)
             {
+                base.OnTrigger(_object);
                 hasSnappedObject = false;
                 potion = null;
                 base.OnGrabbed(_object);

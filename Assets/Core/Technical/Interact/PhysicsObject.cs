@@ -142,7 +142,11 @@ namespace LudumDare49
 
         public virtual void Eat()
         {
-            OnDestroyed();
+            if (doRepop)
+            {
+                OnDestroyed();
+            }
+
             LoseObject(true);
         }
 
@@ -246,11 +250,13 @@ namespace LudumDare49
                 {
                     positionBuffer[i] = positionBuffer[i - 1]; 
                 }
+
                 positionBuffer[0] = transform.position;
             }
             else
             {
                 UpdateIgnoredColliders();
+                ManageCollider();
             }
         }
 
@@ -278,8 +284,65 @@ namespace LudumDare49
 
         #region Collision
         protected static Collider2D[] overlapBuffer = new Collider2D[6];
+        protected static List<Collider2D> currentBuffer = new List<Collider2D>();
+
+        private List<Collider2D> colliderBuffer = new List<Collider2D>();
+        private Dictionary<Collider2D, float> collisionBuffer = new Dictionary<Collider2D, float>();
+
+        protected bool doCollide = false;
 
         // -----------------------
+
+        private void ManageCollider()
+        {
+            int _count = rigidbody.GetContacts(currentBuffer);
+            for (int _i = 0; _i < _count; _i++)
+            {
+                Collider2D _collider = currentBuffer[_i];
+                if (!colliderBuffer.Contains(_collider) && ManageCollider(_collider))
+                {
+                    // Collision !
+                    OnCollideObject(_collider);
+                }
+            }
+
+            colliderBuffer = currentBuffer;
+
+            bool _doCollide = _count > 0;
+            if (_doCollide != doCollide)
+            {
+                doCollide = _doCollide;
+
+                // Hit object.
+                if (doCollide && (rigidbody.velocity.magnitude > 10f))
+                {
+                    OnBrutalCollision(rigidbody.velocity);
+                }
+            }
+
+            // ----- Local Method ----- \\
+
+            bool ManageCollider(Collider2D _collider)
+            {
+                // Delay.
+                if (!collisionBuffer.ContainsKey(_collider))
+                {
+                    collisionBuffer.Add(_collider, Time.time);
+                }
+                else if (Time.time - collisionBuffer[_collider] < .5f)
+                    return false;
+
+                return true;
+            }
+        }
+
+        protected virtual void OnCollideObject(Collider2D _collider)
+        {
+        }
+
+        protected virtual void OnBrutalCollision(Vector3 _velocity)
+        {
+        }
 
         protected virtual void DoOverlap()
         {
@@ -344,6 +407,9 @@ namespace LudumDare49
             for (int _i = ignoredColliders.Count; _i-- > 0;)
             {
                 Collider2D _collider = overlapBuffer[_i];
+                if (_collider == collider)
+                    continue;
+
                 ColliderDistance2D _distance = collider.Distance(_collider);
 
                 if (!_distance.isOverlapped)
