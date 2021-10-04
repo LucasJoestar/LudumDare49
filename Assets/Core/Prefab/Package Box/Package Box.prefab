@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8529524704502246482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.65, y: -3.83, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 8529524705670724971}
   - {fileID: 8529524705173825420}
@@ -54,7 +54,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Alexis_Admin
-  lastModifiedDate: 04/10/2021 11:28:26
+  lastModifiedDate: 04/10/2021 17:29:28
   IsPersistent: 0
 --- !u!212 &8529524704502246477
 SpriteRenderer:
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snappingOffset: {x: 0, y: 1}
+  hasSnappedObject: 0
   potion: {fileID: 0}
   waypoint: {x: 0, y: 3}
   wayPointTransform: {fileID: 8529524705173825420}

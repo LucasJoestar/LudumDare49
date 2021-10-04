@@ -34,11 +34,12 @@ namespace LudumDare49
                 pipeLever.ResetLever();
                 return;
             }
-            if (dispenserSequence.IsActive()) dispenserSequence.Kill(); 
+            if (dispenserSequence.IsActive()) dispenserSequence.Complete(); 
             dispenserSequence = DOTween.Sequence();
             dispenserSequence.Append(pipeTransform.DOShakePosition(1.0f, .1f, 8));
-            dispenserSequence.Append(pipeTransform.DOLocalMoveY(1.05f, .1f).OnComplete(ApplyPotionAction)); 
+            dispenserSequence.Append(pipeTransform.DOLocalMoveY(1.5f, .1f));
             dispenserSequence.Append(pipeTransform.DOLocalMoveY(1.0f, .1f));
+            dispenserSequence.OnComplete(ApplyPotionAction);
         }
 
         public override void OnTrigger(PhysicsObject _object)
@@ -52,16 +53,20 @@ namespace LudumDare49
 
         public override void OnGrabbed(PhysicsObject _object)
         {
-            if(hasSnappedObject && _object == potion)
+            if(hasSnappedObject && (_object as Potion) == potion)
             {
                 base.OnTrigger(_object);
                 hasSnappedObject = false;
-                potion = null; 
+                potion = null;
+                base.OnGrabbed(_object);
             }
         }
 
         public void ApplyPotionAction()
         {
+            if (!potion) return;
+            potion.ApplyAction(actionPotion);
+            pipeLever.ResetLever();
         }
 
         private void Start()
