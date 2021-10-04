@@ -27,7 +27,17 @@ namespace LudumDare49
 
         [SerializeField, ReadOnly] protected List<RecipeAction> remainingActions = new List<RecipeAction>();
 
+        [Section("Audio")]
+
+        [SerializeField, Required] protected AudioClip grabClip = null;
+        [SerializeField, Required] protected AudioClip dropClip = null;
+
+        [SerializeField, Required] protected AudioClip successClip = null;
+        [SerializeField, Required] protected AudioClip failureClip = null;
+
         [Section("Feedback")]
+
+        [SerializeField, Required] protected GameObject bubbleFX = null;
 
         [HelpBox("Magenta", MessageType.Info)]
         [SerializeField] protected Vector3 particleOffset = new Vector3();
@@ -37,17 +47,28 @@ namespace LudumDare49
         #endregion
 
         #region Behaviour
-        public virtual void ApplyAction(PotionAction _action)
+        public virtual void ApplyAction(PotionAction _action, bool _mixIngredient = false)
         {
+            // Mix effect.
+            if (_mixIngredient)
+            {
+                GameObject _particle = Instantiate(bubbleFX);
+                _particle.transform.position = transform.position + grabPoint;
+                _particle.transform.rotation = Quaternion.identity;
+            }
+
             var _match = remainingActions.Find(a => a.Action == _action);
             if (_match != null)
             {
                 // Recipe action.
-                OnRecipeAction(_match, _action);                
+                OnRecipeAction(_match, _action);
+                SoundManager.Instance.PlayAtPosition(successClip, transform.position);
             }
             else
             {
+                SoundManager.Instance.PlayAtPosition(failureClip, transform.position);
                 _match = Array.Find(recipe.ForbiddenActions, a => a.Action == _action);
+
                 if (_match != null)
                 {
                     // Forbidden action.
@@ -66,7 +87,10 @@ namespace LudumDare49
         {
             base.Grab(_cursor, _joint);
             mixInCollider.gameObject.SetActive(false);
-            if(effect != null) effect.OnGrabPotion(_cursor); 
+            if(effect != null) effect.OnGrabPotion(_cursor);
+
+            // Audio
+            SoundManager.Instance.PlayAtPosition(grabClip, transform.position);
         }
 
         public override void Snap()
@@ -80,7 +104,16 @@ namespace LudumDare49
         public override void Drop()
         {
             base.Drop();
-            if (effect != null) effect.OnDropPotion(); 
+            if (effect != null) effect.OnDropPotion();
+
+            // Audio
+            SoundManager.Instance.PlayAtPosition(dropClip, transform.position);
+        }
+
+        protected override void OnBrutalCollision(Vector3 _velocity)
+        {
+            base.OnBrutalCollision(_velocity);
+            LoseObject(false);
         }
 
         public override void Shake()
@@ -88,6 +121,7 @@ namespace LudumDare49
             base.Shake();
             if (effect != null) effect.OnShake();
         }
+
         // -----------------------
 
         protected virtual void OnRecipeAction(RecipeAction _recipeAction, PotionAction _potionAction)

@@ -71,7 +71,7 @@ MonoBehaviour:
   destroyOnSnatched: 0
   fx: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
   fxClip: {fileID: 8300000, guid: fdbf00913d91b92439cd3f4ebc8eb20f, type: 3}
-  interactClip: {fileID: 8300000, guid: 1912ead4eed14484a8f42b0580badd95, type: 3}
+  interactClip: {fileID: 0}
   animator: {fileID: 0}
   isBeingSnatched: 0
   cursor: {fileID: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
   destroyOnSnatched: 0
   fx: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
   fxClip: {fileID: 8300000, guid: fdbf00913d91b92439cd3f4ebc8eb20f, type: 3}
-  interactClip: {fileID: 8300000, guid: 1912ead4eed14484a8f42b0580badd95, type: 3}
+  interactClip: {fileID: 0}
   animator: {fileID: 0}
   isBeingSnatched: 0
   cursor: {fileID: 0}
@@ -257,7 +257,7 @@ MonoBehaviour:
   destroyOnSnatched: 0
   fx: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
   fxClip: {fileID: 8300000, guid: fdbf00913d91b92439cd3f4ebc8eb20f, type: 3}
-  interactClip: {fileID: 8300000, guid: 1912ead4eed14484a8f42b0580badd95, type: 3}
+  interactClip: {fileID: 0}
   animator: {fileID: 0}
   isBeingSnatched: 0
   cursor: {fileID: 0}
@@ -350,7 +350,7 @@ MonoBehaviour:
   destroyOnSnatched: 0
   fx: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
   fxClip: {fileID: 8300000, guid: fdbf00913d91b92439cd3f4ebc8eb20f, type: 3}
-  interactClip: {fileID: 8300000, guid: 1912ead4eed14484a8f42b0580badd95, type: 3}
+  interactClip: {fileID: 0}
   animator: {fileID: 0}
   isBeingSnatched: 0
   cursor: {fileID: 0}
@@ -671,7 +671,7 @@ MonoBehaviour:
   destroyOnSnatched: 0
   fx: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
   fxClip: {fileID: 8300000, guid: fdbf00913d91b92439cd3f4ebc8eb20f, type: 3}
-  interactClip: {fileID: 8300000, guid: 1912ead4eed14484a8f42b0580badd95, type: 3}
+  interactClip: {fileID: 0}
   animator: {fileID: 0}
   isBeingSnatched: 0
   cursor: {fileID: 0}
@@ -764,7 +764,7 @@ MonoBehaviour:
   destroyOnSnatched: 0
   fx: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
   fxClip: {fileID: 8300000, guid: fdbf00913d91b92439cd3f4ebc8eb20f, type: 3}
-  interactClip: {fileID: 8300000, guid: 1912ead4eed14484a8f42b0580badd95, type: 3}
+  interactClip: {fileID: 0}
   animator: {fileID: 0}
   isBeingSnatched: 0
   cursor: {fileID: 0}
@@ -857,7 +857,7 @@ MonoBehaviour:
   destroyOnSnatched: 0
   fx: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
   fxClip: {fileID: 8300000, guid: fdbf00913d91b92439cd3f4ebc8eb20f, type: 3}
-  interactClip: {fileID: 8300000, guid: 1912ead4eed14484a8f42b0580badd95, type: 3}
+  interactClip: {fileID: 0}
   animator: {fileID: 0}
   isBeingSnatched: 0
   cursor: {fileID: 0}
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   destroyOnSnatched: 0
   fx: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
   fxClip: {fileID: 8300000, guid: fdbf00913d91b92439cd3f4ebc8eb20f, type: 3}
-  interactClip: {fileID: 8300000, guid: 1912ead4eed14484a8f42b0580badd95, type: 3}
+  interactClip: {fileID: 0}
   animator: {fileID: 0}
   isBeingSnatched: 0
   cursor: {fileID: 0}
@@ -1282,7 +1282,7 @@ MonoBehaviour:
   destroyOnSnatched: 0
   fx: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
   fxClip: {fileID: 8300000, guid: fdbf00913d91b92439cd3f4ebc8eb20f, type: 3}
-  interactClip: {fileID: 8300000, guid: 1912ead4eed14484a8f42b0580badd95, type: 3}
+  interactClip: {fileID: 0}
   animator: {fileID: 0}
   isBeingSnatched: 0
   cursor: {fileID: 0}
@@ -1375,7 +1375,7 @@ MonoBehaviour:
   destroyOnSnatched: 0
   fx: {fileID: 8482641257979944040, guid: 29cefbe86297dbb4286d3aa4b5acf89c, type: 3}
   fxClip: {fileID: 8300000, guid: fdbf00913d91b92439cd3f4ebc8eb20f, type: 3}
-  interactClip: {fileID: 8300000, guid: 1912ead4eed14484a8f42b0580badd95, type: 3}
+  interactClip: {fileID: 0}
   animator: {fileID: 0}
   isBeingSnatched: 0
   cursor: {fileID: 0}
