@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8761934922397354598}
   - component: {fileID: 8761934922397354599}
   - component: {fileID: 8761934922397354596}
-  - component: {fileID: 3387987924887862806}
+  - component: {fileID: 4073667294243083732}
   - component: {fileID: 8761934922397354602}
   - component: {fileID: 8761934922397354603}
   - component: {fileID: 8761934922397354600}
@@ -52,7 +52,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 11:07:37
+  lastModifiedDate: 04/10/2021 11:27:22
   IsPersistent: 0
 --- !u!212 &8761934922397354596
 SpriteRenderer:
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3387987924887862806
+--- !u!114 &4073667294243083732
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8761934922397354601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407e87acb520dde43ae531c17ed6af46, type: 3}
+  m_Script: {fileID: 11500000, guid: 00400c065a100854e825fcafb97fa0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 8761934922397354602}
@@ -134,7 +134,7 @@ MonoBehaviour:
   ignoreLayer:
     serializedVersion: 2
     m_Bits: 64
-  inertiaCoef: 3
+  inertiaCoef: 2
   doRepop: 0
   repopSpeed: 2
   repopPosition: {fileID: 0}
@@ -144,6 +144,7 @@ MonoBehaviour:
   isRepoping: 0
   carrier: {fileID: 0}
   trigger: {fileID: 0}
+  action: {fileID: 11400000, guid: 3b63aaeac36b20449ba62b6ad587abb3, type: 2}
 --- !u!50 &8761934922397354602
 Rigidbody2D:
   serializedVersion: 4

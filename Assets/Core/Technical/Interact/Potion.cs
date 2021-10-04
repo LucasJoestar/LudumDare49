@@ -17,7 +17,8 @@ namespace LudumDare49
         #region Global Members
         [Section("Potion")]
 
-        [SerializeField] protected Recipe recipe = null;
+        [SerializeField, Required] protected Recipe recipe = null;
+        [SerializeField, Required] protected Collider2D mixInCollider = null;
         [SerializeField, ReadOnly] protected int score = 0;
 
         public int Score => score;
@@ -57,17 +58,20 @@ namespace LudumDare49
             }
         }
 
-        public virtual void Activate()
+        public override void Grab(PlayerCursor _cursor, HingeJoint2D _joint)
         {
-
+            base.Grab(_cursor, _joint);
+            mixInCollider.gameObject.SetActive(false);
         }
 
-        public virtual void Deactivate()
+        public override void Snap()
         {
-
+            base.Snap();
+            mixInCollider.gameObject.SetActive(true);
         }
 
         // -----------------------
+
         protected virtual void OnRecipeAction(RecipeAction _recipeAction, PotionAction _potionAction)
         {
             // Update score.

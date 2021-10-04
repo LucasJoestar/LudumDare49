@@ -18,6 +18,7 @@ namespace LudumDare49
         [SerializeField, Required] private ConveyorBelt belt = null;
         [SerializeField, Required] private Transform generateTransform = null;
         [SerializeField, Required] private SpriteRenderer alertObject = null;
+        [SerializeField, Required] private GameObject blockInteract = null;
 
         [Section("Audio")]
 
@@ -52,7 +53,7 @@ namespace LudumDare49
             alertObject.DOColor(alertColor, alertDuration).SetEase(alertEase).SetLoops(alertLoop, LoopType.Yoyo);
 
             potion.Rigidbody.isKinematic = false;
-            potion.Activate();
+            blockInteract.SetActive(false);
         }
 
         // -----------------------
@@ -69,6 +70,7 @@ namespace LudumDare49
 
                 potion.Rigidbody.isKinematic = true;
 
+                blockInteract.SetActive(true);
                 belt.Roll(potion.transform, beltLoop);
 
                 // Set timer.

@@ -25,8 +25,7 @@ namespace LudumDare49
         {
             if (HasSnappedObject) return; 
             HasSnappedObject = true;
-            _object.Rigidbody.velocity = Vector2.zero;
-            _object.Rigidbody.constraints = RigidbodyConstraints2D.FreezeAll; 
+            _object.Snap();
 
             if (snapSequence != null) snapSequence.Complete(); 
             snapSequence = DOTween.Sequence();
