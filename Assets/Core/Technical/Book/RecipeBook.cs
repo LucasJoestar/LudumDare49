@@ -5,6 +5,7 @@
 // ======================================================================== //
 
 using EnhancedEditor;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem; 
 
@@ -12,6 +13,8 @@ namespace LudumDare49
 {
 	public class RecipeBook : MonoBehaviour
     {
+        public static event Action OnCloseBook = null;
+
         #region Global Members
         [Section("Recipe Book")]
         [SerializeField, Required] private Animator animator = null; 
@@ -48,6 +51,8 @@ namespace LudumDare49
         {
             animator.SetBool(openBook_Hash, false);
             SoundManager.Instance.PlayAtPosition(closeBookClip, transform.position);
+
+            OnCloseBook?.Invoke();
         }
 
         public void OnPreviousPage()

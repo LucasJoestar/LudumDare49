@@ -66,7 +66,7 @@ namespace LudumDare49
 
         public override void OnShake()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public override void OnStart()
