@@ -59,6 +59,11 @@ namespace LudumDare49
             throw new System.NotImplementedException();
         }
 
+        public override void OnStart()
+        {
+
+        }
+
         public override void OnTimeInterval()
         {
             // No Behaviour Here

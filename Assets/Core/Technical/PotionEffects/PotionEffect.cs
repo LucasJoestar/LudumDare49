@@ -27,7 +27,8 @@ namespace LudumDare49
         public abstract void OnTimeInterval();
         public abstract void OnForbiddenAction();
         public abstract void OnShake();
-
+        public abstract void OnStart();
+        
         protected virtual void Start()
         {
             potion = GetComponent<Potion>();
@@ -37,6 +38,7 @@ namespace LudumDare49
                 timeSequence.AppendInterval(intervalTime); 
                 timeSequence.OnComplete(OnTimeInterval);
             }
+            OnStart();
         }
         #endregion
     }
