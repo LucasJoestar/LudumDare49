@@ -15,6 +15,8 @@ namespace LudumDare49
         [Section("Add-in-Potion Trigger")]
 
         [SerializeField, Required] private Potion potion = null;
+        [SerializeField, Required] private GameObject fx = null;
+        [SerializeField, Required] private AudioClip fxClip = null;
         #endregion
 
         #region Behaviour
@@ -24,6 +26,16 @@ namespace LudumDare49
             {
                 // Apply action.
                 potion.ApplyAction(_ingredient.Action, true);
+
+                // FX.
+                if (fx != null)
+                {
+                    var _fx = Instantiate(fx);
+                    _fx.transform.position = transform.position;
+                    _fx.transform.rotation = Quaternion.identity;
+
+                    SoundManager.Instance.PlayAtPosition(fxClip, transform.position);
+                }
 
                 // Disappear.
                 Destroy(_ingredient.gameObject);
