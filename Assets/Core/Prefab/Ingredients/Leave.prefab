@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8761934922397354602}
   - component: {fileID: 8761934922397354603}
   - component: {fileID: 8761934922397354600}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Leave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 01:25:22
+  lastModifiedDate: 04/10/2021 11:07:37
   IsPersistent: 0
 --- !u!212 &8761934922397354596
 SpriteRenderer:
@@ -121,16 +121,16 @@ MonoBehaviour:
   collider: {fileID: 8761934922397354603}
   carrierPrefab: {fileID: 0}
   centerOfMass: {x: 0, y: 0, z: 0}
-  grabPoint: {x: 0, y: 0.5, z: 0}
+  grabPoint: {x: 0, y: 0, z: 0}
   physicsMask:
     serializedVersion: 2
-    m_Bits: 4225
+    m_Bits: 36992
   triggerMask:
     serializedVersion: 2
-    m_Bits: 131584
+    m_Bits: 8704
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 32768
   ignoreLayer:
     serializedVersion: 2
     m_Bits: 64

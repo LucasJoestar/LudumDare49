@@ -20,6 +20,7 @@ namespace LudumDare49
         [SerializeField, Range(1.0f,10.0f)] private float returningSpeed = 2.0f;
         [Section("Stamp Rendering")]
         [SerializeField] private SpriteRenderer spriteRenderer = null;
+        [SerializeField] private SortingGroup group = null;
         [SerializeField] private Sprite normalSprite = null; 
         [SerializeField] private Sprite grabbedSprite = null;
         [Section("Stamp Sound")]
@@ -41,7 +42,9 @@ namespace LudumDare49
         {
             isGrabbed = false;
             transform.rotation = Quaternion.identity; 
-            spriteRenderer.sprite = normalSprite; 
+            spriteRenderer.sprite = normalSprite;
+            group.sortingLayerName = "Default";
+
             // Reset Stamp Position
             if (returningSequence.IsActive()) returningSequence.Kill();
             returningSequence = DOTween.Sequence();
@@ -55,6 +58,7 @@ namespace LudumDare49
             isGrabbed = true;
             handTransform = _joint.transform;
             spriteRenderer.sprite = grabbedSprite;
+            group.sortingLayerName = "Foreground";
         }
 
         public void Shake(){}

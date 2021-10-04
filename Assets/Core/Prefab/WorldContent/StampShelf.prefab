@@ -827,24 +827,8 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8765213752807629308}
     m_Modifications:
-    - target: {fileID: 8207437245214705409, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
-      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8207437245214705410, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
@@ -888,10 +872,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8207437245214705411, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
-      propertyPath: returningSpeed
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207437245214705411, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
       propertyPath: marks.Array.data[0]
       value: 
       objectReference: {fileID: 1674469968130411589}
@@ -914,14 +894,6 @@ PrefabInstance:
     - target: {fileID: 8207437245214705412, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
       propertyPath: m_Name
       value: Stamp Heavy Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207437245214705413, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
-      propertyPath: lastModifiedBy
-      value: Lucas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207437245214705413, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
-      propertyPath: lastModifiedDate
-      value: 04/10/2021 10:37:55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc060a721df6e4c458fdbc1a15ca9dc3, type: 3}
@@ -1028,18 +1000,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 205637646683124592, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1
       objectReference: {fileID: 0}
@@ -1080,10 +1040,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 205637646683124593, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
-      propertyPath: returningSpeed
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 205637646683124593, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
       propertyPath: marks.Array.data[0]
       value: 
       objectReference: {fileID: 5769686554327598734}
@@ -1103,21 +1059,9 @@ PrefabInstance:
       propertyPath: marks.Array.data[4]
       value: 
       objectReference: {fileID: 8541876299059620163}
-    - target: {fileID: 205637646683124595, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 205637646683124598, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
       propertyPath: m_Name
       value: Stamp Fire
-      objectReference: {fileID: 0}
-    - target: {fileID: 205637646683124599, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
-      propertyPath: lastModifiedBy
-      value: Lucas
-      objectReference: {fileID: 0}
-    - target: {fileID: 205637646683124599, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
-      propertyPath: lastModifiedDate
-      value: 04/10/2021 10:37:55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a613e987831de14c81690d15e64d6a1, type: 3}
@@ -1228,18 +1172,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9218079514204754040, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.94
       objectReference: {fileID: 0}
@@ -1280,10 +1212,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9218079514204754041, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
-      propertyPath: returningSpeed
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9218079514204754041, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
       propertyPath: marks.Array.data[0]
       value: 
       objectReference: {fileID: 1383527901821483392}
@@ -1303,21 +1231,9 @@ PrefabInstance:
       propertyPath: marks.Array.data[4]
       value: 
       objectReference: {fileID: 8579156375086112368}
-    - target: {fileID: 9218079514204754043, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9218079514204754046, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
       propertyPath: m_Name
       value: Stamp Living Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 9218079514204754047, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
-      propertyPath: lastModifiedBy
-      value: Lucas
-      objectReference: {fileID: 0}
-    - target: {fileID: 9218079514204754047, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}
-      propertyPath: lastModifiedDate
-      value: 04/10/2021 10:37:55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c9b84dd2c2c3a448ae85e44a0b076ac, type: 3}

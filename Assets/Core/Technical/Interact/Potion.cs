@@ -98,9 +98,9 @@ namespace LudumDare49
         #endregion
 
         #region Mono Behaviour
-        protected override void Start()
+        protected override void Awake()
         {
-            base.Start();
+            base.Awake();
 
             remainingActions = new List<RecipeAction>(recipe.RecipeActions);
         }
