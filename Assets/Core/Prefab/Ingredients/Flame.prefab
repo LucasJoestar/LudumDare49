@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4510053214687586422}
   - component: {fileID: 4510053214687586423}
   - component: {fileID: 4510053214687586420}
+  - component: {fileID: 8873997916115551657}
   m_Layer: 15
   m_Name: Flame
   m_TagString: Untagged
@@ -164,6 +165,19 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
+--- !u!114 &8873997916115551657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4510053214687586421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30c7f45e906f8a43a822ba0b857f281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2204615721715094386}
 --- !u!1001 &5120109966237706405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -240,5 +254,10 @@ PrefabInstance:
 --- !u!4 &2204615721715094384 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6455372071715797973, guid: 404845052a056454c9e01ebe8fb106ac, type: 3}
+  m_PrefabInstance: {fileID: 5120109966237706405}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2204615721715094386 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6455372071715797975, guid: 404845052a056454c9e01ebe8fb106ac, type: 3}
   m_PrefabInstance: {fileID: 5120109966237706405}
   m_PrefabAsset: {fileID: 0}
