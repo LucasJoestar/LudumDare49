@@ -15,11 +15,10 @@ namespace LudumDare49
         #region Global Members
         [Section("Recipe Book")]
         [SerializeField, Required] private Animator animator = null; 
-        [SerializeField] private RecipeUI[] recipesUI = new RecipeUI[] { };
+        [SerializeField] private Sprite[] pageSprites = new Sprite[] { };
         [SerializeField, ReadOnly] private int currentIndex = 0;
         [Section("Pages")]
-        [SerializeField, Required] private SpriteRenderer leftPageImage = null; 
-        [SerializeField, Required] private SpriteRenderer rightPageImage = null; 
+        [SerializeField, Required] private SpriteRenderer page = null; 
         #endregion
 
         #region Animation
@@ -32,11 +31,11 @@ namespace LudumDare49
 
         public void OnNextPage()
         {
-            int _currentIndex = currentIndex++ >= recipesUI.Length ? recipesUI.Length - 1 : currentIndex;
+            int _currentIndex = currentIndex++ >= pageSprites.Length ? pageSprites.Length - 1 : currentIndex;
             if (_currentIndex < currentIndex)
-                currentIndex = _currentIndex; 
+                currentIndex = _currentIndex;
             else
-                UpdatePage();
+                page.sprite = pageSprites[currentIndex]; 
         }
         public void OnPreviousPage()
         {
@@ -44,15 +43,7 @@ namespace LudumDare49
             if (_currentIndex > currentIndex)
                 currentIndex = _currentIndex;
             else
-                UpdatePage();
-        }
-
-        public void UpdatePage()
-        {
-            // Start sound here
-            // Change Sprites
-            leftPageImage.sprite = recipesUI[currentIndex].PotionIcon;
-            rightPageImage.sprite = recipesUI[currentIndex].ActionsIcon; 
+                page.sprite = pageSprites[currentIndex];
         }
         #endregion
     }

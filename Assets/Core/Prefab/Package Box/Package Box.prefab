@@ -54,7 +54,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Alexis_Admin
-  lastModifiedDate: 04/10/2021 17:29:28
+  lastModifiedDate: 04/10/2021 18:30:47
   IsPersistent: 0
 --- !u!212 &8529524704502246477
 SpriteRenderer:
@@ -166,23 +166,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e30edb616068d74dbed1b4b63e8d180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snappingOffset: {x: 0, y: 1}
+  snappingOffset: {x: 0, y: 6.5}
   hasSnappedObject: 0
   potion: {fileID: 0}
-  waypoint: {x: 0, y: 3}
-  wayPointTransform: {fileID: 8529524705173825420}
-  movementCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  rotationCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  potionOffset: {x: 0, y: 2.5}
+  potionRotation: -14
+  rotationDuration: 0.5
+  ingredientOffset:
+  - {x: -1, y: 3}
+  - {x: 1, y: 3}
   closedSprite: {fileID: 7996203760292423402, guid: 807a2ee19f15fca468ad7179b1321cb8, type: 3}
   closingClip: {fileID: 8300000, guid: 19a863dd8a46a4742ad0fd2bbe7dac0c, type: 3}
 --- !u!210 &8529524704502246475
@@ -195,7 +187,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -2
 --- !u!1 &8529524705173825421
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +285,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Alexis_Admin
-  lastModifiedDate: 03/10/2021 18:52:57
+  lastModifiedDate: 04/10/2021 18:19:57
   IsPersistent: 0
 --- !u!331 &8529524705670724970
 SpriteMask:
@@ -341,7 +333,7 @@ SpriteMask:
   m_BackSortingLayerID: 0
   m_FrontSortingLayer: 0
   m_BackSortingLayer: 0
-  m_FrontSortingOrder: 0
+  m_FrontSortingOrder: 1
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 1
