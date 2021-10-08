@@ -108,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8263659808409064213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.21, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8263659807897476187}
@@ -129,8 +129,8 @@ MonoBehaviour:
   comment: 
   Tags:
     Tags: []
-  lastModifiedBy: Lucas
-  lastModifiedDate: 03/10/2021 23:48:04
+  lastModifiedBy: Alexis_Admin
+  lastModifiedDate: 08/10/2021 16:46:00
   IsPersistent: 0
 --- !u!212 &8263659808409064211
 SpriteRenderer:

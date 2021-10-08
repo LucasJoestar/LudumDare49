@@ -12,8 +12,15 @@ namespace LudumDare49
     public class Flame : MonoBehaviour
     {
         [SerializeField] private Animator animator = null;
-        private static readonly int isHorny_ToHash = Animator.StringToHash("IsHorny"); 
+        [SerializeField] private ParticleSystem loveVFX = null; 
 
-        public void MakeHorny() => animator.SetBool(isHorny_ToHash, true);
+        private static readonly int isHorny_ToHash = Animator.StringToHash("IsHorny");
+
+        public void MakeHorny()
+        {
+            animator.SetBool(isHorny_ToHash, true);
+            if (loveVFX)
+                loveVFX.Play(); 
+        }
     }
 }

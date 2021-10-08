@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 3078452126600581941}
   - component: {fileID: 606447786795528126}
   - component: {fileID: 7372237472568872556}
-  - component: {fileID: 3761728895961852071}
-  - component: {fileID: 352715920170339932}
   m_Layer: 5
   m_Name: Canvas - Score
   m_TagString: Untagged
@@ -57,7 +55,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Alexis_Admin
-  lastModifiedDate: 04/10/2021 22:53:15
+  lastModifiedDate: 08/10/2021 16:26:25
   IsPersistent: 0
 --- !u!223 &606447786795528126
 Canvas:
@@ -77,8 +75,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: -827468073
-  m_SortingOrder: -10
+  m_SortingLayerID: -315832941
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &7372237472568872556
 MonoBehaviour:
@@ -103,38 +101,6 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
---- !u!114 &3761728895961852071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956829600266067217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &352715920170339932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956829600266067217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe42058b2302ee34d9da0190759eef7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  successClip: {fileID: 8300000, guid: b10f5178eb167c243aa5032af9d9c7c2, type: 3}
-  failureClip: {fileID: 8300000, guid: 2d5dc2f2dffc36a428ca0949492c6a35, type: 3}
-  text: {fileID: 752641428531946178}
 --- !u!1 &3352491804522828079
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,9 +166,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '0
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -509,7 +473,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Alexis_Admin
-  lastModifiedDate: 03/10/2021 19:57:49
+  lastModifiedDate: 08/10/2021 16:12:09
   IsPersistent: 0
 --- !u!1 &8529524705670724968
 GameObject:

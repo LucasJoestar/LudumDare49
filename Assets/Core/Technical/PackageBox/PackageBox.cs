@@ -102,6 +102,7 @@ namespace LudumDare49
                     {
                         _f.MakeHorny(); 
                         _f2.MakeHorny(); 
+
                     }
                     _offsetPosition = ingredientOffset[1]; 
                 }
@@ -149,16 +150,21 @@ namespace LudumDare49
         {
             if(potion != null)
             {
-                //canvas.SetActive(true);
-                //TextMeshPro _txt = canvas.GetComponentInChildren<TextMeshPro>();
-                //_txt.text = potion.Score > 0 ? "+" : string.Empty;
-                //_txt.color = potion.Score > 0 ? Color.green : Color.red; 
-                //_txt.text += potion.Score; 
                 ScoreManager.Instance.IncrementScore(potion.Score);
-                //if(snapSequence.IsActive())
-                //    snapSequence.Kill(); 
-                //snapSequence = DOTween.Sequence();
-                //snapSequence.Join(canvas.transform.DOMoveY(10, 10)); 
+
+                canvas.SetActive(true);
+                canvas.transform.SetParent(null); 
+                TextMeshProUGUI _txt = canvas.GetComponentInChildren<TextMeshProUGUI>();
+                _txt.text = potion.Score > 0 ? "+" : string.Empty;
+                _txt.color = potion.Score > 0 ? Color.green : Color.red; 
+                _txt.text += potion.Score; 
+
+                if(snapSequence.IsActive())
+                    snapSequence.Kill(); 
+                snapSequence = DOTween.Sequence();
+                snapSequence.Join(canvas.transform.DOScale(2.5f, .25f).SetLoops(2, LoopType.Yoyo)); 
+                snapSequence.Append(canvas.transform.DOMoveY(10, .75f));
+                snapSequence.OnComplete(() => Destroy(canvas.gameObject)); 
             }
         }
         #endregion
