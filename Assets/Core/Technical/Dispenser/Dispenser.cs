@@ -35,7 +35,12 @@ namespace LudumDare49
                 return;
             }
             SoundManager.Instance.PlayAtPosition(audioClip, transform.position); 
-            if (dispenserSequence.IsActive()) dispenserSequence.Complete(); 
+            if (dispenserSequence.IsActive()) dispenserSequence.Complete();
+
+            // --- Disable potion --- // 
+            potion.Collider.enabled = false;
+            potion.MixInCollider.enabled = false; 
+
             dispenserSequence = DOTween.Sequence();
             dispenserSequence.Append(pipeTransform.DOShakePosition(1.0f, .1f, 8));
             dispenserSequence.Append(pipeTransform.DOLocalMoveY(1.5f, .1f));
@@ -65,9 +70,14 @@ namespace LudumDare49
 
         public void ApplyPotionAction()
         {
-            if (!potion) return;
-            potion.ApplyAction(actionPotion);
             pipeLever.ResetLever();
+            if (!potion) return;
+
+            // --- Enable potion --- // 
+            potion.Collider.enabled = true;
+            potion.MixInCollider.enabled = true;
+
+            potion.ApplyAction(actionPotion);
         }
 
         private void Start()

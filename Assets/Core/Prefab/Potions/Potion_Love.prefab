@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useTimeInterval: 1
-  intervalTime: 5
+  intervalTime: 15
   pickupLines:
   - {fileID: 6187296770043771527, guid: de6e5692dd620964d8556af2baed7c23, type: 3}
   pickupLinesClip:
@@ -406,11 +406,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5608044127364552569, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: lastModifiedBy
-      value: Lucas
+      value: Alexis_Admin
       objectReference: {fileID: 0}
     - target: {fileID: 5608044127364552569, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: lastModifiedDate
-      value: 04/10/2021 23:10:19
+      value: 08/10/2021 11:54:03
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 796445538470318154, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}

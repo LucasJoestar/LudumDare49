@@ -18,8 +18,10 @@ namespace LudumDare49
         public PotionAction Action => action;
 
         [SerializeField] private bool canBeMixedUp = true;
-
         public bool CanBeMixedUp => canBeMixedUp;
+
+        [SerializeField] private bool canBePacked = false;
+        public bool CanBePacked => canBePacked; 
         #endregion
 
         #region Behaviour

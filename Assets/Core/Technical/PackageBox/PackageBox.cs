@@ -52,7 +52,7 @@ namespace LudumDare49
             }
             else if(_object is Ingredient _ingredient)
             {
-                if (pendingObject[0] != null && pendingObject[1] != null)
+                if (!_ingredient.CanBePacked || (pendingObject[0] != null && pendingObject[1] != null))
                     return; 
             }
 
@@ -85,6 +85,7 @@ namespace LudumDare49
                 snapSequence.Append(_object.transform.DORotate(Vector3.forward * potionRotation, rotationDuration)); 
                 _offsetPosition = potionOffset; 
                 potion = _potion;
+                potion.MixInCollider.enabled = false; 
             }
             else if (_object is Ingredient _ingredient)
             {

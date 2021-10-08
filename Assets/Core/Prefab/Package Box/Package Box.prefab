@@ -326,7 +326,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Alexis_Admin
-  lastModifiedDate: 04/10/2021 23:00:42
+  lastModifiedDate: 08/10/2021 11:25:55
   IsPersistent: 0
 --- !u!212 &8529524704502246477
 SpriteRenderer:
@@ -392,7 +392,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.4}
+  m_Offset: {x: 0, y: 4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -403,7 +403,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.58, y: 4.8}
+  m_Size: {x: 6.58, y: 8}
   m_EdgeRadius: 0
 --- !u!50 &8529524704502246478
 Rigidbody2D:

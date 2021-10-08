@@ -22,6 +22,7 @@ namespace LudumDare49
         [SerializeField, Required] protected Collider2D mixInCollider = null;
         [SerializeField, ReadOnly] protected int score = 0;
 
+        public Collider2D MixInCollider => mixInCollider;
         public int Score => score;
 
         [Section("Recipe")]

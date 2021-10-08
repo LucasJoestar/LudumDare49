@@ -150,6 +150,7 @@ MonoBehaviour:
   trigger: {fileID: 0}
   action: {fileID: 11400000, guid: b855259e3361c3945bc6fded3f55246b, type: 2}
   canBeMixedUp: 1
+  canBePacked: 1
 --- !u!50 &7277691565383698949
 Rigidbody2D:
   serializedVersion: 4
