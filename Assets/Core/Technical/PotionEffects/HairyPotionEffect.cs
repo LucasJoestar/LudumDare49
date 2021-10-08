@@ -35,7 +35,6 @@ namespace LudumDare49
             GameObject _hair = Instantiate(hairPrefab);
             _hair.transform.position = _point;
             _hair.transform.rotation = Quaternion.identity;
-            _hair.transform.SetParent(_collider.transform, true);
 
             SoundManager.Instance.PlayAtPosition(hairGrow, _point);
         }

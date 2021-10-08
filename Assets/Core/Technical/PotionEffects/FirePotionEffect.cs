@@ -43,6 +43,11 @@ namespace LudumDare49
                 {
                     _flame = Instantiate(fireEffect, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
                     _flame.velocity = (Vector2.up + (Vector2.left * Random.Range(-1.0f, 1.0f))) * flameForce;
+
+                    Sequence _s = DOTween.Sequence();
+                    _s.AppendInterval(waitingTime);
+                    _s.Append(_flame.transform.DOScale(0, shrinkingDuration));
+                    _s.OnComplete(() => Destroy(_flame.gameObject));
                 }
             }
         }

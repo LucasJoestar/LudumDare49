@@ -14,6 +14,7 @@ namespace LudumDare49
     {
         #region Global Members
         [Section("SeducingPotionEffect")]
+        [SerializeField, Required] private AudioSource source = null;
         [SerializeField] private PickupLine[] pickupLines = new PickupLine[] { };
         [SerializeField] private AudioClip[] pickupLinesClip = new AudioClip[] { }; 
         [SerializeField] private float instantiateForce = 10.0f;
@@ -26,6 +27,8 @@ namespace LudumDare49
 
         public override void OnDropPotion()
         {
+            source.DOKill();
+            source.DOFade(0f, .5f).OnComplete(() => source.Stop());
         }
 
         public override void OnForbiddenAction()
@@ -34,6 +37,9 @@ namespace LudumDare49
 
         public override void OnGrabPotion(PlayerCursor _cursor)
         {
+            source.DOKill();
+            source.DOFade(1f, .5f);
+            source.Play();
         }
 
         public override void OnCollideObject(Collider2D _collider, Vector2 _point)

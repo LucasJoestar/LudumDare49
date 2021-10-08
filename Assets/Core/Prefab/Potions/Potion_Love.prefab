@@ -11,10 +11,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: d713fdfa47481d242a65dfae27fa921c, type: 2}
   m_audioClip: {fileID: 8300000, guid: 9e7dbf5a04b39ea4e8771c2928158d63, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_PlayOnAwake: 0
+  m_Volume: 0
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -109,7 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useTimeInterval: 1
-  intervalTime: 15
+  intervalTime: 12
+  source: {fileID: 2965914998182466192}
   pickupLines:
   - {fileID: 6187296770043771527, guid: de6e5692dd620964d8556af2baed7c23, type: 3}
   pickupLinesClip:
@@ -135,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: effect
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7750992902492255600}
     - target: {fileID: 5608044127364552561, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: recipe
       value: 
@@ -406,11 +407,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5608044127364552569, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: lastModifiedBy
-      value: Alexis_Admin
+      value: Lucas
       objectReference: {fileID: 0}
     - target: {fileID: 5608044127364552569, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}
       propertyPath: lastModifiedDate
-      value: 08/10/2021 11:54:03
+      value: 08/10/2021 12:39:22
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 796445538470318154, guid: 4949191a91501e24484b7a1cafa8c771, type: 3}

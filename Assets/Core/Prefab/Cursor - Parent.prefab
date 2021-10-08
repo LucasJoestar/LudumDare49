@@ -397,7 +397,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 950, y: 550}
-  m_SizeDelta: {x: 30, y: 30}
+  m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.2, y: 0.95}
 --- !u!114 &5458748992448039389
 MonoBehaviour:
@@ -415,7 +415,7 @@ MonoBehaviour:
   Tags:
     Tags: []
   lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 15:34:18
+  lastModifiedDate: 08/10/2021 12:32:23
   IsPersistent: 0
 --- !u!222 &5458748992448039391
 CanvasRenderer:
