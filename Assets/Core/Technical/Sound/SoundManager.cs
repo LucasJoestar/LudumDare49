@@ -45,7 +45,7 @@ namespace LudumDare49
             Sequence _s;
             for (int i = 0; i < audioSourcePool.Count; i++)
             {
-                if (!audioSourcePool[i].enabled) continue;
+                if (audioSourcePool[i].enabled) continue;
                 audioSourcePool[i].enabled = true; 
                 _source = audioSourcePool[i];
                 _source.transform.position = _position;
@@ -55,6 +55,7 @@ namespace LudumDare49
                 return; 
             }
             _source = Instantiate(audioSourcePool[0], transform);
+            audioSourcePool.Add(_source);
             _source.enabled = true;
             _source.playOnAwake = false;
             _source.outputAudioMixerGroup = currentGroup;

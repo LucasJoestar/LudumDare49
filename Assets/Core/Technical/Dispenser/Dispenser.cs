@@ -77,7 +77,7 @@ namespace LudumDare49
             potion.Collider.enabled = true;
             potion.MixInCollider.enabled = true;
 
-            potion.ApplyAction(actionPotion);
+            potion.ApplyAction(actionPotion, true);
         }
 
         private void Start()

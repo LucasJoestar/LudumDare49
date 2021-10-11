@@ -21,9 +21,7 @@ namespace LudumDare49
         #endregion
 
         #region Overriden Methods
-        public override void OnCrashPotion()
-        {
-        }
+        public override bool OnCrashPotion() => false; 
 
         public override void OnDropPotion()
         {

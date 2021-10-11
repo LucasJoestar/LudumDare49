@@ -39,10 +39,7 @@ namespace LudumDare49
             SoundManager.Instance.PlayAtPosition(hairGrow, _point);
         }
 
-        public override void OnCrashPotion()
-        {
-            
-        }
+        public override bool OnCrashPotion() => false;
 
         public override void OnDropPotion()
         {

@@ -47,6 +47,12 @@ TextureImporter:
   - first:
       213: -1772244045117237821
     second: PickUpLine
+  - first:
+      213: 5681967267464321869
+    second: Clock
+  - first:
+      213: -2319476694228375547
+    second: Clock_Hand
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -450,7 +456,7 @@ TextureImporter:
         width: 1120
         height: 366
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -458,6 +464,48 @@ TextureImporter:
       bones: []
       spriteID: 3c55c734e69b767e0800000000000000
       internalID: -1772244045117237821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clock
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 97
+        width: 947
+        height: 949
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b9b9a10276ade40800000000000000
+      internalID: 5681967267464321869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clock_Hand
+      rect:
+        serializedVersion: 2
+        x: 2291
+        y: 366
+        width: 132
+        height: 538
+      alignment: 9
+      pivot: {x: 0.43025902, y: 0.076514035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50868b75c309fcfd0800000000000000
+      internalID: -2319476694228375547
       vertices: []
       indices: 
       edges: []

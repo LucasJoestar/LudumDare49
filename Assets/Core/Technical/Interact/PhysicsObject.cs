@@ -166,12 +166,12 @@ namespace LudumDare49
             else
             {
                 // Destroyed.
-                OnDestroyed();
-                Destroy(gameObject);
+                if(!OnDestroyed())
+                    Destroy(gameObject);
             }
         }
 
-        protected virtual void OnDestroyed()
+        protected virtual bool OnDestroyed()
         {
             if (destroyFX != null)
             {
@@ -181,6 +181,7 @@ namespace LudumDare49
 
                 SoundManager.Instance.PlayAtPosition(destroyFXClip, transform.position);
             }
+            return false; 
         }
 
         protected virtual void Repop()

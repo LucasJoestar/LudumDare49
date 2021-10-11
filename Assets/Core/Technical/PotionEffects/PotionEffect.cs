@@ -23,7 +23,8 @@ namespace LudumDare49
         #region Methods
         public abstract void OnGrabPotion(PlayerCursor _cursor);
         public abstract void OnDropPotion();
-        public abstract void OnCrashPotion();
+        // Return true if the potion has to be destroyed outside of the method OnCrashPotion.
+        public abstract bool OnCrashPotion();
         public abstract void OnCollideObject(Collider2D _collider, Vector2 _point);
         public abstract void OnTimeInterval();
         public abstract void OnRecipeAction();

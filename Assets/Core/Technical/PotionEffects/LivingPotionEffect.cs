@@ -37,10 +37,7 @@ namespace LudumDare49
             }
         }
 
-        public override void OnCrashPotion()
-        {
-
-        }
+        public override bool OnCrashPotion() => false; 
 
         public override void OnDropPotion()
         {

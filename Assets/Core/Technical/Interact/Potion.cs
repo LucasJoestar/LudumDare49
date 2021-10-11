@@ -55,7 +55,7 @@ namespace LudumDare49
                 GameObject _particle = Instantiate(bubbleFX);
                 _particle.transform.position = transform.position + grabPoint + new Vector3(0f, .5f, 0f);
                 _particle.transform.rotation = Quaternion.identity;
-
+                _particle.transform.SetParent(transform);
                 SoundManager.Instance.PlayAtPosition(mixClip, transform.position);
             }
 
@@ -131,10 +131,11 @@ namespace LudumDare49
             LoseObject(false);
         }
 
-        protected override void OnDestroyed()
+        protected override bool OnDestroyed()
         {
-            base.OnDestroyed();
-            if (effect != null) effect.OnCrashPotion();
+            bool _isDestroyed = base.OnDestroyed();
+            if (effect != null) _isDestroyed = effect.OnCrashPotion();
+            return _isDestroyed;
         }
 
         public override void Shake()

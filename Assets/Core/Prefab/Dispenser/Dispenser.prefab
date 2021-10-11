@@ -47,8 +47,8 @@ MonoBehaviour:
   comment: 
   Tags:
     Tags: []
-  lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 09:52:47
+  lastModifiedBy: Alexis_Admin
+  lastModifiedDate: 11/10/2021 16:24:00
   IsPersistent: 0
 --- !u!212 &5286046128166725794
 SpriteRenderer:
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: -187275826446481573, guid: c2feecf063f5acd4c8713970762c73f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -151,8 +151,8 @@ MonoBehaviour:
   comment: 
   Tags:
     Tags: []
-  lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 09:53:32
+  lastModifiedBy: Alexis_Admin
+  lastModifiedDate: 11/10/2021 16:23:57
   IsPersistent: 0
 --- !u!212 &2516728910545728083
 SpriteRenderer:
@@ -193,7 +193,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 6733033810867138458, guid: f1ef80106a7678c409e2eec4f698f13a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -313,8 +313,8 @@ MonoBehaviour:
   comment: 
   Tags:
     Tags: []
-  lastModifiedBy: Lucas
-  lastModifiedDate: 04/10/2021 09:50:09
+  lastModifiedBy: Alexis_Admin
+  lastModifiedDate: 11/10/2021 16:23:54
   IsPersistent: 0
 --- !u!212 &2516728910621993776
 SpriteRenderer:
@@ -355,7 +355,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 6758026217529591145, guid: c2feecf063f5acd4c8713970762c73f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

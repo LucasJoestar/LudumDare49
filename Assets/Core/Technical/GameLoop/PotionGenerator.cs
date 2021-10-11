@@ -7,6 +7,7 @@
 using DG.Tweening;
 using EnhancedEditor;
 using UnityEngine;
+using System.Collections.Generic; 
 
 namespace LudumDare49
 {
@@ -29,7 +30,7 @@ namespace LudumDare49
         [SerializeField, MinMax(0f, 100f)] private Vector2 generatePotionInterval = new Vector2(25f, 30f);
         [SerializeField, MinMax(1, 20)] private int beltLoop = 10;
         [SerializeField] private Potion[] potions = new Potion[] { };
-
+        private List<Potion> remainingPotions = new List<Potion>() { }; 
         [Space(5f)]
 
         [SerializeField] private Color alertColor = Color.red;
@@ -64,10 +65,16 @@ namespace LudumDare49
         {
             canGenerate = false;
 
+            if(remainingPotions.Count == 0)
+            {
+                remainingPotions.AddRange(potions);
+            }
+            int _index = Random.Range(0, remainingPotions.Count);
             // Generate.
-            potion = Instantiate(potions[Random.Range(0, potions.Length)]);
+            potion = Instantiate(remainingPotions[_index]);
             potion.transform.position = generateTransform.position;
             potion.transform.rotation = Quaternion.identity;
+            remainingPotions.RemoveAt(_index);
 
             potion.Rigidbody.isKinematic = true;
 

@@ -19,14 +19,11 @@ namespace LudumDare49
         [SerializeField] private SpriteRenderer freezingEffect = null;
         [SerializeField, Range(.1f, 2.0f)] private float transitionDuration = .5f;
         private Sequence transitionSequence = null;
-        private PlayerCursor cursor = null; 
+        private PlayerCursor cursor = null;
         #endregion
 
         #region Methods
-        public override void OnCrashPotion()
-        {
-            // Ne Behaviour here
-        }
+        public override bool OnCrashPotion() => false; 
 
         public override void OnDropPotion()
         {

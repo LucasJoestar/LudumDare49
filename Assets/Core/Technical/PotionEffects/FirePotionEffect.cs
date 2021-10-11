@@ -30,11 +30,9 @@ namespace LudumDare49
         #endregion
 
         #region Overriden Methods
-        public override void OnCrashPotion()
+        public override bool OnCrashPotion()
         {
             // Smoke here + Fire
-            Sequence _crashSequence = DOTween.Sequence();
-            _crashSequence.Append(Camera.main.transform.DOShakePosition(shakeDuration, 1, 15)).OnComplete(() => Destroy(potion.gameObject));
             if(fireEffect != null)
             {
                 int _count = Random.Range(minMaxFireEffect.x, minMaxFireEffect.y + 1);
@@ -50,6 +48,9 @@ namespace LudumDare49
                     _s.OnComplete(() => Destroy(_flame.gameObject));
                 }
             }
+            Sequence _crashSequence = DOTween.Sequence();
+            _crashSequence.Append(Camera.main.transform.DOShakePosition(shakeDuration, 1, 15)).OnComplete(() => Destroy(potion.gameObject));
+            return true; 
         }
 
         public override void OnDropPotion()

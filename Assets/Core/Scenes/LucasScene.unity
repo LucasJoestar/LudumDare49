@@ -1151,6 +1151,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3331440554668146699, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: lastModifiedDate
+      value: 11/10/2021 18:08:30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761165104921072108, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761165104997369999, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 7695784675419628292, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1198,6 +1210,50 @@ PrefabInstance:
     - target: {fileID: 7695784675419628294, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
       propertyPath: m_Name
       value: WorldContent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206824712150440001, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4de844a02e8ab3147a444fe534b26d4a, type: 3}
+    - target: {fileID: 8206824712150440001, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: gameTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206824712150440001, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: easeCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206824712150440001, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: easeCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206824712150440001, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: easeCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206824712150440001, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: easeCurve.m_Curve.Array.data[0].inSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206824712150440001, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: easeCurve.m_Curve.Array.data[1].inSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206824712150440001, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: easeCurve.m_Curve.Array.data[0].outSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206824712150440001, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: easeCurve.m_Curve.Array.data[1].outSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206824712150440001, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: easeCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206824712150440001, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}
+      propertyPath: easeCurve.m_Curve.Array.data[1].tangentMode
+      value: 34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e9ebe7c0438a9748919daed0f84ce5a, type: 3}

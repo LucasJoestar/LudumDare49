@@ -32,10 +32,11 @@ namespace LudumDare49
 
         }
 
-        public override void OnCrashPotion()
+        public override bool OnCrashPotion()
         {
             cursor.RemoveSpeedCoef(this);
             Camera.main.transform.DOShakePosition(shakeDuration, 1, 15);
+            return false; 
         }
 
         public override void OnDropPotion()
